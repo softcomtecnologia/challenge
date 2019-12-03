@@ -10,7 +10,7 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 
 - Colaborar com idéias que possam melhorar nossos sistemas e a vida dos nossos usuários;
 - Estar disposto a aprender e a ensinar;
-- Cuidar da nossos sistemas como se fossem seus filhos;
+- Cuidar dos nossos sistemas como se fossem seus filhos;
 - Estar sempre atento a oportunidades para melhorar o código e nossos processos.
 
 ## Requisitos e Skills
@@ -25,6 +25,7 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 ## Diferenciais
 
 - Experiência em programação assíncrona ou relacionada arquitetura orientada a eventos;
+- Experiência em Linguagens Funcionais;
 - Experiência com metodologia ágil;
 - Experiência com banco de dados NoSQL, como Mongo por exemplo;
 - Experiência com testes de unidade;
@@ -77,12 +78,12 @@ Remove um item do usuário
 
 ## Plus
 
-- Não cobramos nada na parte de segurança, mas implementar estratégia JTW e retornar o token do usuário na autenticação e solicitar a cada requisição do sistema, conta como extra.
-- Da mesma maneira não estamos cobrando testes. Mas caso queira ganhar pontos extras, testes unitários cairiam bem na entrega. 
+- Não cobramos nada na parte de segurança, mas implementar estratégia JWT e retornar o token do usuário na autenticação e solicitar a cada requisição do sistema, conta como extra.
+- Da mesma maneira não estamos cobrando testes. Mas caso queira ganhar pontos extras, testes unitários cairiam bem na entrega.
 
 ## Avaliação
 
 Para nos enviar seu código, você pode:
 
 - Fazer um fork desse repositório, e nos mandar uma pull-request.
-- Nos enviar o link do repistório por e-mail: lab@softcomtecnologia.com.br.
+- Nos enviar o link do repositório por e-mail: lab@softcomtecnologia.com.br.
