@@ -1,4 +1,4 @@
-# Front-end Challenge - Softcom
+# Mobile Challenge - Softcom
 
 Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo *README* na raiz do projeto falando sobre o desenvolvimento do desafio.
 
@@ -17,28 +17,30 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 
 - Graduado/Cursando Ciência da Computação ou áreas relacionadas ou experiência profissional equivalente;
 - Experiência com JavaScript;
+- Experiência com React Native;
 - HTML5 e CSS3;
 - Conhecer o básico de versionamento com Git;
-- Conhecer algum module bundler (webpack, gulp e etc.)
+- Conhecer o básico de JSX.
 
 ## Diferenciais
 
-- Experiência com ReactJS e/ou React Native;
+- Experiência com ReactJS;
 - Experiência em consumir dados de API REST;
 - Saber como funciona o protocolo HTTP;
 - Experiência com metodologia ágil;
 - Escrita de código usando ECMAScript 6;
 - Testes unitários com Jest;
-- Experiência com desenvolvimento mobile.
+- Styled Components;
+- Experiência com desenvolvimento mobile nativo.
 
 ## Problema
 
-No desafio back-end, criamos uma lojinha virtual para pequenos empreendedores. Temos basicamente o seguinte fluxo: Tela de login, tela de cadastro do usuário, Tela de listagem de itens cadastrados pelo usário. Também precisamos de telas ou modais para as seguintes ações do sistema: Cadastrar item, remover item e atualizar item.
-Pedimos que esse desafio seja feito em ReactJS e caso você também tenha feito o desafio do back-end, pode integrar sua API com esse desafio front-end.
+Precisamos criar um aplicativo de lojinha virtual para pequenos empreendedores. Temos basicamente o seguinte fluxo: Tela de login, tela de cadastro do usuário, Tela de listagem de itens cadastrados pelo usário. Também precisamos de telas ou modais para as seguintes ações do sistema: Cadastrar item, remover item e atualizar item.
+Pedimos que esse desafio seja feito em React native e caso você também tenha feito o desafio do back-end, pode integrar sua API com esse desafio mobile.
 
 ## Plus
 
-- Caso tenha optado por fazer também o desafio back-end e integrar os dois desafios, gostaríamos de ver como resolve a parte de segurança também no front-end consumindo o JWT Token.
+- Caso tenha optado por fazer também o desafio back-end e integrar os dois desafios, gostaríamos de ver como resolve a parte de segurança também no aplicativo consumindo o JWT Token.
 - Da mesma maneira não estamos cobrando testes. Mas caso queira ganhar pontos extras, testes unitários cairiam bem na entrega.
 
 ## Avaliação

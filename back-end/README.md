@@ -18,7 +18,7 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 - Base em programação orientada a objetos;
 - Graduado/Cursando Ciência da Computação ou áreas relacionadas ou experiência profissional equivalente;
 - Experiência com JavaScript e/ou outra linguagem de programação.
-- Conhece o básico de versionamento com Git;
+- Conhecer o básico de versionamento com Git;
 - Saber como funciona o protocolo HTTP.
 - Experiência com banco de dados Relacional, como SQL Server ou MySQL, por exemplo
 
@@ -70,7 +70,6 @@ Remove um item do usuário
 - O usuário deve poder se autenticar na aplicação com e-mail ou cnpj e senha;
 - O usuário deve poder cadastrar um item com nome, descrição, preço;
 - O usuário não pode criar uma conta caso o e-mail/cnpj já exista no sistema;
-- O usuário deve poder criar item com nome, descrição e preço. 
 - O usuário deve poder excluir um item pelo id;
 - O usuário deve poder atualizar um item pelo id;
 - O usuário deve poder exibir um item pelo id;
