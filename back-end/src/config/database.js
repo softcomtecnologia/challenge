@@ -1,11 +1,8 @@
 module.exports = {
     dialect: 'postgres',
-    // host: process.env.DB_HOST,
-    // username: process.env.DB_USER,
-    // password: process.env.DB_PASS,
-    // database: process.env.DB_NAME,
     host: '192.168.99.100',
-    username: 'softcom',
+    port: 5433,
+    username: 'postgres',
     password: 'docker',
     database: 'db_desafio_softcom',
     define: {
@@ -14,3 +11,8 @@ module.exports = {
         underscoredAll: true,
     },
 };
+
+// host: process.env.DB_HOST,
+// username: process.env.DB_USER,
+// password: process.env.DB_PASS,
+// database: process.env.DB_NAME,
