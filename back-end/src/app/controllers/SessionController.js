@@ -5,9 +5,16 @@ import authConfig from '../../config/auth';
 
 class SessionController {
     async store(req, res) {
-        const { email, password } = req.body;
+        const { email, cnpj, password } = req.body;
+        const emailCnpj = {};
 
-        const user = await User.findOne({ where: { email } });
+        if (cnpj) {
+            emailCnpj.cnpj = cnpj;
+        } else {
+            emailCnpj.email = email;
+        }
+
+        const user = await User.findOne({ where: emailCnpj });
 
         if (!user) {
             res.status(401).json({ error: 'Usuário não encontrado' });

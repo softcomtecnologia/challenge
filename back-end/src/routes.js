@@ -11,10 +11,9 @@ routes.get('/', (req, res) => {
     return res.json({ message: 'API Desafio Softcom' });
 });
 
-routes.post('/users', UserController.store);
-routes.post('/sessions', SessionController.store);
+routes.post('/api/v1//users', UserController.store);
+routes.post('/api/v1//sessions', SessionController.store);
 
 routes.use(authMiddleware);
-routes.put('/users', UserController.update);
 
 export default routes;
