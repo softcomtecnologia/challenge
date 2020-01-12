@@ -7,7 +7,8 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^7.17.0",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.3",
+    "yup": "^0.28.0"
   },
   "scripts": {
     "dev": "nodemon src/server.js",

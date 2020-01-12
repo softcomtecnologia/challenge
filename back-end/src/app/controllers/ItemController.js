@@ -1,17 +1,28 @@
+import * as Yup from 'yup';
 import Product from '../models/Product';
 
 class ItemController {
     async store(req, res) {
+        const schema = Yup.object().shape({
+            name: Yup.string().required(),
+            description: Yup.string().required(),
+            price: Yup.number().required(),
+        });
+
+        if (!(await schema.isValid(req.body))) {
+            return res.status(400).json({ error: 'Erro de validação' });
+        }
+
         const { name, description, price } = req.body;
 
-        const product = await Product.create({
+        await Product.create({
             name,
             description,
             price,
             user_id: req.userId,
         });
 
-        return res.json(product);
+        return res.json({ name, description, price });
     }
 
     async index(req, res) {
@@ -43,6 +54,16 @@ class ItemController {
     }
 
     async update(req, res) {
+        const schema = Yup.object().shape({
+            name: Yup.string().required(),
+            description: Yup.string().required(),
+            price: Yup.number().required(),
+        });
+
+        if (!(await schema.isValid(req.body))) {
+            return res.status(400).json({ error: 'Erro de validação' });
+        }
+
         const idProduct = req.params.id;
 
         const { name, description, price } = req.body;
