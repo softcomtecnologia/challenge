@@ -26,7 +26,6 @@ class ProductForSalesController {
     }
 
     async show(req, res) {
-        // const idUser = req.params.id;
         const { id, idItem } = req.params;
 
         const user = await User.findByPk(id);
