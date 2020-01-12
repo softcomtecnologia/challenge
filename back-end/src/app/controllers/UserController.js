@@ -22,6 +22,21 @@ class UserController {
 
         return res.json({ id, name, cnpj, email });
     }
+
+    async show(req, res) {
+        const idUser = req.params.id;
+
+        const user = await User.findOne({
+            where: { id: idUser },
+            attributes: ['id', 'name', 'email', 'cnpj'],
+        });
+
+        if (!user) {
+            return res.status(400).json({ error: 'Usuário não encontrado' });
+        }
+
+        return res.json(user);
+    }
 }
 
 export default new UserController();
