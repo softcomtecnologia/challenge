@@ -7,6 +7,7 @@ import SessionController from './app/controllers/SessionController';
 import ItemController from './app/controllers/ItemController';
 import ListProductController from './app/controllers/ListProductController';
 import ProductForSalesController from './app/controllers/ProductForSalesController';
+import BuyProductController from './app/controllers/BuyProductController';
 
 const routes = new Router();
 
@@ -35,6 +36,9 @@ routes.get(
     ProductForSalesController.show
 );
 
-// routes.post('/product-for-sales/user/:id/item/:idItem/buy', BuyController.create);
+routes.post(
+    '/product-for-sales/user/:id/item/:idItem/buy',
+    BuyProductController.store
+);
 
 export default routes;
