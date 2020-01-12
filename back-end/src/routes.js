@@ -5,6 +5,8 @@ import authMiddleware from './app/middlewares/auth';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import ItemController from './app/controllers/ItemController';
+import ListProductController from './app/controllers/ListProductController';
+import ProductForSalesController from './app/controllers/ProductForSalesController';
 
 const routes = new Router();
 
@@ -25,9 +27,14 @@ routes.get('/user/item/:id', ItemController.show);
 routes.put('/user/item/:id', ItemController.update);
 routes.delete('/user/item/:id', ItemController.delete);
 
-// routes.get('/product/', ProductController.index);
-// routes.get('/product/user/:id', ProductController.index);
-// routes.get('/product/user/:id/item/:id', ProductController.index);
-// routes.post('/product/user/:id/item/:id/buy', ProductController.index);
+routes.get('/list-product/', ListProductController.index);
+
+routes.get('/product-for-sales/user/:id', ProductForSalesController.index);
+routes.get(
+    '/product-for-sales/user/:id/item/:idItem',
+    ProductForSalesController.show
+);
+
+// routes.post('/product-for-sales/user/:id/item/:idItem/buy', BuyController.create);
 
 export default routes;
