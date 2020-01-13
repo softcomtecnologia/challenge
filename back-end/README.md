@@ -10,9 +10,11 @@ Abaixo retorno os exemplos das rotas que minimamente sejam disponibilizadas.
 
 ### Instalar o Node.js
 
-Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis e poderá ser instalado por meio do endereço `https://nodejs.org/en/`.
+Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis e poderá ser instalado por meio do endereço https://nodejs.org/en/.
 
-### Instalar o Docker por meio do seguinte endereço
+### Instalar o Docker
+
+O Docker poderá ser instalado por meio do seguinte endereço
 
 https://docs.docker.com/docker-for-windows/install/
 
@@ -97,3 +99,7 @@ por meio do endereço https://insomnia.rest/download/
    + O usuário deve poder exibir um item pelo id;
     
    + O usuário deve poder listar os itens por usuário.
+   
+   ## Plus alcançado
+
+- implementar estratégia JWT e retornar o token do usuário na autenticação e solicitar a cada requisição do sistema, conta como extra.
