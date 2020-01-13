@@ -65,20 +65,20 @@ por meio do endereço https://insomnia.rest/download/
 
 ### Rotas da API Desafio Softcom
 
- * post - `http://localhost:3333/api/v1user`
- * get -  `http://localhost:3333/api/v1user/find/:id`
- * post - `http://localhost:3333/api/v1auth/sign_in`
+ * post - `http://localhost:3333/api/v1/user`
+ * get -  `http://localhost:3333/api/v1/user/find/:id`
+ * post - `http://localhost:3333/api/v1/auth/sign_in`
 
- * post -   `http://localhost:3333/api/v1user/item`
- * get -    `http://localhost:3333/api/v1user/item`
- * get -    `http://localhost:3333/api/v1user/item/:id`
- * put -    `http://localhost:3333/api/v1user/item/:id`
- * delete - `http://localhost:3333/api/v1user/item/:id`
+ * post -   `http://localhost:3333/api/v1/user/item`
+ * get -    `http://localhost:3333/api/v1/user/item`
+ * get -    `http://localhost:3333/api/v1/user/item/:id`
+ * put -    `http://localhost:3333/api/v1/user/item/:id`
+ * delete - `http://localhost:3333/api/v1/user/item/:id`
 
- * get -  `http://localhost:3333/api/v1list-product/`
- * get -  `http://localhost:3333/api/v1product-for-sales/user/:id`
- * get -  `http://localhost:3333/api/v1product-for-sales/user/:id/item/:idItem`
- * post - `http://localhost:3333/api/v1product-for-sales/user/:id/item/:idItem/buy`
+ * get -  `http://localhost:3333/api/v1/list-product/`
+ * get -  `http://localhost:3333/api/v1/product-for-sales/user/:id`
+ * get -  `http://localhost:3333/api/v1/product-for-sales/user/:id/item/:idItem`
+ * post - `http://localhost:3333/api/v1/product-for-sales/user/:id/item/:idItem/buy`
 
 ### Requisitos funcionais alcançados
 
