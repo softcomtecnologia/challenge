@@ -82,18 +82,18 @@ por meio do endereço `https://insomnia.rest/download/`
 
 ### Requisitos funcionais alcançados
 
-    + O usuário deve poder criar uma conta com nome, e-mail, cnpj e senha;
-    + O usuário deve poder se autenticar na aplicação com e-mail ou cnpj e senha;
-    + O usuário deve poder cadastrar um item com nome, descrição, preço;
-    + O usuário não pode criar uma conta caso o e-mail/cnpj já exista no sistema;
-    + O usuário deve poder excluir um item pelo id;
-    + O usuário deve poder atualizar um item pelo id;
-    + O usuário deve poder exibir um item pelo id;
-    + O usuário deve poder listar os itens por usuário.
+   + O usuário deve poder criar uma conta com nome, e-mail, cnpj e senha;
     
-    * Item 1
+   + O usuário deve poder se autenticar na aplicação com e-mail ou cnpj e senha;
     
-+ Item 2
-
-- Item 3
-
+   + O usuário deve poder cadastrar um item com nome, descrição, preço;
+    
+   + O usuário não pode criar uma conta caso o e-mail/cnpj já exista no sistema;
+    
+   + O usuário deve poder excluir um item pelo id;
+    
+   + O usuário deve poder atualizar um item pelo id;
+    
+   + O usuário deve poder exibir um item pelo id;
+    
+   + O usuário deve poder listar os itens por usuário.
