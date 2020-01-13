@@ -14,7 +14,7 @@ Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome 
 
 ### Instalar o Docker por meio do seguinte endereço
 
-[https://docs.docker.com/docker-for-windows/install/]
+https://docs.docker.com/docker-for-windows/install/
 
 ### Criar o container Docker
 
@@ -34,16 +34,16 @@ Username: postgres
 password:  docker
 Todos esses dados poderam ser alterados de acordo com a configuração na criação inicial do container
 
-Linux ou Mac: `https://electronjs.org/apps/postbird`
-Windows: `https://github.com/Paxa/postbird/releases`
+Linux ou Mac: https://electronjs.org/apps/postbird
+Windows: https://github.com/Paxa/postbird/releases
 
 ### Instalar o Yarn e incializar o projeto
 
 O yarn é um gerenciador de pacotes e poderá ser instalado por meio do endereço
-`https://yarnpkg.com/en/docs/install`, seguindo os passos conforme documentação
+https://yarnpkg.com/en/docs/install, seguindo os passos conforme documentação
 
 Para inicializar o projeto após realizar o clone do repositório por meio do endereço
-`https://github.com/thalysssonNascimento/challenge`, deverá rodar o seguinte comando
+https://github.com/thalysssonNascimento/challenge, deverá rodar o seguinte comando
 na raiz do projeto
 
 ```bash
@@ -59,26 +59,26 @@ npm install
 ### Instalar o Insomnia REST Client
 
 O Insomnia é um cross-platform onde poderá realizar testes na sua API GraphQL ou REST, poderá ser instaldo
-por meio do endereço `https://insomnia.rest/download/`
+por meio do endereço https://insomnia.rest/download/
 
 ## Rotas
 
 ### Rotas da API Desafio Softcom
 
- * post - http://localhost:3333/api/v1user
- * get -  http://localhost:3333/api/v1user/find/:id
- * post - http://localhost:3333/api/v1auth/sign_in
+ * post - `http://localhost:3333/api/v1user`
+ * get -  `http://localhost:3333/api/v1user/find/:id`
+ * post - `http://localhost:3333/api/v1auth/sign_in`
 
- * post -   http://localhost:3333/api/v1user/item
- * get -    http://localhost:3333/api/v1user/item
- * get -    http://localhost:3333/api/v1user/item/:id
- * put -    http://localhost:3333/api/v1user/item/:id
- * delete - http://localhost:3333/api/v1user/item/:id
+ * post -   `http://localhost:3333/api/v1user/item`
+ * get -    `http://localhost:3333/api/v1user/item`
+ * get -    `http://localhost:3333/api/v1user/item/:id`
+ * put -    `http://localhost:3333/api/v1user/item/:id`
+ * delete - `http://localhost:3333/api/v1user/item/:id`
 
- * get -  http://localhost:3333/api/v1list-product/
- * get -  http://localhost:3333/api/v1product-for-sales/user/:id
- * get -  http://localhost:3333/api/v1product-for-sales/user/:id/item/:idItem
- * post - http://localhost:3333/api/v1product-for-sales/user/:id/item/:idItem/buy
+ * get -  `http://localhost:3333/api/v1list-product/`
+ * get -  `http://localhost:3333/api/v1product-for-sales/user/:id`
+ * get -  `http://localhost:3333/api/v1product-for-sales/user/:id/item/:idItem`
+ * post - `http://localhost:3333/api/v1product-for-sales/user/:id/item/:idItem/buy`
 
 ### Requisitos funcionais alcançados
 
