@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import { Colors, Metrics } from './../../theme/';
 import { useFormik } from 'formik';
+import API from '../../services';
 import {
   Grid,
   Dialog,
@@ -42,7 +43,32 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-const ItemDescription = ({ open, setOpenModal, title }) => {
+const AddUpdateItem = ({ open, setOpenModal, title }) => {
+  const classes = useStyles();
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
+  
+  useEffect(() => {
+    if (isLoading){
+      (async () => {
+        try {
+          const formData = new FormData();
+          formData.append('name', formik.values.name);
+          formData.append('price', formik.values.price);
+          formData.append('description', formik.values.description);
+          const response = await API.Items.add(formData);
+          const response2 = await API.Items.showAll()
+          console.log(response2)
+          localStorage.setItem('items', JSON.stringify(response2.data.items));
+          window.location = '/home';
+        } catch (e) {
+          setMessage(e.errorMessage);
+        }
+        setIsLoading(false)
+      })();
+    }
+  }, [isLoading]);  
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -64,7 +90,16 @@ const ItemDescription = ({ open, setOpenModal, title }) => {
 
     },
   });
-  const classes = useStyles();
+  const handleSubmit = event => {
+    //event.preventDefault();
+    formik.handleSubmit()
+    let fieldsError = (Object.values(formik.errors).filter(value => value != ""))
+    if (fieldsError.length == 0){
+      console.log('a')
+     setIsLoading(true)
+    }
+  };
+
   return (
     <Dialog
       open={open}
@@ -143,16 +178,16 @@ const ItemDescription = ({ open, setOpenModal, title }) => {
         <Button onClick={() => { setOpenModal(false) }} color="primary" autoFocus>
           Cancel
         </Button>
-        <Button onClick={() => { setOpenModal(false) }} variant="contained" className={classes.buttonUpdate} color="primary" autoFocus>
-          Ok
+        <Button onClick={() =>  handleSubmit()} variant="contained" className={classes.buttonUpdate} color="primary" autoFocus>
+          ADD
         </Button>
       </DialogActions>
     </Dialog>
   );
 };
-ItemDescription.propTypes = {
+AddUpdateItem.propTypes = {
   open: PropTypes.string.isRequired,
 
 };
 
-export default ItemDescription;
+export default AddUpdateItem;

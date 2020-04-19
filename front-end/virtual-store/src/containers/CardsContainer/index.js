@@ -8,13 +8,15 @@ import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 // Style
 import useStyles from './styles';
 
-const CardsContainer = () => {
+const CardsContainer = ({items}) => {
   const [openModalDescription, setOpenModalDescription] = useState(false);
   const [openModalAddUpdateItem, setOpenModalAddUpdateItem] = useState(false);
   const [titleModal, setTitleModal] = useState('');
   const [priceModal, setPriceModal] = useState('');
   const [descriptionModal, setDescriptionModal] = useState('');
   const classes = useStyles();
+  console.log(items)
+  console.log('a')
   //OpenModalDescription
   useEffect(() => {
 
@@ -22,7 +24,6 @@ const CardsContainer = () => {
 
   //OpenModalAddUpdateItem
   useEffect(() => {
-    console.log('oi')
   }, [openModalAddUpdateItem]);
 
 
@@ -62,10 +63,9 @@ const CardsContainer = () => {
         alignItems="center"
         className={classes.container}
         spacing={10}>
-        <InfoCard setOpenModal={setOpenModal} value="100" title="Phone" description="Muito bom e ótimo preço" />
-        <InfoCard setOpenModal={setOpenModal} value="100" title="Sofá" description="Muito bom e ótimo preço" />
-        <InfoCard value="100" title="TV" />
-        <InfoCard value="100" title="Notebook" />
+          {items.map(item => (
+            <InfoCard setOpenModal={setOpenModal} value={item.price} title={item.name} description={item.description} />
+          ))}
       </Grid>
       <ItemDescription
         open={openModalDescription}

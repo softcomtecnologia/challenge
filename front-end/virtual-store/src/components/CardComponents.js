@@ -41,7 +41,8 @@ const CardValue = styled.h3`
   color: ${Colors.text};
   margin-bottom: 100px;
   width: 100%;
-  margin-left: 30px;
+  text-align: center;
+  margin-right: 30px;
   cursor: pointer
   
 `;

@@ -2,7 +2,7 @@ import { authApi } from './config';
 
 const login = async user => {
   try {
-    return await authApi.post('users/api/login/', user, {
+    return await authApi.post('auth/sign_in', user, {
       headers: {
         'content-type': 'multipart/form-data',
         Accept: 'application/json',
@@ -18,7 +18,7 @@ const login = async user => {
 
 const register = async user => {
   try {
-    return await authApi.post('users/api/register/', user, {
+    return await authApi.post('user', user, {
       headers: {
         'content-type': 'multipart/form-data',
         Accept: 'application/json',
@@ -26,7 +26,7 @@ const register = async user => {
     });
   } catch (e) {
     const error = {
-      errorMessage: 'Register error',
+      errorMessage: 'Error when register user',
     };
     throw error;
   }

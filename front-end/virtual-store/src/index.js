@@ -6,12 +6,15 @@ import Register from './views/RegisterUser';
 import HomePage from './views/HomePage';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+const getAccessToken = () => localStorage.getItem('access_token');
+const isAuthenticated = () => !!getAccessToken();
 const Index = () => (
+    
     <BrowserRouter>
         <Switch>
-            <Route path="/"  exact component={Login}/>
+            <Route path="/"  exact component={isAuthenticated() ? HomePage : Login}/>
             <Route path="/register"  exact component={Register}/>
-            <Route path="/home"  exact component={HomePage}/>
+            <Route path="/home"  exact component={isAuthenticated() ? HomePage : Login}/>
         </Switch>
     </BrowserRouter>
 );

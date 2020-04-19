@@ -71,8 +71,11 @@ const Login = () => {
         try {
           const response = await API.Users.login(formData);
           localStorage.setItem('access_token', response.data.token);
-          sessionStorage.setItem('user', JSON.stringify(response.data.user));
-          window.location = '/dashboard';
+          console.log(response)
+          const response2 = await API.Items.showAll();
+          localStorage.setItem('user', JSON.stringify(response2.data.user));
+          localStorage.setItem('items', JSON.stringify(response2.data.items));
+          window.location = '/home';
         } catch (e) {
           setErrorLogin(e.errorMessage);
         }

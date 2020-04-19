@@ -18,45 +18,20 @@ import useStyles from './styles';
 
 const HomePage = () => {
   const classes = useStyles();
-  const [currentUser, setCurrentUser] = useState('');
-
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('items')));
+  /*
   useEffect(() => {
     
-  }, [currentUser]);  
+  }, [currentUser]);  */
 
   const handleValidation = () => {
     let formIsValid = true;
   };
 
-  const addItem = event => {
-    /*
-    event.preventDefault();
-    if (handleValidation()) {
-      const formData = new FormData();
-
-      if (email !== '') {
-        formData.append('email', email);
-      }
-      if (password !== '') {
-        formData.append('password', password);
-      }
-      (async () => {
-        try {
-          const response = await API.Users.login(formData);
-          localStorage.setItem('access_token', response.data.token);
-          sessionStorage.setItem('user', JSON.stringify(response.data.user));
-          window.location = '/dashboard';
-        } catch (e) {
-          setErrorLogin(e.errorMessage);
-        }
-      })();
-    }*/
-  };
-
   return (
     <div className={classes.root}>
       <AppBar></AppBar>
-       <CardsContainer />
+       <CardsContainer items={items} />
     </div>
   );
 };

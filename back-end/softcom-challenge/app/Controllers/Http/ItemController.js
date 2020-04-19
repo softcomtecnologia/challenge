@@ -2,12 +2,19 @@
 
 const Item = use("App/Models/Item");
 
+const User = use("App/Models/User")
 
 class ItemController {
   
   async index ({ auth, request, response }) {
     let items = await auth.user.items().fetch()
-    return response.json(items)
+    const user = await User.find(auth.user.id)
+    
+    const res = {
+      items: items,
+      user: user
+    }
+    return  response.json(res) 
   }
 
   async store ({ request, auth, response }) {

@@ -18,9 +18,11 @@ import useStyles from './styles';
 
 const Register = () => {
   const classes = useStyles();
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorEmail, setErrorEmail] = useState('');
+  const [errorName, setErrorName] = useState('');
   const [errorPassword, setErrorPassword] = useState('');
   const [errorLogin, setErrorLogin] = useState('');
   const [cnpj, setCnpj] = useState('');
@@ -29,7 +31,11 @@ const Register = () => {
   const [errorPasswordConfirm, setErrorPasswordConfirm] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-
+  useEffect(() => {
+    if (name) {
+      setErrorName('');
+    }
+  }, [name]);
 
   useEffect(() => {
     if (email) {
@@ -62,7 +68,13 @@ const Register = () => {
       formIsValid = false;
       setErrorEmail('Email cannot be empty');
     }  else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+      formIsValid = false;
       setErrorEmail('Invalid email')
+    }
+
+    if (!name) {
+      formIsValid = false;
+      setErrorName('Name cannot be empty');
     }
 
     if (!password) {
@@ -96,6 +108,12 @@ const Register = () => {
       if (email !== '') {
         formData.append('email', email);
       }
+      if (name !== '') {
+        formData.append('username', name);
+      }
+      if (cnpj !== '') {
+        formData.append('cnpj', password);
+      }
       if (password !== '') {
         formData.append('password', password);
       }
@@ -103,7 +121,7 @@ const Register = () => {
         setIsLoading(true)
         try {
           const response = await API.Users.register(formData);
-          localStorage.setItem('register_success', response.data.message);
+          localStorage.setItem('register_success', "User registered sucessful");
           window.location = '/';
         } catch (e) {
           setErrorLogin(e.errorMessage);
@@ -133,7 +151,7 @@ const Register = () => {
             onClick={makeRegister}
             component="span">
             Register
-      </Button>
+          </Button>
         </Grid>
       </>
     )
@@ -284,6 +302,73 @@ const Register = () => {
                             </Grid>
                           </Paper>
                         </Grid>
+                        {/**Name */}
+                        <Grid item className={classes.containerBoxLogin}>
+                          <Paper className={classes.paper3}>
+                            <Grid
+                              container
+                              direction="column"
+                              justify="flex-start"
+                              alignItems="space-between">
+                              <Grid item>
+                                <Grid
+                                  container
+                                  direction="column"
+                                  justify="flex-start"
+                                  alignItems="flex-start">
+                                  <Grid item />
+                                  <Typography
+                                    className={classes.label}
+                                    variant="subtitle1">
+                                    Name
+                                  </Typography>
+                                </Grid>
+                              </Grid>
+
+                              <Grid item>
+                                <Grid
+                                  container
+                                  direction="row"
+                                  justify="space-between"
+                                  alignItems="space-between"
+                                  className={classes.container}>
+                                  <Grid item>
+                                    <Grid
+                                      container
+                                      direction="column"
+                                      justify="flex-start"
+                                      alignItems="flex-start"
+                                      className={classes.container}>
+                                      <Grid item>
+                                        <input
+                                          type="text"
+                                          value={name}
+                                          onChange={e =>
+                                            setName(e.target.value)
+                                          }
+                                          className="no-outline"
+                                          placeholder="Enter your Name"
+                                        />
+                                      </Grid>
+
+                                      <Grid item>
+                                        <Typography
+                                          className={classes.captionError}
+                                          variant="caption"
+                                          component="h2">
+                                          {errorName}
+                                        </Typography>
+                                      </Grid>
+                                    </Grid>
+                                  </Grid>
+                                  <Grid item>
+                                    <img  src={User} alt="Cnpj" />
+                                  </Grid>
+                                </Grid>
+                              </Grid>
+                            </Grid>
+                          </Paper>
+                        </Grid>
                          {/**Cnpj */}
                          <Grid item className={classes.containerBoxLogin}>
                           <Paper className={classes.paper3}>
@@ -351,6 +436,7 @@ const Register = () => {
                             </Grid>
                           </Paper>
                         </Grid>
+                        
                         
                         {/**Password */}
                         <Grid item className={classes.containerBoxLogin}>
