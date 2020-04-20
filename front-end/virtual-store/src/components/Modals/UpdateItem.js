@@ -43,10 +43,10 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-const AddUpdateItem = ({ open, closeModalUpdate, title }) => {
+const AddUpdateItem = ({ open, closeModalUpdate, title, priceValue, nameValue, descriptionValue, id }) => {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(nameValue);
   
   useEffect(() => {
     if (isLoading){
@@ -70,9 +70,9 @@ const AddUpdateItem = ({ open, closeModalUpdate, title }) => {
 
   const formik = useFormik({
     initialValues: {
-      name:  '',
-      price: '',
-      description: '',
+      name:  nameValue  ,
+      price: priceValue,
+      description: descriptionValue
     },
     validate: values => {
       const err = {
@@ -86,8 +86,8 @@ const AddUpdateItem = ({ open, closeModalUpdate, title }) => {
       if (!values.description) err.description = message;
 
       return err;
-
     },
+    
   });
   const handleSubmit = event => {
     //event.preventDefault();
@@ -107,7 +107,7 @@ const AddUpdateItem = ({ open, closeModalUpdate, title }) => {
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle className={classes.title} id="alert-dialog-title">
-        {title} Item 
+        {title} Item  
       </DialogTitle>
       <DialogContent>
         <DialogContentText className={classes.description} id="alert-dialog-description">

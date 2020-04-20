@@ -23,6 +23,7 @@ const Login = () => {
   const [errorPassword, setErrorPassword] = useState('');
   const [errorLogin, setErrorLogin] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [register_success, setRegister_success] = useState(localStorage.getItem("register_success"))
 
   useEffect(() => {
     if (email) {
@@ -75,6 +76,7 @@ const Login = () => {
           const response2 = await API.Items.showAll();
           localStorage.setItem('user', JSON.stringify(response2.data.user));
           localStorage.setItem('items', JSON.stringify(response2.data.items));
+          localStorage.removeItem('register_success');
           window.location = '/home';
         } catch (e) {
           setErrorLogin(e.errorMessage);
@@ -206,9 +208,13 @@ const Login = () => {
                           severity="error">
                           {errorLogin}
                         </Alert>
-                      ) : (
-                          ''
-                        )}
+                      ) : register_success ? (
+                        <Alert
+                          className={classes.register_success}
+                          severity="success">
+                          {register_success}
+                        </Alert>
+                      ) : ''}
                     </Grid>
 
                     <Grid item className={classes.container}>

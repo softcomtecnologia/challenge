@@ -1,7 +1,6 @@
 import { authApi, api } from './config';
 
 const add = async item => {
-  console.log('aki')
   const userId = JSON.parse(localStorage.getItem('user')).id;
   try {
     return await api.post(`/user/${userId}/item`, item, {
@@ -30,7 +29,7 @@ const showAll = async () => {
     });
   } catch (e) {
     const error = {
-      errorMessage: 'you not have items',
+      errorMessage: 'Error in Server',
     };
     throw error;
   }
@@ -52,17 +51,20 @@ const update = async item => {
   }
 };
 
-const deleteItem = async item => {
+const deleteItem = async itemId => {
+  const token = localStorage.getItem('access_token');
+  const userId = JSON.parse(localStorage.getItem('user')).id;
   try {
-    return await authApi.post('users/api/register/', item, {
+    return await api.delete(`/user/${userId}/item/${itemId}`, {
       headers: {
         'content-type': 'multipart/form-data',
         Accept: 'application/json',
+        Authorization: `Bearer ${token}`,
       },
     });
   } catch (e) {
     const error = {
-      errorMessage: 'Register error',
+      errorMessage: 'Unauthorized',
     };
     throw error;
   }
