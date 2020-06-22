@@ -1,8 +1,8 @@
-# Front-end Challenge - Softcom
+# Front-end Challenge (ReactJS) - Softcom
 
-Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo *README* na raiz do projeto falando sobre o desenvolvimento do desafio.
+Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo _README_ na raiz do projeto falando sobre o desenvolvimento do desafio.
 
-Focamos aqui em design de código e design patterns em *JavaScript* e principalmente criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
+Focamos aqui em design de código e design patterns em _TypeScript_ com e principalmente criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
 
 A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contato e vamos enviar um retorno do teste enviado. Faremos questão de falar seus pontos fortes e os pontos a melhorar. Então, aproveite essa oportunidade. =]
 
@@ -15,21 +15,23 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 
 ## Requisitos e Skills
 
-- Graduado/Cursando Ciência da Computação ou áreas relacionadas ou experiência profissional equivalente;
-- Experiência com JavaScript;
+- Experiência com TypeScript;
 - HTML5 e CSS3;
+- React Hooks e Context API;
+- Styled Components;
+- Clean Code;
 - Conhecer o básico de versionamento com Git;
-- Conhecer algum module bundler (webpack, gulp e etc.)
 
 ## Diferenciais
 
-- Experiência com ReactJS e/ou React Native;
-- Experiência em consumir dados de API REST;
-- Saber como funciona o protocolo HTTP;
+- Experiência em construir formulários com Formik + Yup;
+- Experiência em consumir dados de Graphql e/ou API Rest;
+- Experiência em consumir o JWT Token;
+- Experiência com Material-UI e/ou React-Bootstrap;
 - Experiência com metodologia ágil;
-- Escrita de código usando ECMAScript 6;
 - Testes unitários com Jest;
-- Experiência com desenvolvimento mobile.
+- Experiência com Continuous integration/continuous delivery;
+- Conhecimento em inglês para escrita de comentários, revisão de PRs e leitura;
 
 ## Problema
 
