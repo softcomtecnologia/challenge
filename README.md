@@ -28,8 +28,8 @@ O intuito do projeto é uma Loja Virtual a qual o usuário pode cadastrar-se com
 
 Veja com mais detalhes o:
 
- - [Backend]('./backend')
- - [Frontend]('./frontend')
+ - [Backend](/backend)
+ - [Frontend](/frontend)
 
 ## 🤔 Como contribuir
 
