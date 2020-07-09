@@ -79,8 +79,12 @@ $ yarn
 
 > Criando a imagem do banco no Docker
 ```bash
-$ docker run --name softcom_postgres -e POSTGRES_PASSWORD=docker -d postgres
+$ docker run --name softcom_postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
 ```
+
+> OBSERVAÇÃO
+> CRIAR UM DATABASE COM O NOME: softcom_tecnologia
+> geralmente eu crio através do DBeaver
 
 > Rodando as migrations
 ```bash
@@ -131,7 +135,7 @@ $ yarn add cors -D @types/cors
 $ yarn add uuidv4
 ```
 ```bash
-$ docker run --name softcom_postgres -e POSTGRES_PASSWORD=docker -d postgres
+$ docker run --name softcom_postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
 ```
 ```bash
 $ yarn add typeorm pg
