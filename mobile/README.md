@@ -38,8 +38,8 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 
 ## Problema
 
-Precisamos criar um aplicativo de lojinha virtual para pequenos empreendedores. Temos basicamente o seguinte fluxo: Tela de login, tela de cadastro do usuário, Tela de listagem de itens cadastrados pelo usário. Também precisamos de telas ou modais para as seguintes ações do sistema: Cadastrar item, remover item e atualizar item.
-Pedimos que esse desafio seja feito em React native e caso você também tenha feito o desafio do back-end, pode integrar sua API com esse desafio mobile.
+Precisamos criar um aplicativo de lojinha virtual para pequenos empreendedores. Temos basicamente o seguinte fluxo: Tela de login, tela de cadastro do usuário, Tela de listagem de itens cadastrados pelo usuário. Também precisamos de telas ou modais para as seguintes ações do sistema: Cadastrar item, remover item e atualizar item.
+Pedimos que esse desafio seja feito em React-Native e caso você também tenha feito o desafio do back-end, pode integrar sua API com esse desafio mobile.
 
 ## Plus
 
