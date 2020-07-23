@@ -31,7 +31,7 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 - Experiência em consumir o JWT Token;
 - Experiência com Material-UI e/ou React-Bootstrap;
 - Experiência com metodologia ágil;
-- Experiência com Arquiterura Offline Firts;
+- Experiência com Arquiterura Offline First;
 - Testes unitários com Jest;
 - Experiência em desenvolvimento de aplicações mobile (Comprovada/Portifólio);
 - Experiência em publicação de aplicações nas lojas (Play Store e Apple Store);
