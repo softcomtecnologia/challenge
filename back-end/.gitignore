@@ -1,0 +1,11 @@
+# Packages
+node_modules
+
+# Files
+.DS_Store
+.idea
+package-lock.json
+
+# Folders
+/logs
+/.vscode

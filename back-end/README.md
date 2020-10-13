@@ -1,8 +1,8 @@
 # Back-end Challenge - Softcom
 
-Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo *README* na raiz do projeto falando sobre o desenvolvimento do desafio.
+Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo _README_ na raiz do projeto falando sobre o desenvolvimento do desafio.
 
-Focamos aqui em design de código e design patterns em *JavaScript* e principalmente criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
+Focamos aqui em design de código e design patterns em _JavaScript_ e principalmente criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
 
 A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contato e vamos enviar um retorno do teste enviado. Faremos questão de falar seus pontos fortes e os pontos a melhorar. Então, aproveite essa oportunidade. =]
 
@@ -62,7 +62,7 @@ Remove um item do usuário
 
 ## Requisitos não funcionais
 
-- Utilize banco de dados relacional 
+- Utilize banco de dados relacional
 
 ## Requisitos funcionais
 
