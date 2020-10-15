@@ -48,19 +48,19 @@ const e = require('express');
   
   exports.login = async (req, res, next) => {
       const email = req.body.email;
-      const senha = req.body.senha;
+      const password = req.body.password;
       const cnpj = req.body.cnpj;
       if(email){
      const user = await User.findAll({where:{ 
           email: email,
-          senha: senha
+          password: password
       }}).then((user) => {
         if (user[0]) {
             const id = 1; //esse id viria do banco de dados
             var token = jwt.sign({ id }, process.env.SECRET, {
             expiresIn: 300 // expires in 5min
         });
-        return res.json({ auth: true, token: token });
+        return res.json({ auth: true, token: token, nome: user[0].nome, email: user[0].email, cnpj: user[0].cnpj  });
         } 
 
         res.status(500).json({message: 'Login inválido!', user: user[0]});
@@ -71,14 +71,14 @@ const e = require('express');
 if(cnpj){
     const user = await User.findAll({where:{ 
          cnpj: cnpj,
-         senha: senha
+         password: password
      }}).then((user) => {
        if (user[0]) {
            const id = 1; //esse id viria do banco de dados
            var token = jwt.sign({ id }, process.env.SECRET, {
            expiresIn: 300 // expires in 5min
        });
-       return res.json({ auth: true, token: token });
+       return res.json({ auth: true, token: token, nome: user[0].nome, email: user[0].email, cnpj: user[0].cnpj  });
        } 
 
        res.status(500).json({message: 'Login inválido!', user: user[0]});
@@ -93,14 +93,14 @@ if(cnpj){
       const nome = request.body.nome
       const email = request.body.email
       const cnpj = request.body.cnpj
-      const senha = request.body.senha
+      const password = request.body.password
 
 
       User.create({
           nome: nome,
           email: email,
           cnpj: cnpj,
-          senha: senha
+          password: password
       }).then(() => {
           response.status(Status.CREATED).send("Usuario cadastrado com Sucesso !")
       }).catch((error) => next(error))
@@ -112,7 +112,7 @@ if(cnpj){
       const nome = request.body.nome
       const email = request.body.email
       const cnpj = request.body.cnpj
-      const senha = request.body.senha
+      const password = request.body.password
 
       User.findByPk(id).then((user) => {
           if (user) {
@@ -120,7 +120,7 @@ if(cnpj){
                   nome: nome,
                   email: email,
                   cnpj: cnpj,
-                  senha: senha
+                  password: password
               }, { where: { id: id } }).then(() => {
                   response.send("Cadastro atualizado com Sucesso !")
               }).catch((error) => next(error))

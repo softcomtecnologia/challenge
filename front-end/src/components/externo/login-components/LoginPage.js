@@ -1,136 +1,196 @@
-import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import LoginService from '../../../services/LoginService';
+import React, {Component} from 'react';
+import { Button, TextField, Checkbox, FormControlLabel, Link, ThemeProvider, createMuiTheme} from '@material-ui/core';
+import { Link as Lr } from 'react-router-dom';
+import LoginPageService from './LoginPageService';
+/* import './styles.css'; */
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://github.com/pedrinhoas7">
-        pedrinhoas7
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
+const theme = createMuiTheme({
+    overrides: {
+        MuiTypography:{
+            colorPrimary:{
+                color: '#0073FC'
+            }
+        },
+        MuiInputBase:{
+            input:{
+                backgroundColor: 'FFFFFF',
+                border: '1px solid #CCCCCC',
+                borderRadius: '4px',
+            },
+            root:{
+                marginBottom: '16px',
+                fontFamily: 'Wonder Unit Sans',
+                width: '100%'
+            }
+        },
+        MuiFormControl:{
+            root:{  
+                alignItems: 'center',
+                width: '75%'
+            }
+        }
+    }
+})
+
+
+class LoginPage extends Component {
+    constructor(props){
+        super(props);
+        const email = localStorage.getItem('email');
+        if(email !== null){
+            this.state={
+                email: email,
+                password: '',
+                loading: false,
+                checked: true,
+                error: '',
+            }
+        }else{
+            this.state={
+                email: '',
+                password: '',
+                loading: false,
+                checked: false,
+                error: '',
+            }
+        }
+    }
+
+    submit = async (e) => {
+        e.preventDefault();
+        const { email, password, checked } = this.state;
+        this.setState({ loading: true });
+        try {
+            if( email !== '' && password !== ''){
+
+                const body = { email: email, password: password}
+    
+                const res = await LoginPageService.attemptLogin(body);
+                console.log(res);
+                if(res === true){
+                    if(checked){
+                        localStorage.setItem('email', email);
+                    }
+                    this.setState({ loading: false });
+                    /* return window.location.reload(); */
+                }else{
+                  
+                    this.setState({ error: 'Credenciais Invalidas'})
+                    this.setState({ loading: false });
+                    return false;
+                }
+            }
+        } catch (error) {
+            this.setState({ error: 'Credenciais Invalidas'})
+            this.setState({ loading: false });
+            throw error;
+        }
+    }
+
+    changeEmail = (e) => {
+        const value = e.target.value;
+        this.setState({ email: value });
+    }
+
+    changePassword = (e) => {
+        const value = e.target.value;
+        this.setState({ password: value });
+    }
+
+    checkboxChange = (e) => {
+        const { checked } = this.state;
+        if(!checked){
+            localStorage.setItem('checked', true);
+            this.setState({ checked: true });
+        }else{
+            localStorage.removeItem('email');
+            localStorage.setItem('checked', false);
+            this.setState({ checked: false });
+        }
+    }
+
+  s
+    // .MuiTypography-colorPrimary
+    render(){
+        const { password, email, loading, checked } = this.state;
+
+        return(
+            <ThemeProvider theme={theme}>
+                <div className="color-background">
+                    <div className="box">
+                        <div className=" div-img vertical-aling">
+                           {/*  <img className='img' src={require('../..//assets/images/icons/img-background-login.png')} alt="img" /> */}
+                        </div>
+                        <div className="box-card">
+                            <div className="card-login " variant="outlined">
+                                <div className="logo-form-login">
+                                    {/* <img className=" logo-form__img text-center" src={require('../../assets/images/icons/logo-form.png')} alt="img"/> */}
+                                    <p>App</p>
+                                </div>
+                                <form onSubmit={this.submit}>
+                                    <div className='centerForm'>
+                                        <TextField
+                                            required={true}
+                                            variant="outlined"
+                                            size='small'
+                                            type='email'
+                                            placeholder="exemplo@exemplo.com"
+                                            onChange={this.changeEmail}
+                                            value={email}
+                                            onSubmit={this.submit}
+                                        />
+                                        <TextField
+                                            required={true}
+                                            variant="outlined"
+                                            size='small'
+                                            type='password'
+                                            placeholder="Password"
+                                            onChange={this.changePassword}
+                                            value={password}
+                                            onSubmit={this.submit}
+                                        />
+                                    </div>
+                                    <div className='checkbox'>
+                                        <FormControlLabel
+                                            label='Lembrar-me'
+                                            control={
+                                                <Checkbox
+                                                    color='primary'
+                                                    name='remember'
+                                                    value={checked}
+                                                    checked={checked}
+                                                    onChange={this.checkboxChange}
+                                                />
+                                            }
+                                                
+                                        />
+                                        <Link component={Lr} className='link' to='/forgot'>
+                                                Esqueci minha senha
+                                        </Link>
+                                    </div>
+                                    <div className='centerForm'>
+                                        <Button
+                                            disabled={loading}
+                                            type='submit'
+                                            variant='contained'
+                                            color='primary'
+                                            className='btn-login'
+                                        >
+                                            Entrar
+                                        </Button>
+                                    </div>
+                                    {/* {rt} */}
+                                    {this.state.error}
+                                </form>
+
+                            </div>
+                            <p className="direitos"> © 2020. Todos os direitos reservados </p>
+                        </div>
+                    </div>    
+                </div>     
+            </ThemeProvider>            
+        );
+    }
 }
 
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    height: '100vh',
-  },
-  image: {
-    backgroundImage: 'url(https://img.elo7.com.br/product/244x194/23863DE/quadros-personalizado-com-sua-foto-63x130mt-em-tecido-quadros-de-lanches.jpg)',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
-
-
-export default function LoginPage() {
-  const classes = useStyles();
-
-
-  return (
-    <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-          {/* <Typography component="h1" variant="h5">
-            Login
-          </Typography> */}
-          <form className={classes.form} noValidate>
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required  
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-              submit={}
-            >
-              Entrar
-            </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Esqueceu a senha?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Você nao possui conta? Cadastre aqui"}
-                </Link>
-              </Grid>
-            </Grid>
-            <Box mt={5}>
-              <Copyright />
-            </Box>
-          </form>
-        </div>
-      </Grid>
-    </Grid>
-  );
-}
+export default LoginPage;

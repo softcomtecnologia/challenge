@@ -33,7 +33,7 @@ const User = sequelize.define('User', {
           len: [2, 255]
         }
       },
-      senha: {
+      password: {
         allowNull: false,
         type: Sequelize.STRING(255),
         validate: {
