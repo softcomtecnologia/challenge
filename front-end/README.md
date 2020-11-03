@@ -1,51 +1,68 @@
-# Front-end Challenge (ReactJS) - Softcom
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo _README_ na raiz do projeto falando sobre o desenvolvimento do desafio.
+## Available Scripts
 
-Focamos aqui em design de código e design patterns em _TypeScript_ com e principalmente criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
+In the project directory, you can run:
 
-A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contato e vamos enviar um retorno do teste enviado. Faremos questão de falar seus pontos fortes e os pontos a melhorar. Então, aproveite essa oportunidade. =]
+### `yarn start`
 
-## Principais responsabilidades que buscamos
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- Colaborar com idéias que possam melhorar nossos sistemas e a vida dos nossos usuários;
-- Estar disposto a aprender e a ensinar;
-- Cuidar dos nossos sistemas como se fossem seus filhos;
-- Estar sempre atento a oportunidades para melhorar o código e nossos processos.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Requisitos e Skills
+### `yarn test`
 
-- Experiência com TypeScript;
-- HTML5 e CSS3;
-- React Hooks e Context API;
-- Styled Components;
-- Clean Code;
-- Conhecer o básico de versionamento com Git;
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Diferenciais
+### `yarn build`
 
-- Experiência em construir formulários com Formik + Yup;
-- Experiência em consumir dados de Graphql e/ou API Rest;
-- Experiência em consumir o JWT Token;
-- Experiência com Material-UI e/ou React-Bootstrap;
-- Experiência com metodologia ágil;
-- Testes unitários com Jest;
-- Experiência com Continuous integration/continuous delivery;
-- Conhecimento em inglês para escrita de comentários, revisão de PRs e leitura;
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Problema
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-No desafio back-end, criamos uma lojinha virtual para pequenos empreendedores. Temos basicamente o seguinte fluxo: Tela de login, tela de cadastro do usuário, Tela de listagem de itens cadastrados pelo usário. Também precisamos de telas ou modais para as seguintes ações do sistema: Cadastrar item, remover item e atualizar item.
-Pedimos que esse desafio seja feito em ReactJS e caso você também tenha feito o desafio do back-end, pode integrar sua API com esse desafio front-end.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Plus
+### `yarn eject`
 
-- Caso tenha optado por fazer também o desafio back-end e integrar os dois desafios, gostaríamos de ver como resolve a parte de segurança também no front-end consumindo o JWT Token.
-- Da mesma maneira não estamos cobrando testes. Mas caso queira ganhar pontos extras, testes unitários cairiam bem na entrega.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Avaliação
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Para nos enviar seu código, você pode:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-- Fazer um fork desse repositório, e nos mandar uma pull-request.
-- Nos enviar o link do repositório por e-mail: lab@softcomtecnologia.com.br.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
