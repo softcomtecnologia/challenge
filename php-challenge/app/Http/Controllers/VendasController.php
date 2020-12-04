@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 use App\Models\Venda;
+use App\Models\VendaProduto;
 use App\Models\Produto;
 use Carbon\Carbon;
 
@@ -15,10 +16,23 @@ class VendasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request )
     {
-        $vendas = Venda::all();
-        return response()->json(['data', $vendas]);
+        $array = null;
+        $cont = 1;
+        $vendaProduto = VendaProduto::all();
+        foreach($vendaProduto as $value){
+                $vendaProduto = $value;
+            if($vendaProduto->venda_id == $request->id){
+                $array[$cont] = $vendaProduto;
+                $cont++; 
+            }
+        }
+        if(!$array){
+            $vendaProduto = VendaProduto::all();
+            return response()->json(['data', $vendaProduto]);
+        }
+        return response()->json(['data', $array]);
     }
 
     /**
@@ -40,11 +54,12 @@ class VendasController extends Controller
     public function store(Request $request)
     {
         try{
-        $venda = Venda::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'address' => $request->address,
-        ]);
+            $venda = Venda::create([
+                'name' => $request->name,
+                'fone' => $request->fone,
+                'email' => $request->email,
+                'address' => $request->address,
+            ]);
      
         return response()->json(['venda' => $venda, 'status' => true], 200);
     } catch (Exception $e) {

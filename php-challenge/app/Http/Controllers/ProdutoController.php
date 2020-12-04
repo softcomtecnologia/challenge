@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use App\Models\Venda;
 use App\Models\VendaProduto;
 
 class ProdutoController extends Controller
@@ -25,28 +26,28 @@ class ProdutoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function addProduto(Request $request)
-    {
+    {       
+            /* SELECIONA VENDA */
+            $getVenda = Venda::find($request->venda_id);
 
-        $venda_produto_id = $request->venda_produto_id;
-            $getVenda = VendaProduto::find($venda_produto_id);
-            if(!$getVenda){
+            /* SELECIONA PRODUTO */
+            $produto_id = $request->produto_id;
+            $getProduto = Produto::find($produto_id);
+            $status = $request->status;
+            if(!$getProduto){
                 return \response()->json(['status' => FALSE, "erro" => "Não existe venda associada"], 500);
             }
         try {
-            $venda_produto_id = $request->venda_produto_id;
-            $getVenda = VendaProduto::find($venda_produto_id);
-            $produto_id = $request->produto_id;
-            $getProduto = Produto::find($produto_id);
-            $amount = $request->amount;
-        
-            $produto = Produto::create([
-            'name' => $getProduto->name,
-            'description' => $getProduto->description,
-            'value' => $getProduto->value,
-            'amount' => $amount,
-            'venda_produto_id' => $getVenda->id
-        ]);
-            return response()->json(['venda produto' => $getVenda, 'produto adicionado' => $produto], 200);
+            $vendaProduto = VendaProduto::create([
+                'status' => $status,
+                'venda_id' => $getVenda->id,
+                'produto_id' => $getProduto->id
+            ]);
+            /* $amount = $request->amount;
+            $getVendaProduto->venda_id = $getVendaProduto->id;
+            $getVendaProduto->produto_id = $getProduto->id;
+            $getVendaProduto->update(); */
+            return response()->json(['venda produto' => $vendaProduto, 'venda' => $getVenda, 'produto adicionado' => $getProduto], 200);
         }catch(Exception $e){
             return \response()->json(['status' => false, "erro" => $e], 500);
         }

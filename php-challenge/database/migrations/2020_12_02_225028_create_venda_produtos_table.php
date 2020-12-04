@@ -16,8 +16,8 @@ class CreateVendaProdutosTable extends Migration
         Schema::create('venda_produtos', function (Blueprint $table) {
             $table->id();
             $table->string('status');
-          /*   $table->unsignedBigInteger('venda_id')->nullable();
-            $table->foreign('venda_id')->references('id')->on('vendas'); */
+            $table->unsignedBigInteger('venda_id')->nullable();
+            $table->foreign('venda_id')->references('id')->on('vendas');
             $table->unsignedBigInteger('produto_id')->nullable();
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->timestamps();

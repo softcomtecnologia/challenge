@@ -18,8 +18,8 @@ class CreateVendasTable extends Migration
             $table->string('name');
             $table->string('fone');
             $table->string('email');
-            $table->unsignedBigInteger('venda_produto_id')->nullable();
-            $table->foreign('venda_produto_id')->references('id')->on('venda_produtos');  
+            /* $table->unsignedBigInteger('venda_produto_id')->nullable();
+            $table->foreign('venda_produto_id')->references('id')->on('venda_produtos'); */  
             $table->string('address')->nullable();
             $table->string('valor')->nullable();
             $table->timestamps();
