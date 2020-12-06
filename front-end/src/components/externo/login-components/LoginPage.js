@@ -72,7 +72,7 @@ class LoginPage extends Component {
                         localStorage.setItem('email', email);
                     }
                     this.setState({ loading: false });
-                    /* return window.location.reload(); */
+                    return window.location.href = "home"
                 }else{
                   
                     this.setState({ error: 'Credenciais Invalidas'})
@@ -109,7 +109,7 @@ class LoginPage extends Component {
         }
     }
 
-  s
+
     // .MuiTypography-colorPrimary
     render(){
         const { password, email, loading, checked } = this.state;
@@ -117,15 +117,15 @@ class LoginPage extends Component {
         return(
             <ThemeProvider theme={theme}>
                 <div className="color-background">
-                    <div className="box">
-                        <div className=" div-img vertical-aling">
-                           {/*  <img className='img' src={require('../..//assets/images/icons/img-background-login.png')} alt="img" /> */}
+                    <div className="box" >
+                        <div style={{float : "left"}}>
+                           {  <img className='img' src='https://image.freepik.com/free-vector/isometric-e-commerce-elements-background_52683-536.jpg' width={850} alt="img" /> }
                         </div>
-                        <div className="box-card">
-                            <div className="card-login " variant="outlined">
-                                <div className="logo-form-login">
-                                    {/* <img className=" logo-form__img text-center" src={require('../../assets/images/icons/logo-form.png')} alt="img"/> */}
-                                    <p>App</p>
+                        <div style={{float : "left", marginLeft : 40}}>
+                            <div style={{marginLeft : 10}} >
+                                <div >
+                                    { <img className=" logo-form__img text-center" src='http://areacontador.softcomsistemas.com.br//img/logo_softcomshop.png' width={400} style={{marginLeft : -10}} alt="img" /> }
+                                    
                                 </div>
                                 <form onSubmit={this.submit}>
                                     <div className='centerForm'>
@@ -184,7 +184,7 @@ class LoginPage extends Component {
                                 </form>
 
                             </div>
-                            <p className="direitos"> © 2020. Todos os direitos reservados </p>
+                            <p style={{marginLeft : 20}}> © 2020. Todos os direitos reservados </p>
                         </div>
                     </div>    
                 </div>     

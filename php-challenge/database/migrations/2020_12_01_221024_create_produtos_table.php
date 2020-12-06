@@ -18,9 +18,7 @@ class CreateProdutosTable extends Migration
             $table->string('name');
             $table->float('value');
             $table->integer('amount');
-            $table->string('description');
-  /*           $table->unsignedBigInteger('venda_produto_id')->nullable();
-            $table->foreign('venda_produto_id')->references('id')->on('venda_produtos');  */   
+            $table->string('description');  
             $table->timestamps();
         });
     }

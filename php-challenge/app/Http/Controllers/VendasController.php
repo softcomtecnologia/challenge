@@ -29,7 +29,10 @@ class VendasController extends Controller
             }
         }
         if(!$array){
-            $vendaProduto = VendaProduto::all();
+            $vendaProduto = Venda::find($request->id);
+            if(!$vendaProduto){
+                $vendaProduto = Venda::all();
+            }
             return response()->json(['data', $vendaProduto]);
         }
         return response()->json(['data', $array]);
@@ -67,16 +70,7 @@ class VendasController extends Controller
     }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -107,8 +101,19 @@ class VendasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        try {
+            $vendas = Venda::find($request->id);
+            if (!$vendas) {
+                return response()->json(['status' => false, 'msg' => 'Venda não existe !'], 404);
+            } else {
+                $vendas->destroy($vendas->id);
+                return response()->json(['status' => true, 'msg' => 'Venda deletada com sucesso !'], 200);
+            }
+        }catch(Exception $e){
+            return response()->json(['status' => false, 'msg' => 'Erro no interno :'+ $e], 200);
+        }
+
     }
 }

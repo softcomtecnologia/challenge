@@ -56,7 +56,7 @@ class VendaProdutoController extends Controller
                 'address' => $request->address,
             ]);
             $vendaProduto = VendaProduto::create([
-                'status' => $request->status,
+                'status' => 'ADICIONADO',
                 'venda_id' => $venda->id,
         ]);
             return response()->json(['venda produto' => $vendaProduto, 'venda' => $venda], 200);
@@ -65,16 +65,37 @@ class VendaProdutoController extends Controller
        /*  } */
     }
 
-    /**
+   /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    /* TODO: ENCONTRAR SOMA DOS PRODUTOS E FINALIZAR A VENDA.
+     public function fechametoVenda(Request $request)
     {
-        //
-    }
+        $desconto = $request->desconto;
+        $desconto = $desconto /1000;
+        if(!$desconto){
+            $desconto = 0;
+        }
+        $vendaProduto = VendaProduto::find($request->venda_produto_id   );
+        if($vendaProduto == null){
+            return response()->json(['status' => false, 'msg' =>  "Não existe nenhum produto vinculado a essa venda", ],404);
+        }
+
+        $venda = Venda::find($vendaProduto->venda_id);
+        
+        if($venda == null){
+            return response()->json(['status' => false, 'msg' =>  "Venda não cadastrado", ],404);
+        }
+        $vendaProduto->status = 'COMPRADO';
+        $vendaProduto->desconto - $desconto;
+        $vendaProduto->update();
+
+            return response()->json(['valor': $ven, 'desconto' => $desconto ,'venda' => $venda, 'venda produto' => $vendaProduto],200);
+    } */
+
 
     /**
      * Show the form for editing the specified resource.
@@ -105,8 +126,26 @@ class VendaProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+
+        /* TODO:  Refazer função  Apagar vendaProduto de um produto
+         $produto = Produto::find($request->produto_id);
+        $vendaProduto = VendaProduto::find($request->vendaProduto);
+        if(!$produto || !$vendaProduto){
+            return response()->json(['data' => 'Não existe esse produto na venda', 'status' => false]);
+        }else{
+            return response()->json(['produto' => $produto, 'venda' => $vendaProduto]);
+        }
+        
+        foreach($vendaProduto as $value){
+            $venda = $value;
+            if($venda->produto_id == $produto->id){
+                $venda->delete();
+                return response()->json(['venda'=> $venda, 'status' => true]);
+            }
+        } */
+        
+        
     }
 }

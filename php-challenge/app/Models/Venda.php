@@ -20,6 +20,7 @@ class Venda extends Model
         'address',
         'fone',
         'valor',
+        'desconto',
         "venda_produto_id"
     ];
 

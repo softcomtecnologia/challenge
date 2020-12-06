@@ -17,11 +17,10 @@ class CreateVendasTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('fone');
-            $table->string('email');
-            /* $table->unsignedBigInteger('venda_produto_id')->nullable();
-            $table->foreign('venda_produto_id')->references('id')->on('venda_produtos'); */  
+            $table->string('email'); 
             $table->string('address')->nullable();
-            $table->string('valor')->nullable();
+            $table->float('valor')->nullable();
+            $table->float('desconto')->nullable();
             $table->timestamps();
         });
     }

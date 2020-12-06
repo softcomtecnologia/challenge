@@ -66,14 +66,14 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-       /*  $cliente = Cliente::where('id', $id)->first();
+        $cliente = Cliente::where('id', $id)->first();
         if($cliente){
             $user->name = $request->name;
             $user->email = $request->email;
             $user->fone = $request->fone;
             $user->fone = $request->fone;
             $user->update();    
-        } */
+        }
         return response()->json(['user' => $user]);
         
     }

@@ -17,7 +17,7 @@ class CreateVendaProdutosTable extends Migration
             $table->id();
             $table->string('status');
             $table->unsignedBigInteger('venda_id')->nullable();
-            $table->foreign('venda_id')->references('id')->on('vendas');
+            $table->foreign('venda_id')->references('id')->on('vendas')->onDelete('cascade');;
             $table->unsignedBigInteger('produto_id')->nullable();
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->timestamps();

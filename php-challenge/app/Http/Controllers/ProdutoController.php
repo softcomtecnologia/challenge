@@ -43,10 +43,6 @@ class ProdutoController extends Controller
                 'venda_id' => $getVenda->id,
                 'produto_id' => $getProduto->id
             ]);
-            /* $amount = $request->amount;
-            $getVendaProduto->venda_id = $getVendaProduto->id;
-            $getVendaProduto->produto_id = $getProduto->id;
-            $getVendaProduto->update(); */
             return response()->json(['venda produto' => $vendaProduto, 'venda' => $getVenda, 'produto adicionado' => $getProduto], 200);
         }catch(Exception $e){
             return \response()->json(['status' => false, "erro" => $e], 500);

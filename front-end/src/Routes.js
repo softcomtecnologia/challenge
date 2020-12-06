@@ -3,17 +3,35 @@ import {Switch, BrowserRouter as Router,
     Route,} from 'react-router-dom';
 import LayoutInterno from './components/interno/LayoutInterno';
 import LayoutExterno from './components/externo/LayoutExterno'
+import ModalCreateProduto from './components/modals/ModalCreateProduto';
+import ModalCreateVendas from './components/modals/ModalCreateVenda';
 
 const Routes = () => (
     <Router>
         <Switch>
-
-             {/* Rotas externas da aplicação */}
-          <Route exact path="/home" component={LayoutInterno}/>
+        {/* Teste de componentes */}
+        <Route exact path="/test" exact={true} component={ModalCreateProduto}/>
 
             {/* Rotas externas da aplicação */}
           <Route exact path="/login" component={LayoutExterno}/>
           <Route exact path="/" component={LayoutExterno}/>
+
+              {/* Rotas interna da aplicação */}
+
+                {/* Home */}
+              <Route exact path="/home" exact={true} component={LayoutInterno}/>
+
+                {/* Produtos*/}
+              <Route exact path="/produtos" exact={true} component={LayoutInterno}/>
+              <Route exact path="/produtos/create" exact={true} component={LayoutInterno}/>
+
+                {/* Produtos*/}
+              <Route exact path="/vendas" exact={true} component={LayoutInterno}/>
+              <Route exact path="/vendas/create" exact={true} component={LayoutInterno}/>
+
+                {/* Modais */}
+              <Route exact path="/modal/vendas" exact={true} component={ModalCreateVendas}/>
+              <Route exact path="/modal/produtos" exact={true} component={ModalCreateProduto}/>
 
         </Switch>
     </Router>

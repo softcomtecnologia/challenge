@@ -24,27 +24,27 @@ use App\Http\Controllers\Auth\UserAuth;
 /* AUTH */
 Route::post('/verify', [UserAuth::class, 'verify']);
 
-
-/* USER */
+/* USER  * -- TODO: ajustar o middleware*/
 Route::group(['middleware'=>['auth:api']], function(){
     Route::get('/user', [UserController::class, 'index']);
  });
-
 Route::post('/user', [UserController::class , 'store']);
 Route::get('/user/{id}', [UserController::class, 'show']);
 Route::put('/user/{id}', [UserController::class, 'update']);
 
-
 /* PRODUTO */
 Route::post('/produto', [ProdutoController::class , 'store']);
-Route::post('/vendaProduto', [ProdutoController::class , 'addProduto']);
+Route::post('/produto/add', [ProdutoController::class , 'addProduto']);
+Route::get('/produto', [ProdutoController::class , 'index']);
 
 /* VENDAS */
 Route::post('/vendas', [VendasController::class , 'store']);
 Route::get('/vendas', [VendasController::class , 'index']);
-
+Route::delete('/vendas', [VendasController::class , 'destroy']);
 
 /* VENDAS PRODUTO CONTROLLER */
 Route::post('/carrinho', [VendaProdutoController::class , 'store']);
 Route::get('/carrinho', [VendaProdutoController::class , 'index']);
+Route::post('/carrinho/finalizar', [VendaProdutoController::class , 'fechametoVenda']);
+
 

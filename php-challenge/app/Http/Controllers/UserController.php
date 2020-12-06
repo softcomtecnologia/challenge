@@ -40,7 +40,7 @@ class UserController extends Controller
         ]);
         return response()->json(['user' => $user, 'status' => true], 200);
     } catch (Exception $e) {
-        return response()->json(['data' => 'Erro interno','status' => false], 500);
+        return response()->json(['data' => 'Erro de conexão','status' => false], 500);
     }
     }
 
