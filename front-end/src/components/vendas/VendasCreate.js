@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Button, TextField, Card, CardContent, makeStyles,Typography,createMuiTheme,ThemeProvider, CardActions} from '@material-ui/core';
 import VendasService from './VendasService';
+import FormListAddProduto from '../produto/FormListAddProduto';
 
 const theme = createMuiTheme({
     overrides: {
@@ -63,8 +64,8 @@ class VendasCreate extends Component {
                   console.log(res);
                   this.setState({ loading: false });
                   this.setState({id : res});
-                  console.log(this.id);
-                  /* return window.location.href = '/vendas/produto/' */
+                  console.log(this.state.id);
+                  return window.location.href = '/vendas/produto?id='+this.state.id 
                   /* return window.location.reload(); */
               }else{
                 
@@ -101,6 +102,7 @@ class VendasCreate extends Component {
     render(){
         const { name, email, fone, address } = this.state;
         return (
+            <div>
             <Card  style={{width:  1000, marginLeft : 285}}>
       <CardContent>
       <ThemeProvider theme={theme} >
@@ -151,7 +153,7 @@ class VendasCreate extends Component {
                                     </div>
                                     <div className='checkbox'>
                                         {this.state.error}
-                                        <Button
+                                       {/*  <Button
                                             disabled={false}
                                             type='submit'
                                             variant='contained'
@@ -159,7 +161,7 @@ class VendasCreate extends Component {
                                             className='btn-login'
                                         >
                                             Iniciar Venda
-                                        </Button>
+                                        </Button> */}
                                     </div>
                             
                                 </form>
@@ -171,7 +173,11 @@ class VendasCreate extends Component {
 {/*         <Button size="small">Learn More</Button> */}
       </CardActions>
     </Card>
-            
+
+    
+    <FormListAddProduto/>
+    </div>
+           
         )
     }
 }

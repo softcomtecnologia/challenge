@@ -25,13 +25,14 @@ const Routes = () => (
               <Route exact path="/produtos" exact={true} component={LayoutInterno}/>
               <Route exact path="/produtos/create" exact={true} component={LayoutInterno}/>
 
-                {/* Produtos*/}
+                {/* Vendas*/}
               <Route exact path="/vendas" exact={true} component={LayoutInterno}/>
               <Route exact path="/vendas/create" exact={true} component={LayoutInterno}/>
+              <Route exact path="/vendas/produto" exact={true} component={LayoutInterno}/>
 
                 {/* Modais */}
               <Route exact path="/modal/vendas" exact={true} component={ModalCreateVendas}/>
-              <Route exact path="/modal/produtos" exact={true} component={ModalCreateProduto}/>
+              <Route exact path="/modal/produto" exact={true} component={ModalCreateProduto}/>
 
         </Switch>
     </Router>

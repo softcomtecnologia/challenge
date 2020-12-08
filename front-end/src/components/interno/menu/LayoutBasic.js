@@ -10,6 +10,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuNav from './MenuNav';
+import { Link } from 'react-router-dom';
 import { AddBox, MonetizationOn, Send } from '@material-ui/icons';
 
 
@@ -56,22 +57,35 @@ export default function ClippedDrawer() {
       >
         <Toolbar />
         <div className={classes.drawerContainer}>
+          
           <List>
-            {['Produtos', 'Relatorios'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <AddBox/> : <Send  /> }</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
+            <Link to="/vendas">
             {['Vendas'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <MonetizationOn/> : <Send  /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
+            </Link>
+            <Link to="/produtos">
+            {['Produtos'].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>{index % 2 === 0 ? <AddBox/>: <Send  /> }</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+            </Link>
+          </List>
+          <Divider />
+          <List>
+          <Link to="/relatorios">
+            {['Relatorios'].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>{index % 2 === 0 ? <AddBox/> : <Send  /> }</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+            </Link>
           </List>
           
         </div>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import React, { Component } from "react";
+import { withStyles, makeStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -7,7 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-
+import ProdutoService from './ProdutoService'
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -27,54 +27,66 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+class FormListProduto extends Component {
+
+  constructor(props) {
+      super(props)
+      this.state = {
+          produtos: []
+      };
+  }
+
+  componentDidMount() {
+          ProdutoService.getProdutos().then(produtos => {
+              produtos.map(produto => {
+                  const mapping = produto;
+                  const arr = this.state.produtos.slice();
+                  arr.push(mapping);
+
+                  this.setState({ produtos: arr });
+              })
+          })
+  }
 
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 700,
-  },
-});
-
-export default function FormListProduto() {
-  const classes = useStyles();
-
-  return (
-    <TableContainer style={{marginTop: 0, marginLeft:250, width: 1100      }} component={Paper}>
-      <Table className={classes.table} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Produto</StyledTableCell>
-            <StyledTableCell align="right">Nome</StyledTableCell>
-            <StyledTableCell align="right">Quantidade</StyledTableCell>
+    render(){
+        return (
+          <TableContainer style={{marginTop: 0, marginLeft:250, width: 1100      }} >
+          <Table >
+            <TableHead>
+            <TableRow>
+            <StyledTableCell>Nome</StyledTableCell>
             <StyledTableCell align="right">Descrição</StyledTableCell>
+            <StyledTableCell align="right">Quantidade</StyledTableCell>
             <StyledTableCell align="right">Valor</StyledTableCell>
+            <StyledTableCell align="right">cod</StyledTableCell>
           </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+            </TableHead>
+            <TableBody>
+              
+        {/* {this.state.produtos.map(mapping => (
+            <div>id: {mapping.id}, nome: {mapping.name}</div>
+            
+        ))} */}
+       {this.state.produtos.map((row) => (
+            <StyledTableRow key={row.id}>
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              <StyledTableCell align="right">{row.description}</StyledTableCell>
+              <StyledTableCell align="right">{row.amount}</StyledTableCell>
+              <StyledTableCell align="right">{row.value}</StyledTableCell>
+            {  <StyledTableCell align="right">{row.id}</StyledTableCell>}
             </StyledTableRow>
           ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-  );
+            </TableBody>
+          </Table>
+        </TableContainer>
+        )
+    }
 }
+
+export default FormListProduto;
+
+

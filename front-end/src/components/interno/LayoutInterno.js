@@ -29,6 +29,10 @@ class LayoutInterno extends Component{
                   <LayoutBasic/>
                   <VendasCreate/>
             </Route>
+            <Route path='/vendas/produto' exact={true}>
+                  <LayoutBasic/>
+                  {<VendasCreate/>}
+            </Route>
             <Route path='/vendas' exact={true}>
                   <LayoutBasic/>
                

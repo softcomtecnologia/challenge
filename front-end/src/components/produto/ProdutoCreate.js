@@ -60,7 +60,7 @@ class ProdutoCreate extends Component {
       
               if(res === true){
                   this.setState({ loading: false });
-                  return window.location.href = '/modal/produtos'
+                  return window.location.href = '/modal/produto'
                   /* return window.location.reload(); */
               }else{
                 
