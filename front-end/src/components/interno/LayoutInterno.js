@@ -7,6 +7,8 @@ import LayoutBasic from './menu/LayoutBasic';
 import ProdutoCreate from '../produto/ProdutoCreate';
 import ProdutoList from '../produto/ProdutoList';
 import VendasCreate from '../vendas/VendasCreate'
+import Dashboard from '../dashboard/Dashboard';
+import VendasList from '../vendas/VendasList';
 
 
 class LayoutInterno extends Component{
@@ -16,6 +18,7 @@ class LayoutInterno extends Component{
         <Switch>
             <Route path='/home' exact={true}>
                   <LayoutBasic/>
+                  <Dashboard/>
             </Route>
             <Route path='/produtos' exact={true}>
                   <LayoutBasic/>
@@ -35,7 +38,7 @@ class LayoutInterno extends Component{
             </Route>
             <Route path='/vendas' exact={true}>
                   <LayoutBasic/>
-               
+                  <VendasList/>
             </Route>
         </Switch>
         </>
