@@ -1,83 +1,146 @@
-import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
+import React, {Component} from 'react';
+import {withStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import NativeSelect from '@material-ui/core/NativeSelect';
-import InputBase from '@material-ui/core/InputBase';
-import { Card } from '@material-ui/core';
+import { Card, CardContent } from '@material-ui/core';
+import  ProdutoService  from './ProdutoService';
+import TextField from '@material-ui/core/TextField';
+import { Autocomplete } from '@material-ui/lab';
+import {Table,TableBody, TableCell, TableContainer, TableHead, TableRow} from '@material-ui/core';
 
-const BootstrapInput = withStyles((theme) => ({
+
+const StyledTableCell = withStyles((theme) => ({
+  head: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  body: {
+    fontSize: 14,
+  },
+}))(TableCell);
+
+const StyledTableRow = withStyles((theme) => ({
   root: {
-    'label + &': {
-      marginTop: theme.spacing(3),
-      marginLeft: theme.spacing(80)
+    '&:nth-of-type(odd)': {
+      backgroundColor: theme.palette.action.hover,
     },
   },
-  input: {
-    borderRadius: 4,
-    position: 'relative',
-    backgroundColor: theme.palette.background.paper,
-    border: '1px solid #ced4da',
-    fontSize: 16,
-    padding: '10px 26px 10px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    // Use the system font instead of the default Roboto font.
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:focus': {
-      borderRadius: 4,
-      borderColor: '#80bdff',
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-    },
-  },
-}))(InputBase);
+}))(TableRow);
 
-const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
-  },
-}));
 
-export default function FormListAddProduto() {
-  const classes = useStyles();
-  const [age, setAge] = React.useState('');
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+
+class FormListAddProduto extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      produtos: [],
+      produto: null,
+      produtosForm: []
+    }
+    this.handleChange = this.handleChange.bind(this)
+    
+}
+
+handleChange(e) {
+  this.setState({option: this.props.produtos[e.target.value].id})
+}
+finalizar = (e) => {
+  console.log(this.state.produtosForm);
+}
+adicionarProduto = (e) => {
+  var p = this.state.produtosForm;
+  p.push(this.state.produto);
+  this.setState({produtosForm: p});
+}
+
+apagarProduto = (e) => {
+  console.log(e.target.dataset.value);
+  this.state.produtosForm.map((produto, index) => {
+    console.log(produto);
+      if (produto.id == e.target.dataset.value) {
+       var newProdutosForm = this.state.produtosForm;
+       newProdutosForm.pop(index)
+       this.setState({produtosForm: newProdutosForm});
+      }
+  });
+}
+
+componentDidMount() {
+    ProdutoService.getProdutos().then(produtos => {
+        produtos.map(produto => {
+            const mapping = produto;
+            const arr = this.state.produtos.slice();
+            arr.push(mapping);
+            this.setState({ produtos: arr });
+        })
+    })
+}
+
+
+  render(){
+
   return (
-    <div>
-      <Card className={classes.margin} style={{width : 1000 , marginLeft: 283}}>
 
-      <FormControl className={classes.margin} style={{whidth: 50}}>
-        <Select
-          labelId="demo-customized-select-label"
-          id="demo-customized-select"
-          value={'A'}
-          onChange={handleChange}
-          input={<BootstrapInput />}
-          
-        >
-          <MenuItem value={'A'}>
-            <em>Selecione</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
+    <div>
+      <Card  style={{width : 1000, marginTop: 10 }}>
+
+      <FormControl  style={{whidth: 50}}>
+      <input type="hidden" value="${value.id}" name="produto"></input>
+      <Autocomplete
+      id="combo-box-demo"
+      placeholder="Selecione..."
+      options={this.state.produtos}
+      getOptionLabel={(produto) => produto.id +' - '+ produto.name}
+      onChange={(event, newValue) => {
+        this.state.produto = newValue;
+      }}
+      style={{ width: 300 }}
+      renderInput={(params) => <TextField {...params} label="produto" variant="outlined" />}
+    />
+      <button 
+      onClick={this.adicionarProduto}
+      >+</button>
+      {/* <Select
+      options={options} /> */}
       </FormControl>
+      <CardContent>
+      <TableContainer >
+          <Table >
+            <TableHead>
+            <TableRow>
+            <StyledTableCell>Nome</StyledTableCell>
+            <StyledTableCell align="right">Descrição</StyledTableCell>
+            <StyledTableCell align="right">Quantidade</StyledTableCell>
+            <StyledTableCell align="right">Valor</StyledTableCell>
+            <StyledTableCell align="right">cod</StyledTableCell>
+            <StyledTableCell align="right">Apagar</StyledTableCell>
+          </TableRow>
+            </TableHead>
+            <TableBody>
+      {this.state.produtosForm.map((row) => (
+         <StyledTableRow key={row.id}>
+        <StyledTableCell component="th" scope="row">
+           {row.name}
+         </StyledTableCell>
+         <td align="right">{row.description}</td>
+         <td align="right">{row.amount}</td>
+         <td align="right">{row.value}</td>
+         <td align="right">{row.id}</td>
+         <td align="right" ><button onClick={this.apagarProduto} data-value={row.id}>Apagar</button></td>
+       </StyledTableRow>
+      ))}
+       </TableBody>
+       </Table>
+       </TableContainer>
+      </CardContent>
+        
+      
+      <button 
+      onClick={this.finalizar}
+      >Finalizar</button>
       </Card>
     </div>
-  );
+  )
+  }
 }
+
+export default FormListAddProduto;

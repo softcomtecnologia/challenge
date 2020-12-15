@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, TextField, Card, CardContent, makeStyles,Typography,createMuiTheme,ThemeProvider, CardActions} from '@material-ui/core';
+import { Button, TextField, Card, CardContent,Typography,createMuiTheme,ThemeProvider, CardActions} from '@material-ui/core';
 import VendasService from './VendasService';
 import FormListAddProduto from '../produto/FormListAddProduto';
 
@@ -40,7 +40,7 @@ class VendasCreate extends Component {
     constructor(props){
         super(props);
         this.state = {
-        id: null,
+        id: 'Não iniciada',
         name: 'CONSUMIDOR',   
         email : 'consumidor@consumidor.com.br',
         fone : '(99) 9 9999-9999',
@@ -54,18 +54,14 @@ class VendasCreate extends Component {
       const body = { name: this.name, email : this.email, fone: this.fone, address: this.address} = this.state;
       this.setState({ loading: true });
       try {
-        
 
-              /* const body = { name: name, description: description, amount: amount, value: value} = this.state; */
-               
               const res = await VendasService.postVendas(body);
-      
               if(res){
                   console.log(res);
-                  this.setState({ loading: false });
+                  this.setState({ loading: true });
                   this.setState({id : res});
                   console.log(this.state.id);
-                  return window.location.href = '/vendas/produto?id='+this.state.id 
+                  /* return window.location.href = '/vendas/produto?id='+this.state.id  */
                   /* return window.location.reload(); */
               }else{
                 
@@ -102,8 +98,10 @@ class VendasCreate extends Component {
     render(){
         const { name, email, fone, address } = this.state;
         return (
-            <div>
-            <Card  style={{width:  1000, marginLeft : 285}}>
+            <div style={{width:  1000, marginLeft : 285}}>
+                Venda: {this.state.id}
+            <Card >
+               
       <CardContent>
       <ThemeProvider theme={theme} >
       <Typography  color="textSecondary" gutterBottom>
@@ -153,7 +151,7 @@ class VendasCreate extends Component {
                                     </div>
                                     <div className='checkbox'>
                                         {this.state.error}
-                                       {/*  <Button
+                                       <Button
                                             disabled={false}
                                             type='submit'
                                             variant='contained'
@@ -161,21 +159,16 @@ class VendasCreate extends Component {
                                             className='btn-login'
                                         >
                                             Iniciar Venda
-                                        </Button> */}
-                                    </div>
-                            
+                                        </Button>
+                                    </div>              
                                 </form>
-
             </div>
             </ThemeProvider>
       </CardContent>
-      <CardActions>
-{/*         <Button size="small">Learn More</Button> */}
-      </CardActions>
     </Card>
 
-    
     <FormListAddProduto/>
+    
     </div>
            
         )

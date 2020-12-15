@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { withStyles, makeStyles} from '@material-ui/core/styles';
+import { withStyles} from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
 import ProdutoService from './ProdutoService'
 
 const StyledTableCell = withStyles((theme) => ({
@@ -64,11 +63,6 @@ class FormListProduto extends Component {
           </TableRow>
             </TableHead>
             <TableBody>
-              
-        {/* {this.state.produtos.map(mapping => (
-            <div>id: {mapping.id}, nome: {mapping.name}</div>
-            
-        ))} */}
        {this.state.produtos.map((row) => (
             <StyledTableRow key={row.id}>
               <StyledTableCell component="th" scope="row">
