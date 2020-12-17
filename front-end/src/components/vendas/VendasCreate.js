@@ -40,7 +40,7 @@ class VendasCreate extends Component {
     constructor(props){
         super(props);
         this.state = {
-        id: 'Não iniciada',
+        id: null,
         name: 'CONSUMIDOR',   
         email : 'consumidor@consumidor.com.br',
         fone : '(99) 9 9999-9999',
@@ -149,9 +149,11 @@ class VendasCreate extends Component {
                                             onSubmit={this.submit}
                                         />
                                     </div>
+
                                     <div className='checkbox'>
                                         {this.state.error}
-                                       <Button
+                                        {this.state.id ? 
+                                        null : <Button
                                             disabled={false}
                                             type='submit'
                                             variant='contained'
@@ -159,15 +161,16 @@ class VendasCreate extends Component {
                                             className='btn-login'
                                         >
                                             Iniciar Venda
-                                        </Button>
+                                        </Button>}
+                                       
                                     </div>              
                                 </form>
             </div>
             </ThemeProvider>
       </CardContent>
     </Card>
-
-    <FormListAddProduto/>
+    {this.state.loading ? <FormListAddProduto/> : 'Status: Venda não iniciada, nenhum dado salvo'}
+    
     
     </div>
            

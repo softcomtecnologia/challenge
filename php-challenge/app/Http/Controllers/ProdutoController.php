@@ -16,8 +16,10 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        $produto = Produto::all();
-        return response()->json(['data', $produto]);
+        $produto = Produto::select('*')
+        ->orderBy('name', 'desc')
+        ->get();
+        return response()->json(['produtos', $produto]);
     }
     /**
      * Store a newly created resource in storage.
