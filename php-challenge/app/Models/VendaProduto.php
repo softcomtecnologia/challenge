@@ -17,7 +17,9 @@ class VendaProduto extends Model
     protected $fillable = [
         'status',
         'produto_id',
-        "venda_id"
+        "venda_id",
+        'amount',
+        'value'
      
     ];
 

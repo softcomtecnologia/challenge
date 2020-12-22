@@ -42,8 +42,8 @@ class FormListVendas extends Component {
                   const mapping = venda;
                   const arr = this.state.vendas.slice();
                   arr.push(mapping);
-
                   this.setState({ vendas: arr });
+                  return this.state.vendas
               })
           })
   }

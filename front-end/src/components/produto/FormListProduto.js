@@ -42,8 +42,8 @@ class FormListProduto extends Component {
                   const mapping = produto;
                   const arr = this.state.produtos.slice();
                   arr.push(mapping);
-
                   this.setState({ produtos: arr });
+                  return this.state.produtos
               })
           })
   }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, TextField, Card, CardContent, makeStyles,Typography,createMuiTheme,ThemeProvider, CardActions} from '@material-ui/core';
+import { Button, TextField, Card, CardContent,Typography,createMuiTheme,ThemeProvider, CardActions} from '@material-ui/core';
 import ProdutoService from './ProdutoService';
 
 const theme = createMuiTheme({

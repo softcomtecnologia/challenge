@@ -45,6 +45,9 @@ Route::delete('/vendas', [VendasController::class , 'destroy']);
 /* VENDAS PRODUTO CONTROLLER */
 Route::post('/carrinho', [VendaProdutoController::class , 'store']);
 Route::get('/carrinho', [VendaProdutoController::class , 'index']);
+Route::get('/carrinho/{id}', [VendaProdutoController::class , 'show']);
+Route::put('/carrinho/{id}', [VendaProdutoController::class , 'update']);
+Route::delete('/carrinho/{id}', [VendaProdutoController::class , 'destroy']);
 Route::post('/carrinho/finalizar', [VendaProdutoController::class , 'fechametoVenda']);
 
 

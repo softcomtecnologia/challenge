@@ -11,7 +11,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuNav from './MenuNav';
 import { Link } from 'react-router-dom';
-import { AddBox, MonetizationOn, Send } from '@material-ui/icons';
+import { CardGiftcard, ListAlt, LocalAtm, Send } from '@material-ui/icons';
 
 
 const drawerWidth = 240;
@@ -62,7 +62,7 @@ export default function ClippedDrawer() {
             <Link to="/vendas">
             {['Vendas'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <MonetizationOn/> : <Send  /> }</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <LocalAtm/> : <Send  /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
@@ -70,7 +70,7 @@ export default function ClippedDrawer() {
             <Link to="/produtos">
             {['Produtos'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <AddBox/>: <Send  /> }</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <CardGiftcard/>: <Send  /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
@@ -81,7 +81,7 @@ export default function ClippedDrawer() {
           <Link to="/relatorios">
             {['Relatorios'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <AddBox/> : <Send  /> }</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <ListAlt/> : <Send  /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}

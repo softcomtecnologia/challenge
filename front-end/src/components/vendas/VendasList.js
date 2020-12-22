@@ -1,6 +1,5 @@
 import React, {Component}  from 'react';
 import FormListVendas from './FormListVendas';
-import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import { Link } from 'react-router-dom';

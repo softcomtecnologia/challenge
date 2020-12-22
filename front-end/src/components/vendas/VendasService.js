@@ -21,7 +21,9 @@ export class VendasService extends React.Component {
     async getVendas() {
         try {
             const res = await axios.get(`${this.baseUrl}/vendas`);
-            return await res.data[1]
+            console.log(res.data.venda.data);
+            return await res.data.venda.data
+            
         } catch (error) {
             throw error;
         }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, TextField, Card, CardContent,Typography,createMuiTheme,ThemeProvider, CardActions} from '@material-ui/core';
+import { Button, TextField, Card, CardContent,Typography,createMuiTheme,ThemeProvider} from '@material-ui/core';
 import VendasService from './VendasService';
 import FormListAddProduto from '../produto/FormListAddProduto';
 
@@ -169,7 +169,7 @@ class VendasCreate extends Component {
             </ThemeProvider>
       </CardContent>
     </Card>
-    {this.state.loading ? <FormListAddProduto/> : 'Status: Venda não iniciada, nenhum dado salvo'}
+    {this.state.loading ? <FormListAddProduto id={this.state.id}/> : 'Status: Venda não iniciada, nenhum dado salvo'}
     
     
     </div>

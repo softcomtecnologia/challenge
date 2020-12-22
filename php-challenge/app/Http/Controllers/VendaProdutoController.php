@@ -103,9 +103,16 @@ class VendaProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function show($id)
     {
-        //
+        $venda = Venda::find($id)->first();
+
+        if($venda){
+            $vendaProduto = VendaProduto::where('venda_id', $id)->get();
+            return response()->json(['vendaProduto' => $vendaProduto, 'id' => $id]);
+        }else{
+            return response()->json(['error' => 'cadastro']);
+        }
     }
 
     /**
@@ -117,7 +124,18 @@ class VendaProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $venda = Venda::find($id);
+        $produtoId = $request->produto_id;
+        $vendaProduto = VendaProduto::where('venda_id', $venda->id)->get();
+        foreach($vendaProduto as $produto){
+            if($produto->produto_id == $produtoId){
+                $produto->amount = $request->amount;
+                $produto->value = $request->value;
+                $produto->update();
+                return response()->json(['data' => true], 200);
+            }
+        }
+        
     }
 
     /**
@@ -126,25 +144,24 @@ class VendaProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy(Request $request, $id)
     {
+        $venda = Venda::find($id);
+            $produtoId = $request->produto_id;
+            $vendaProduto = VendaProduto::where('venda_id', $venda->id)->first();
+        try {
+            
 
-        /* TODO:  Refazer função  Apagar vendaProduto de um produto
-         $produto = Produto::find($request->produto_id);
-        $vendaProduto = VendaProduto::find($request->vendaProduto);
-        if(!$produto || !$vendaProduto){
-            return response()->json(['data' => 'Não existe esse produto na venda', 'status' => false]);
-        }else{
-            return response()->json(['produto' => $produto, 'venda' => $vendaProduto]);
-        }
-        
-        foreach($vendaProduto as $value){
-            $venda = $value;
-            if($venda->produto_id == $produto->id){
-                $venda->delete();
-                return response()->json(['venda'=> $venda, 'status' => true]);
+            
+                if ($vendaProduto) {
+                    $vendaProduto->delete();
+                    return response()->json(['data' => true],200);
+                
             }
-        } */
+        }catch(Exception $e){
+            return response()->json(['data' => $e]);
+        }
+       
         
         
     }

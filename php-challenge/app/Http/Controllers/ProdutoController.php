@@ -36,18 +36,22 @@ class ProdutoController extends Controller
             $produto_id = $request->produto_id;
             $getProduto = Produto::find($produto_id);
             $status = $request->status;
+            $amount = $request->amount;
+            $value = $request->value;
             if(!$getProduto){
                 return \response()->json(['status' => FALSE, "erro" => "Não existe venda associada"], 500);
             }
         try {
             $vendaProduto = VendaProduto::create([
                 'status' => $status,
+                'amount' => $amount,
+                'value' => $value,
                 'venda_id' => $getVenda->id,
                 'produto_id' => $getProduto->id
             ]);
             return response()->json(['venda produto' => $vendaProduto, 'venda' => $getVenda, 'produto adicionado' => $getProduto], 200);
         }catch(Exception $e){
-            return \response()->json(['status' => false, "erro" => $e], 500);
+            return \response()->json(['status' => false, "erro" => $e, 'venda_produto' => $vendaProduto], 500);
         }
     
     }

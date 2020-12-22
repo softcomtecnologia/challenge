@@ -51,3 +51,5 @@
 [1208/005307.790:ERROR:exception_snapshot_win.cc(99)] thread ID 15836 not found in process
 [1208/005307.805:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
 [1208/005307.805:ERROR:exception_snapshot_win.cc(99)] thread ID 7280 not found in process
+[1217/050642.401:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1219/002939.491:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)

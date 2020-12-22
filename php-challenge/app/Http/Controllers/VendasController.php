@@ -18,24 +18,8 @@ class VendasController extends Controller
      */
     public function index(Request $request )
     {
-        $array = null;
-        $cont = 1;
-        $vendaProduto = VendaProduto::all();
-        foreach($vendaProduto as $value){
-                $vendaProduto = $value;
-            if($vendaProduto->venda_id == $request->id){
-                $array[$cont] = $vendaProduto;
-                $cont++; 
-            }
-        }
-        if(!$array){
-            $vendaProduto = Venda::find($request->id);
-            if(!$vendaProduto){
-                $vendaProduto = Venda::all();
-            }
-            return response()->json(['data', $vendaProduto]);
-        }
-        return response()->json(['data', $array]);
+        $venda = Venda::paginate(10);
+        return response()->json(['venda' => $venda]);
     }
 
     /**
