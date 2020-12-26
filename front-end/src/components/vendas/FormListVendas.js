@@ -7,6 +7,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import VendasService from './VendasService'
+import { AddIcCallRounded, DeleteForever, ListAlt } from "@material-ui/icons";
+import { IconButton } from "@material-ui/core";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -35,7 +37,18 @@ class FormListVendas extends Component {
           vendas: []
       };
   }
+  deleteVenda = async (e, id) => {
+    console.log(id);
+    const res = await VendasService.deleteVenda(id);
 
+   if (res) {
+       const resp = await VendasService.getVendas();
+       console.log(resp);
+       console.log(this.state.vendas);
+       this.setState({vendas: resp});
+     } 
+   
+   }
   componentDidMount() {
           VendasService.getVendas().then(vendas => {
               vendas.map(venda => {
@@ -58,8 +71,10 @@ class FormListVendas extends Component {
             <StyledTableCell>cod</StyledTableCell>
             <StyledTableCell align="right">Nome</StyledTableCell>
             <StyledTableCell align="right">Telefone</StyledTableCell>
-            <StyledTableCell align="right">Email</StyledTableCell>
+            {/* <StyledTableCell align="right">Email</StyledTableCell> */}
             <StyledTableCell align="right">Valor</StyledTableCell>
+            <StyledTableCell align="right">Abrir</StyledTableCell>
+            <StyledTableCell align="right">Excluir</StyledTableCell>
           </TableRow>
             </TableHead>
             <TableBody>
@@ -72,8 +87,18 @@ class FormListVendas extends Component {
               </StyledTableCell>
               <StyledTableCell align="right">{row.name}</StyledTableCell>
               <StyledTableCell align="right">{row.fone}</StyledTableCell>
-              <StyledTableCell align="right">{row.email}</StyledTableCell>
+              {/* <StyledTableCell align="right">{row.email}</StyledTableCell> */}
               <StyledTableCell align="right">{row.value}</StyledTableCell>
+              <StyledTableCell align="right">
+              <IconButton  color="primary" aria-label="abrir venda">
+                    <ListAlt/>
+                </IconButton>
+              </StyledTableCell>
+              <StyledTableCell align="right">
+              <IconButton onClick={(e) => this.deleteVenda(e, row.id)}  color="primary" aria-label="abrir venda">
+                    <DeleteForever/>
+                </IconButton>
+              </StyledTableCell>
             </StyledTableRow>
           ))}
             </TableBody>

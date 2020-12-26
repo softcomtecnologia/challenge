@@ -121,5 +121,6 @@ class ProdutoController extends Controller
     public function destroy($id)
     {
         //
+
     }
 }

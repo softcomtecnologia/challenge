@@ -53,3 +53,8 @@
 [1208/005307.805:ERROR:exception_snapshot_win.cc(99)] thread ID 7280 not found in process
 [1217/050642.401:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [1219/002939.491:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1221/212950.235:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1222/160231.549:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1224/181843.255:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1224/185317.672:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1225/124115.753:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0

@@ -40,6 +40,7 @@ Route::get('/produto', [ProdutoController::class , 'index']);
 /* VENDAS */
 Route::post('/vendas', [VendasController::class , 'store']);
 Route::get('/vendas', [VendasController::class , 'index']);
+Route::get('/vendas/{id}', [VendasController::class , 'view']);
 Route::delete('/vendas', [VendasController::class , 'destroy']);
 
 /* VENDAS PRODUTO CONTROLLER */

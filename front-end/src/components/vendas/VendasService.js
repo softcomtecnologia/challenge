@@ -28,6 +28,18 @@ export class VendasService extends React.Component {
             throw error;
         }
     }
+
+    async deleteVenda(id) {
+        try {
+
+            const res = await axios.delete(`${this.baseUrl}/vendas?id=${id}`);
+            console.log(res);
+            return await res
+            
+        } catch (error) {
+            throw error;
+        }
+    }
   
 }
 

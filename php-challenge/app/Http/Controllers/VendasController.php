@@ -7,6 +7,7 @@ use App\Models\Cliente;
 use App\Models\Venda;
 use App\Models\VendaProduto;
 use App\Models\Produto;
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 class VendasController extends Controller
@@ -19,6 +20,8 @@ class VendasController extends Controller
     public function index(Request $request )
     {
         $venda = Venda::paginate(10);
+       
+       /*  dd($dbvenda); */
         return response()->json(['venda' => $venda]);
     }
 
@@ -27,9 +30,17 @@ class VendasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function view($id)
     {
-        //
+        $this->soma($id);
+    }
+
+    public function soma($id){
+        $dbvenda = DB::table('venda_produtos')
+        ->where('venda_id', $id)
+        ->select(DB::raw("sum(amount * value) as total"))
+        ->first();
+        return !is_null($dbvenda) ? $dbvenda->total : 0;
     }
 
     /**

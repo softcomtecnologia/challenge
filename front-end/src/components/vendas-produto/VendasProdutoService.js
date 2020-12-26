@@ -22,11 +22,12 @@ export class VendasProdutoService extends React.Component {
     
     async deleteVendasProdutos(id, vendaId) {
         try {
+            console.log(id);
             const res = await axios.delete(`${this.baseUrl}/carrinho/${vendaId}`,{
                 produto_id: id
             });
             console.log(res);
-            return await res.data
+            return await res.data.data
         } catch (error) {
             throw error;
         }

@@ -162,29 +162,33 @@ export default function MenuNav() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar style={{background: '#fde910' }}
+      position="static"
+      color="secondary">
         <Toolbar>
           <IconButton
             edge="start"
             className={classes.menuButton}
-            color="inherit"
+            style={{background: '#fde910'}}
             aria-label="open drawer"
           >
             <MenuIcon />
           </IconButton>
-          <Link to="/home">
+          <Link
+          style={{ textDecoration: 'none' }} 
+          to="/home">
           <Typography className={classes.title} variant="h6" noWrap>
             SOFTCOM
           </Typography>
           </Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            <IconButton aria-label="show 4 new mails" style={{background: '#fde910'}}>
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
+            <IconButton aria-label="show 17 new notifications" style={{background: '#fde910'}}>
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
               </Badge>
@@ -195,7 +199,7 @@ export default function MenuNav() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
+              style={{background: '#fde910'}}
             >
               <AccountCircle />
             </IconButton>

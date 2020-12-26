@@ -106,9 +106,20 @@ class VendaProdutoController extends Controller
     public function show($id)
     {
         $venda = Venda::find($id)->first();
+        $vendaProduto = VendaProduto::where('venda_id', $id)->get();
+        $arr=[];
+        $count=0;
+        foreach($vendaProduto as $venda){
+            $produto = Produto::find($venda->produto_id);
+            $produto->value = $vendaProduto[$count]->value;
+            $produto->amount = $vendaProduto[$count]->amount;
+            $arr[$count] = $produto;
 
+            ++$count; 
+        }
+        return response()->json(['produtos' => $arr]);
         if($venda){
-            $vendaProduto = VendaProduto::where('venda_id', $id)->get();
+            
             return response()->json(['vendaProduto' => $vendaProduto, 'id' => $id]);
         }else{
             return response()->json(['error' => 'cadastro']);
@@ -155,7 +166,7 @@ class VendaProdutoController extends Controller
             
                 if ($vendaProduto) {
                     $vendaProduto->delete();
-                    return response()->json(['data' => true],200);
+                    return response()->json(['data' => true, 'vP' => $vendaProduto],200);
                 
             }
         }catch(Exception $e){

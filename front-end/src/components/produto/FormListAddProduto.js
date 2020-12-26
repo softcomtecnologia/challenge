@@ -11,6 +11,7 @@ import {Table,TableBody, TableCell, TableContainer, TableHead, TableRow} from '@
 import  VendasProdutoService  from '../vendas-produto/VendasProdutoService';
 import { DeleteForever, Edit} from '@material-ui/icons';
 import  VendaProdutoEditForm  from '../vendas-produto/VendaProdutoEditForm';
+import FormDesconto from '../vendas/FormDesconto';
 
 
 
@@ -41,7 +42,7 @@ class FormListAddProduto extends Component {
       error: null,
       status: 'INICIADA',
       vendaId: null,
-      produtoId: null,
+      produtoId: 'mudi',
       amount: '',
       value: '',
       loading: false,
@@ -61,17 +62,15 @@ class FormListAddProduto extends Component {
 
 submit = async (e) => {
   e.preventDefault();
+  console.log(this.state.produto)
   const body = { status: this.status, produtoId: this.produtoId, vendaId : this.vendaId, amount: this.amount, value: this.value} = this.state;
   
   try {
             const res = await VendasProdutoService.postVendasProdutos(body);
             if(res){
               const res = await VendasProdutoService.getVendasProdutos(this.props.id);
-              console.log(res);
-              var p = this.state.produtosForm;
-              console.log(this.state.produto)
-              p.push(this.state.produto);
-              this.setState({produtosForm: p});
+              console.log(res.produtos);
+              this.setState({produtosForm: res.produtos});
             }
             
   } catch (error) {
@@ -95,32 +94,45 @@ adicionarProduto = (e) => {
 }
 
 
-deleteVendasProduto = (e, id) => {
+deleteVendasProduto = async (e, id) => {
  console.log(id, this.props.id);
   const vendaId = this.props.id;
-  const res = VendasProdutoService.deleteVendasProdutos(id,vendaId);
-  console.log(res);
- /*  const resp = VendasProdutoService.getVendasProdutos(this.state.vendaId); */
-/*  this.atualizaProdutos(); */
+  const res = await VendasProdutoService.deleteVendasProdutos(id,vendaId);
+
+  if (res) {
+    const resp = await VendasProdutoService.getVendasProdutos(this.props.id);
+    console.log(resp.produtos);
+    this.setState({produtosForm: resp.produtos});
+  }
+
 }
 
 atualizaPreco = (e) => {
-   this.state.produto.value = parseInt(e.target.value);
-
+    this.state.value = parseInt(e.target.value);
 }
 reset (){
   this.setState({produto: null})
 }
-editarProduto(e, id){
+
+editarProduto(){
     this.setState({edit: true})
-    console.log(this.state.edit);
+      
+    
+}
+finalizaredicao = async () =>{
+  this.state.edit = false;
+  if(this.state.edit == false){
+    const resp = await VendasProdutoService.getVendasProdutos(this.props.id);
+    console.log(resp.produtos);
+    this.setState({produtosForm: resp.produtos});
+  }
+
+    
 }
 
 atualizaQtd (e, v){
-  this.state.produto.amount = parseInt(e.target.value);
+  this.state.amount = parseInt(e.target.value);
 }
-
-
 
 componentDidMount() {    
     ProdutoService.getProdutos().then(produtos => {
@@ -145,7 +157,7 @@ componentDidMount() {
 
       <FormControl  style={{whidth: 50}}>
       {/* <input type="hidden" value="${value.id}" name="produto"></input> */}
-      <TableRow style={{marginLeft: 300, width: 800, borderColor: 'white'}}>
+      <TableRow style={{marginLeft: 630, width: 800, borderColor: 'white'}}>
             <StyledTableCell >
             <Autocomplete
             onClick={this.reset}
@@ -154,6 +166,8 @@ componentDidMount() {
             options={this.state.produtos}
             getOptionLabel={(produto) => produto.id +' - '+ produto.name}
             onChange={(event, newValue) => {  
+            newValue.amount = this.state.produto.amount
+            console.log(newValue)
             this.setState({produto : newValue})
            /*  this.state.produto.value = newValue.value; */
             console.log(this.state.produto.value)
@@ -173,6 +187,7 @@ componentDidMount() {
                 InputLabelProps={{
                 shrink: true,
                 }}
+                onClick={this.atualizaQtd}
                 onBlur={this.atualizaQtd}
                 variant="outlined"
                 />
@@ -229,6 +244,8 @@ componentDidMount() {
          <td align="right" >
            {this.state.edit ?
            <VendaProdutoEditForm
+           finalizaredicao={this.finalizaredicao}
+           edit={this.state.edit}
            vendaId={this.state.vendaId} 
            produtoId={row.id}
            name={row.name}
@@ -257,10 +274,10 @@ componentDidMount() {
       </CardContent>
         
       
-      <button 
-      onClick={this.finalizar}
-      >Finalizar</button>
-      </Card>
+      
+      </Card >
+      <FormDesconto
+      vendaId={this.state.vendaId}/>
     </div>
   )
   }

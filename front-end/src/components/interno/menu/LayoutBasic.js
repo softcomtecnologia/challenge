@@ -45,7 +45,7 @@ export default function ClippedDrawer() {
   return (
     <div className={classes.root}>
       <CssBaseline  />
-      <AppBar position="fixed" className={classes.appBar}>
+      <AppBar position="fixed" className={classes.appBar} >
         <MenuNav></MenuNav>
       </AppBar>
       <Drawer
@@ -56,10 +56,12 @@ export default function ClippedDrawer() {
         }}
       >
         <Toolbar />
-        <div className={classes.drawerContainer}>
+        <div className={classes.drawerContainer} >
           
           <List>
-            <Link to="/vendas">
+            <Link
+            style={{ textDecoration: 'none' }}
+            to="/vendas">
             {['Vendas'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <LocalAtm/> : <Send  /> }</ListItemIcon>
@@ -67,7 +69,9 @@ export default function ClippedDrawer() {
               </ListItem>
             ))}
             </Link>
-            <Link to="/produtos">
+            <Link
+            style={{ textDecoration: 'none' }} 
+            to="/produtos">
             {['Produtos'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <CardGiftcard/>: <Send  /> }</ListItemIcon>
@@ -78,7 +82,9 @@ export default function ClippedDrawer() {
           </List>
           <Divider />
           <List>
-          <Link to="/relatorios">
+          <Link
+          style={{ textDecoration: 'none' }} 
+          to="/relatorios">
             {['Relatorios'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <ListAlt/> : <Send  /> }</ListItemIcon>

@@ -5,12 +5,13 @@ import LayoutExterno from './components/externo/LayoutExterno'
 import ModalCreateProduto from './components/modals/ModalCreateProduto';
 import ModalCreateVendas from './components/modals/ModalCreateVenda';
 import VendaProdutoEditForm from './components/vendas-produto/VendaProdutoEditForm';
+import FormDesconto from './components/vendas/FormDesconto';
 
 const Routes = () => (
     <Router>
         <Switch>
         {/* Teste de componentes */}
-        <Route path="/test" exact={true} component={VendaProdutoEditForm}/>
+        <Route path="/test" exact={true} component={FormDesconto}/>
 
             {/* Rotas externas da aplicação */}
           <Route exact path="/login" component={LayoutExterno}/>
