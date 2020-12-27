@@ -16,6 +16,7 @@ class Venda extends Model
      */
     protected $fillable = [
         'name',
+        'status',
         'email',
         'address',
         'fone',

@@ -10,8 +10,6 @@ export class LoginPageService extends Component{
                 email: body.email,
                 password: body.password,
             });
-
-            console.log(res.data);
             localStorage.setItem('Token', res.data.token);
             localStorage.setItem('Nome', res.data.name);
             localStorage.setItem('Email', res.data.email);

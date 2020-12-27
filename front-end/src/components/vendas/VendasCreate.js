@@ -52,17 +52,13 @@ class VendasCreate extends Component {
     submit = async (e) => {
       e.preventDefault();
       const body = { name: this.name, email : this.email, fone: this.fone, address: this.address} = this.state;
-      this.setState({ loading: true });
       try {
 
               const res = await VendasService.postVendas(body);
               if(res){
-                  console.log(res);
                   this.setState({ loading: true });
                   this.setState({id : res});
-                  console.log(this.state.id);
-                  /* return window.location.href = '/vendas/produto?id='+this.state.id  */
-                  /* return window.location.reload(); */
+       
               }else{
                 
                   this.setState({ error: 'Venda não validada: rever atributos'})

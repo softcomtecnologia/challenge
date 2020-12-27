@@ -39,6 +39,7 @@ class FormListAddProduto extends Component {
   constructor(props){
     super(props);
     this.state = {
+      soma: undefined,
       error: null,
       status: 'INICIADA',
       vendaId: null,
@@ -62,15 +63,14 @@ class FormListAddProduto extends Component {
 
 submit = async (e) => {
   e.preventDefault();
-  console.log(this.state.produto)
   const body = { status: this.status, produtoId: this.produtoId, vendaId : this.vendaId, amount: this.amount, value: this.value} = this.state;
   
   try {
             const res = await VendasProdutoService.postVendasProdutos(body);
             if(res){
               const res = await VendasProdutoService.getVendasProdutos(this.props.id);
-              console.log(res.produtos);
               this.setState({produtosForm: res.produtos});
+              this.somaProdutos();
             }
             
   } catch (error) {
@@ -82,33 +82,29 @@ submit = async (e) => {
 handleChange(e) {
   this.setState({option: this.props.produtos[e.target.value].id})
 }
-finalizar = (e) => {
-  console.log(this.state.produtosForm);
-}
+
 adicionarProduto = (e) => {
   var p = this.state.produtosForm;
-  console.log(this.state.produto)
   p.push(this.state.produto);
   this.setState({produtosForm: p});
- /*  this.setState({produto: this.state.defaultproduto}) */
 }
 
 
 deleteVendasProduto = async (e, id) => {
- console.log(id, this.props.id);
   const vendaId = this.props.id;
   const res = await VendasProdutoService.deleteVendasProdutos(id,vendaId);
 
   if (res) {
     const resp = await VendasProdutoService.getVendasProdutos(this.props.id);
-    console.log(resp.produtos);
     this.setState({produtosForm: resp.produtos});
+    this.somaProdutos();
   }
 
 }
 
-atualizaPreco = (e) => {
-    this.state.value = parseInt(e.target.value);
+atualizaPreco = async (e) => {
+  this.setState({value: parseInt(e.target.value)})
+    /* this.state.value = parseInt(e.target.value); */
 }
 reset (){
   this.setState({produto: null})
@@ -120,18 +116,23 @@ editarProduto(){
     
 }
 finalizaredicao = async () =>{
-  this.state.edit = false;
-  if(this.state.edit == false){
+  this.setState({edit: false});
+  if(this.state.edit === false){
     const resp = await VendasProdutoService.getVendasProdutos(this.props.id);
-    console.log(resp.produtos);
     this.setState({produtosForm: resp.produtos});
+    this.somaProdutos();
   }
 
     
 }
+somaProdutos = async () =>{
+  const res = await VendasProdutoService.getSomaProdutos(this.state.vendaId);
+  this.setState({soma: res.data});
+}
 
-atualizaQtd (e, v){
-  this.state.amount = parseInt(e.target.value);
+atualizaQtd = async (e, v) =>{
+  this.setState({amount: parseInt(e.target.value)})
+  /* this.state.amount = parseInt(e.target.value); */
 }
 
 componentDidMount() {    
@@ -156,7 +157,6 @@ componentDidMount() {
       
 
       <FormControl  style={{whidth: 50}}>
-      {/* <input type="hidden" value="${value.id}" name="produto"></input> */}
       <TableRow style={{marginLeft: 630, width: 800, borderColor: 'white'}}>
             <StyledTableCell >
             <Autocomplete
@@ -167,10 +167,7 @@ componentDidMount() {
             getOptionLabel={(produto) => produto.id +' - '+ produto.name}
             onChange={(event, newValue) => {  
             newValue.amount = this.state.produto.amount
-            console.log(newValue)
             this.setState({produto : newValue})
-           /*  this.state.produto.value = newValue.value; */
-            console.log(this.state.produto.value)
             this.setState({value:  newValue.value, produtoId: newValue.id, amount: newValue.amount })
             this.setState({vendaId : this.props.id});
             }}
@@ -200,7 +197,6 @@ componentDidMount() {
                 type="float"
                 onClick={this.atualizaPreco}
                 onChange={this.atualizaPreco}
-                /* value={this.state.produto.value} */
                 InputLabelProps={{
                     shrink: true,
                 }}
@@ -255,7 +251,6 @@ componentDidMount() {
            /> : null}
          <IconButton  color="primary" aria-label="Editar produto">
                     <Edit onClick={(e) => this.editarProduto(e, row.id)}/>
-                    {/* onClick={(e) => this.deleteVendasProduto(e, row.id)}  */}
                 </IconButton>
          </td>
          <td align="right" >
@@ -277,6 +272,7 @@ componentDidMount() {
       
       </Card >
       <FormDesconto
+      soma={this.state.soma}
       vendaId={this.state.vendaId}/>
     </div>
   )

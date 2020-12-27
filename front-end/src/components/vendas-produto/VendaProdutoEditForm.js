@@ -31,8 +31,8 @@ class VendaProdutoEditForm extends Component {
       };
       putProdutos = async () => {
         const body = ({ produtoId: this.state.produtoId, vendaId : this.state.vendaId, amount: this.state.amount, value: this.state.value});
-        console.log(body);
         const res = await VendasProdutoService.putVendasProdutos(body);
+        console.log(res);
         this.setState({open: false});
         this.props.finalizaredicao();
       }    

@@ -12,7 +12,7 @@ export class ProdutoService extends React.Component {
                 amount: body.amount,
                 value : body.value
             });
-            console.log(res.data);
+            console.log(res);
             return true;
         } catch (error) {
             throw error;

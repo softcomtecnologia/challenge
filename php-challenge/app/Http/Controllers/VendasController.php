@@ -30,9 +30,10 @@ class VendasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function view($id)
+    public function view(Request $request, $id)
     {
-        $this->soma($id);
+        $desconto = $request->desconto * $this->soma($id) / 100;
+        return $this->soma($id) - $desconto;
     }
 
     public function soma($id){
@@ -42,6 +43,28 @@ class VendasController extends Controller
         ->first();
         return !is_null($dbvenda) ? $dbvenda->total : 0;
     }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function finalizar(Request $request)
+    {
+        try{
+            $venda = Venda::find($request->id);
+            if($venda){
+                $venda->status = 'FINALIZADA';
+                $venda->valor =  $request->valor;
+                $venda->update();
+            }
+     
+        return response()->json(['venda' => $venda, 'status' => true], 200);
+    } catch (Exception $e) {
+        return response()->json(['data' => 'Erro interno','status' => false], 500);
+    }
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -53,6 +76,7 @@ class VendasController extends Controller
     {
         try{
             $venda = Venda::create([
+                'status' => 'INICIADA',
                 'name' => $request->name,
                 'fone' => $request->fone,
                 'email' => $request->email,

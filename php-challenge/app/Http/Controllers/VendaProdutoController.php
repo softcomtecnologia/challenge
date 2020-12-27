@@ -159,10 +159,10 @@ class VendaProdutoController extends Controller
     {
         $venda = Venda::find($id);
             $produtoId = $request->produto_id;
-            $vendaProduto = VendaProduto::where('venda_id', $venda->id)->first();
+            $vendaProduto = VendaProduto::where('venda_id', $venda->id)
+            ->where('produto_id', $produtoId)
+            ->first();
         try {
-            
-
             
                 if ($vendaProduto) {
                     $vendaProduto->delete();

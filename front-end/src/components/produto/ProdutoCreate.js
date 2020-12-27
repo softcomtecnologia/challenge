@@ -54,14 +54,14 @@ class ProdutoCreate extends Component {
       try {
         
 
-              /* const body = { name: name, description: description, amount: amount, value: value} = this.state; */
+             
                
               const res = await ProdutoService.postProdutos(body);
       
               if(res === true){
                   this.setState({ loading: false });
                   return window.location.href = '/modal/produto'
-                  /* return window.location.reload(); */
+
               }else{
                 
                   this.setState({ error: 'Produto não valido: rever atributos'})
@@ -164,7 +164,6 @@ class ProdutoCreate extends Component {
             </ThemeProvider>
       </CardContent>
       <CardActions>
-{/*         <Button size="small">Learn More</Button> */}
       </CardActions>
     </Card>
             

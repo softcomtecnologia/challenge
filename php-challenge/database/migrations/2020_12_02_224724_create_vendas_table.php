@@ -17,7 +17,8 @@ class CreateVendasTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('fone');
-            $table->string('email'); 
+            $table->string('email');
+            $table->string('status')->nullable();
             $table->string('address')->nullable();
             $table->float('valor')->nullable();
             $table->float('desconto')->nullable();

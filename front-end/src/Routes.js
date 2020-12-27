@@ -4,7 +4,6 @@ import LayoutInterno from './components/interno/LayoutInterno';
 import LayoutExterno from './components/externo/LayoutExterno'
 import ModalCreateProduto from './components/modals/ModalCreateProduto';
 import ModalCreateVendas from './components/modals/ModalCreateVenda';
-import VendaProdutoEditForm from './components/vendas-produto/VendaProdutoEditForm';
 import FormDesconto from './components/vendas/FormDesconto';
 
 const Routes = () => (

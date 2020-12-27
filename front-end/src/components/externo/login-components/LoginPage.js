@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { Button, TextField, Checkbox, FormControlLabel, Link, ThemeProvider, createMuiTheme} from '@material-ui/core';
 import { Link as Lr } from 'react-router-dom';
 import LoginPageService from './LoginPageService';
-/* import './styles.css'; */
 
 const theme = createMuiTheme({
     overrides: {
@@ -66,7 +65,6 @@ class LoginPage extends Component {
                 const body = { email: email, password: password}
     
                 const res = await LoginPageService.attemptLogin(body);
-                console.log(res);
                 if(res === true){
                     if(checked){
                         localStorage.setItem('email', email);
@@ -179,7 +177,6 @@ class LoginPage extends Component {
                                             Entrar
                                         </Button>
                                     </div>
-                                    {/* {rt} */}
                                     {this.state.error}
                                 </form>
 

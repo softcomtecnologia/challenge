@@ -7,21 +7,34 @@ export class VendasService extends React.Component {
     async postVendas(body) {
         try {
             const res = await axios.post(`${this.baseUrl}/vendas`, {
+                address: body.address,
                 name: body.name,
                 email: body.email,
                 fone: body.fone,
             });
-            console.log(res.data.venda.id);
+
             return res.data.venda.id;
         } catch (error) {
             throw error;
         }
     }
+
+    async postFinalizarVendas(id,valor) {
+        try {
+            const res = await axios.post(`${this.baseUrl}/vendas/finalizar`, {
+                id: id,
+                valor: valor,
+            });
+            return res;
+        } catch (error) {
+            throw error;
+        }
+    }
+    
      
     async getVendas() {
         try {
             const res = await axios.get(`${this.baseUrl}/vendas`);
-            console.log(res.data.venda.data);
             return await res.data.venda.data
             
         } catch (error) {
@@ -33,7 +46,6 @@ export class VendasService extends React.Component {
         try {
 
             const res = await axios.delete(`${this.baseUrl}/vendas?id=${id}`);
-            console.log(res);
             return await res
             
         } catch (error) {

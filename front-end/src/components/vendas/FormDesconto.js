@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Button, TextField, Card, CardContent,Typography,createMuiTheme,ThemeProvider} from '@material-ui/core';
 import VendasService from './VendasService';
-import FormListAddProduto from '../produto/FormListAddProduto';
+import  VendasProdutoService  from '../vendas-produto/VendasProdutoService';
 
 const theme = createMuiTheme({
     overrides: {
@@ -40,13 +40,32 @@ class FormDesconto extends Component {
     constructor(props){
         super(props);
         this.state = {
-            vendaId: undefined
+            vendaId: undefined,
+            soma: undefined,
+            valorLiquido: undefined,
         }
 
     }
     getValue(){
         this.setState({vendaId: this.props.vendaId})
-        console.log(this.state.vendaId)
+    }
+    finalizarVenda = async () => {
+        if(!this.state.valorLiquido){
+            await this.setState({valorLiquido: this.state.soma})
+        }
+        const res = await VendasService.postFinalizarVendas(this.props.vendaId,this.state.valorLiquido)
+        if(res){
+            window.location.href = '/vendas'
+        }
+
+    }
+    aplicadesconto = async( e ) =>{
+        const id = this.props.vendaId
+        const desconto = parseInt(e.target.value);
+        const res = await VendasProdutoService.getDescontoProdutos(id,desconto);
+        if(res){
+            this.setState({valorLiquido: res.data})
+        }
     }
     render(){
         return (
@@ -55,51 +74,58 @@ class FormDesconto extends Component {
       <CardContent>
       <ThemeProvider theme={theme} >
       <Typography  color="textSecondary" gutterBottom>
-          Desconto
+          Total
         </Typography>
             <div >
                <form onSubmit={this.submit}>
                                     <div className='centerForm'>
                                         <TextField
-                                            required={true}
+                                            label={'Valor Bruto'}
+                                            disabled
                                             variant="outlined"
                                             size='small'
                                             placeholder="Valor Bruto"
-                                            /* onChange={this.changeName}
-                                            value={name}
-                                            onSubmit={this.submit} */
+                                            value={this.props.soma}
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
+                                      
                                         />
                                         
                                         <TextField
-                                            required={true}
+                                            label={'Desconto (%)'}
                                             variant="outlined"
                                             size='small'
                                             placeholder="Desconto em Porcentagem"
-                                            /* onChange={this.changeEmail}
-                                            value={email}
-                                            onSubmit={this.submit} */
+                                            onBlur={this.aplicadesconto}
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
+                                         
                                         />
 
                                         <TextField
-                                            required={true}
+                                            label={'Valor Liquido'}
+                                           disabled
                                             variant="outlined"
                                             size='small'
                                             placeholder="Valor liquido"
-                                            /* onChange={this.changeFone}
-                                            value={fone}
-                                            onSubmit={this.submit }*/
+                                            value={this.state.valorLiquido}
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
+                                   
                                         />
                                     </div>
 
                                     <div className='checkbox'>
                                        
                                         <Button
-                                            onClick={this.getValue}
-                                            disabled={false}
-                                            type='submit'
+                                            onClick={this.finalizarVenda}
                                             variant='contained'
                                             color='primary'
                                             className='btn-login'
+                                            
                                         >
                                             Finalizar Venda
                                         </Button>

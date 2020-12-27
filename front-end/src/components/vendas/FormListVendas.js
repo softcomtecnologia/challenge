@@ -7,7 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import VendasService from './VendasService'
-import { AddIcCallRounded, DeleteForever, ListAlt } from "@material-ui/icons";
+import { DeleteForever, ListAlt } from "@material-ui/icons";
 import { IconButton } from "@material-ui/core";
 
 const StyledTableCell = withStyles((theme) => ({
@@ -38,13 +38,10 @@ class FormListVendas extends Component {
       };
   }
   deleteVenda = async (e, id) => {
-    console.log(id);
     const res = await VendasService.deleteVenda(id);
 
    if (res) {
        const resp = await VendasService.getVendas();
-       console.log(resp);
-       console.log(this.state.vendas);
        this.setState({vendas: resp});
      } 
    
@@ -71,7 +68,6 @@ class FormListVendas extends Component {
             <StyledTableCell>cod</StyledTableCell>
             <StyledTableCell align="right">Nome</StyledTableCell>
             <StyledTableCell align="right">Telefone</StyledTableCell>
-            {/* <StyledTableCell align="right">Email</StyledTableCell> */}
             <StyledTableCell align="right">Valor</StyledTableCell>
             <StyledTableCell align="right">Abrir</StyledTableCell>
             <StyledTableCell align="right">Excluir</StyledTableCell>
@@ -87,8 +83,7 @@ class FormListVendas extends Component {
               </StyledTableCell>
               <StyledTableCell align="right">{row.name}</StyledTableCell>
               <StyledTableCell align="right">{row.fone}</StyledTableCell>
-              {/* <StyledTableCell align="right">{row.email}</StyledTableCell> */}
-              <StyledTableCell align="right">{row.value}</StyledTableCell>
+              <StyledTableCell align="right">{row.valor}</StyledTableCell>
               <StyledTableCell align="right">
               <IconButton  color="primary" aria-label="abrir venda">
                     <ListAlt/>

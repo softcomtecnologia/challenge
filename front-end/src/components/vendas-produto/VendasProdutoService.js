@@ -13,7 +13,7 @@ export class VendasProdutoService extends React.Component {
                 value: body.value,
                 produto_id: body.produtoId
             });
-            console.log(res.data);
+            console.log(res);
             return true;
         } catch (error) {
             throw error;
@@ -22,11 +22,7 @@ export class VendasProdutoService extends React.Component {
     
     async deleteVendasProdutos(id, vendaId) {
         try {
-            console.log(id);
-            const res = await axios.delete(`${this.baseUrl}/carrinho/${vendaId}`,{
-                produto_id: id
-            });
-            console.log(res);
+            const res = await axios.delete(`${this.baseUrl}/carrinho/${vendaId}?produto_id=${id}`);
             return await res.data.data
         } catch (error) {
             throw error;
@@ -49,8 +45,24 @@ export class VendasProdutoService extends React.Component {
                 value: body.value,
                 produto_id: body.produtoId
             });
-            console.log(res.data);
             return res.data;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async getSomaProdutos(id){
+        try {
+            const res = await axios.get(`${this.baseUrl}/vendas/soma/${id}`);
+            return res;
+        } catch (error) {
+            throw error;
+        }
+    }
+    async getDescontoProdutos(id, desconto){
+        try {
+            const res = await axios.get(`${this.baseUrl}/vendas/${id}?desconto=${desconto}`);
+            return res;
         } catch (error) {
             throw error;
         }
