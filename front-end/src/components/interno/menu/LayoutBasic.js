@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
+    background: '#333'
   },
   drawerContainer: {
     overflow: 'auto',
@@ -60,34 +61,34 @@ export default function ClippedDrawer() {
           
           <List>
             <Link
-            style={{ textDecoration: 'none' }}
+            style={{ textDecoration: 'none', color: 'orange' }}
             to="/vendas">
             {['Vendas'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <LocalAtm/> : <Send  /> }</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <LocalAtm style={{color: 'orange'}}/> : <Send  /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
             </Link>
             <Link
-            style={{ textDecoration: 'none' }} 
+            style={{ textDecoration: 'none', color: 'orange' }} 
             to="/produtos">
             {['Produtos'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <CardGiftcard/>: <Send  /> }</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <CardGiftcard style={{color: 'orange'}}/>: <Send  /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
             </Link>
           </List>
-          <Divider />
+          <Divider style={{background: 'white'}} />
           <List>
           <Link
-          style={{ textDecoration: 'none' }} 
+          style={{ textDecoration: 'none', color: 'orange' }} 
           to="/relatorios">
             {['Relatorios'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <ListAlt/> : <Send  /> }</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <ListAlt style={{color: 'orange'}}/> : <Send  /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}

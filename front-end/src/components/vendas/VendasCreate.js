@@ -107,6 +107,7 @@ class VendasCreate extends Component {
                <form onSubmit={this.submit}>
                                     <div className='centerForm'>
                                         <TextField
+                                            
                                             required={true}
                                             variant="outlined"
                                             size='small'
@@ -114,6 +115,10 @@ class VendasCreate extends Component {
                                             onChange={this.changeName}
                                             value={name}
                                             onSubmit={this.submit}
+                                            label="Nome do Cliente"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
                                         
                                         <TextField
@@ -124,6 +129,10 @@ class VendasCreate extends Component {
                                             onChange={this.changeEmail}
                                             value={email}
                                             onSubmit={this.submit}
+                                            label="Email"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
 
                                         <TextField
@@ -134,15 +143,22 @@ class VendasCreate extends Component {
                                             onChange={this.changeFone}
                                             value={fone}
                                             onSubmit={this.submit}
+                                            label="Telefone"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
                                         <TextField
-                                            required={true}
                                             variant="outlined"
                                             size='small'
                                             placeholder="Endereço"
                                             onChange={this.changeAddress}
                                             value={address}
                                             onSubmit={this.submit}
+                                            label="Endereço (opicional)"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
                                     </div>
 
@@ -153,8 +169,7 @@ class VendasCreate extends Component {
                                             disabled={false}
                                             type='submit'
                                             variant='contained'
-                                            color='primary'
-                                            className='btn-login'
+                                            style={{background: 'orange'}}
                                         >
                                             Iniciar Venda
                                         </Button>}

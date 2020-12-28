@@ -11,7 +11,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -161,15 +160,17 @@ export default function MenuNav() {
   );
 
   return (
+    
     <div className={classes.grow}>
-      <AppBar style={{background: '#fde910' }}
+       
+      <AppBar style={{background: '#fff' }}
       position="static"
       color="secondary">
         <Toolbar>
           <IconButton
             edge="start"
             className={classes.menuButton}
-            style={{background: '#fde910'}}
+            style={{background: '#fff'}}
             aria-label="open drawer"
           >
             <MenuIcon />
@@ -178,17 +179,17 @@ export default function MenuNav() {
           style={{ textDecoration: 'none' }} 
           to="/home">
           <Typography className={classes.title} variant="h6" noWrap>
-            SOFTCOM
+          <img alt="logo" src="http://areacontador.softcomsistemas.com.br//img/logo_softcomshop.png" width="200"/>
           </Typography>
           </Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" style={{background: '#fde910'}}>
+            <IconButton aria-label="show 4 new mails" style={{background: '#fff'}}>
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 17 new notifications" style={{background: '#fde910'}}>
+            <IconButton aria-label="show 17 new notifications" style={{background: '#fff'}}>
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
               </Badge>
@@ -199,7 +200,7 @@ export default function MenuNav() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              style={{background: '#fde910'}}
+              style={{background: '#fff'}}
             >
               <AccountCircle />
             </IconButton>
@@ -211,9 +212,12 @@ export default function MenuNav() {
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="inherit"
+              
             >
-              <MoreIcon />
+              
             </IconButton>
+            
+           
           </div>
         </Toolbar>
       </AppBar>

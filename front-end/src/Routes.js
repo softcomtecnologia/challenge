@@ -30,6 +30,9 @@ const Routes = () => (
               <Route path="/vendas/create" exact={true} component={LayoutInterno}/>
               <Route path="/vendas/produto" exact={true} component={LayoutInterno}/>
 
+               {/*  Relatorios */}
+               <Route path="/relatorios" exact={true} component={LayoutInterno}/>
+
                 {/* Modais */}
               <Route path="/modal/vendas" exact={true} component={ModalCreateVendas}/>
               <Route path="/modal/produto" exact={true} component={ModalCreateProduto}/>

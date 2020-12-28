@@ -51,7 +51,7 @@ class FormDesconto extends Component {
     }
     finalizarVenda = async () => {
         if(!this.state.valorLiquido){
-            await this.setState({valorLiquido: this.state.soma})
+            await this.setState({valorLiquido: this.props.soma})
         }
         const res = await VendasService.postFinalizarVendas(this.props.vendaId,this.state.valorLiquido)
         if(res){
@@ -123,8 +123,7 @@ class FormDesconto extends Component {
                                         <Button
                                             onClick={this.finalizarVenda}
                                             variant='contained'
-                                            color='primary'
-                                            className='btn-login'
+                                            style={{background: 'orange'}}
                                             
                                         >
                                             Finalizar Venda

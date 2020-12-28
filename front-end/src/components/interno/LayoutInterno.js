@@ -18,7 +18,11 @@ class LayoutInterno extends Component{
         <Switch>
             <Route path='/home' exact={true}>
                   <LayoutBasic/>
-                  <Dashboard/>
+                  <Dashboard />
+            </Route>
+            <Route path='/relatorios' exact={true}>
+                  <LayoutBasic/>
+                  <Dashboard />
             </Route>
             <Route path='/produtos' exact={true}>
                   <LayoutBasic/>

@@ -53,11 +53,18 @@ class FormListAddProduto extends Component {
         value: 0.0,
         amount: 1
       },
+      editvendaId: undefined,
+      editprodutoId: undefined,
+      editname: undefined,
+      editdescription: undefined,
+      editamount: undefined,
+      editvalue: undefined,
       produtosForm: []
     }
     this.editarProduto = this.editarProduto.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.atualizaQtd = this.atualizaQtd.bind(this)
+    this.resetAutoComplete = this.resetAutoComplete(this)
     
 }
 
@@ -110,7 +117,16 @@ reset (){
   this.setState({produto: null})
 }
 
-editarProduto(){
+editarProduto(e,row){
+  console.log(row);
+ 
+  this.setState({editvendaId: this.state.vendaId}); 
+  this.setState({editprodutoId :row.id});
+  this.setState({editname : row.name});
+  this.setState({editdescription : row.description});
+  this.setState({editamount :row.amount});
+  this.setState({editvalue: row.value});
+
     this.setState({edit: true})
       
     
@@ -133,6 +149,9 @@ somaProdutos = async () =>{
 atualizaQtd = async (e, v) =>{
   this.setState({amount: parseInt(e.target.value)})
   /* this.state.amount = parseInt(e.target.value); */
+}
+resetAutoComplete(){
+  this.setState({amount : 1, value : 0});
 }
 
 componentDidMount() {    
@@ -165,11 +184,15 @@ componentDidMount() {
             placeholder="Selecione..."
             options={this.state.produtos}
             getOptionLabel={(produto) => produto.id +' - '+ produto.name}
-            onChange={(event, newValue) => {  
+            onChange={(event, newValue) => {
+            if(!newValue){
+
+            }else{  
             newValue.amount = this.state.produto.amount
             this.setState({produto : newValue})
             this.setState({value:  newValue.value, produtoId: newValue.id, amount: newValue.amount })
             this.setState({vendaId : this.props.id});
+            }
             }}
             style={{ width: 300 }}
             renderInput={(params) => <TextField {...params} label="Selcione..." variant="outlined" />}
@@ -193,6 +216,7 @@ componentDidMount() {
                 <TextField
                 label="Valor"
                 placeholder={this.state.produto.value}
+                value={this.state.produto.value}
                 style={{width: 150}}
                 type="float"
                 onClick={this.atualizaPreco}
@@ -242,15 +266,15 @@ componentDidMount() {
            <VendaProdutoEditForm
            finalizaredicao={this.finalizaredicao}
            edit={this.state.edit}
-           vendaId={this.state.vendaId} 
-           produtoId={row.id}
-           name={row.name}
-           description={row.description}
-           amount={row.amount}
-           value={row.value}
+           vendaId={this.state.editvendaId} 
+           produtoId={this.state.editprodutoId}
+           name={this.state.editname}
+           description={this.state.editdescription}
+           amount={this.state.editamount}
+           value={this.state.editvalue}
            /> : null}
          <IconButton  color="primary" aria-label="Editar produto">
-                    <Edit onClick={(e) => this.editarProduto(e, row.id)}/>
+                    <Edit onClick={(e) => this.editarProduto(e, row)}/>
                 </IconButton>
          </td>
          <td align="right" >

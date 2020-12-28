@@ -114,6 +114,10 @@ class ProdutoCreate extends Component {
                                             onChange={this.changeName}
                                             value={name}
                                             onSubmit={this.submit}
+                                            label="Nome do Produto"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
                                         
                                         <TextField
@@ -124,6 +128,10 @@ class ProdutoCreate extends Component {
                                             onChange={this.changeDescription}
                                             value={description}
                                             onSubmit={this.submit}
+                                            label="Descrição"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
 
                                         <TextField
@@ -134,6 +142,10 @@ class ProdutoCreate extends Component {
                                             onChange={this.changeAmount}
                                             value={amount}
                                             onSubmit={this.submit}
+                                            label="Quantidade"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
                                         <TextField
                                             required={true}
@@ -143,6 +155,10 @@ class ProdutoCreate extends Component {
                                             onChange={this.changeValue}
                                             value={value}
                                             onSubmit={this.submit}
+                                            label="Valor"
+                                            InputLabelProps={{
+                                                shrink: true,
+                                                }}
                                         />
                                     </div>
                                     <div className='checkbox'>
@@ -151,8 +167,7 @@ class ProdutoCreate extends Component {
                                             disabled={false}
                                             type='submit'
                                             variant='contained'
-                                            color='primary'
-                                            className='btn-login'
+                                            style={{background: 'orange'}}
                                         >
                                             Cadastrar
                                         </Button>

@@ -26,6 +26,21 @@ class VendasController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function vendasFinalizadas(Request $request )
+    {
+        $venda = Venda::where('status', 'FINALIZADA')
+        ->select('updated_at', 'valor')
+        ->get();
+       $data = Carbon::now();
+       /*  dd($dbvenda); */
+        return response()->json(['venda' => $venda, 'data' => $data]);
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
