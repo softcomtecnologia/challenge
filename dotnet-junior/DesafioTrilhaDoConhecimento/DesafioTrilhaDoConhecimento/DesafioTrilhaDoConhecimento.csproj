@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EC1AC89-7DD3-47F5-8595-18198F385EC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DesafioTrilhaDoConhecimento</RootNamespace>
+    <AssemblyName>DesafioTrilhaDoConhecimento</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Categoria.cs" />
+    <Compile Include="Controllers\ControllerDataBase\Conexao.cs" />
+    <Compile Include="Controllers\ControllerDataBase\LocalDb.cs" />
+    <Compile Include="Controllers\Filho.cs" />
+    <Compile Include="Controllers\Pessoa.cs" />
+    <Compile Include="Controllers\Salario.cs" />
+    <Compile Include="Controllers\UsuarioSessao.cs" />
+    <Compile Include="Controllers\Util.cs" />
+    <Compile Include="DesafioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DesafioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Views\FrmCadastroCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCadastroCategorias.Designer.cs">
+      <DependentUpon>FrmCadastroCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCadastroPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCadastroPessoas.designer.cs">
+      <DependentUpon>FrmCadastroPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmPesquisar.Designer.cs">
+      <DependentUpon>FrmPesquisar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\RptFormPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\RptFormPessoas.Designer.cs">
+      <DependentUpon>RptFormPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\CabecalhoPadrao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\CabecalhoPadrao.Designer.cs">
+      <DependentUpon>CabecalhoPadrao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\FrmCadastroCategorias.resx">
+      <DependentUpon>FrmCadastroCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCadastroPessoas.resx">
+      <DependentUpon>FrmCadastroPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmPesquisar.resx">
+      <DependentUpon>FrmPesquisar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\RptFormPessoas.resx">
+      <DependentUpon>RptFormPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\RptPessoas.rdlc" />
+    <EmbeddedResource Include="Views\UserControls\CabecalhoPadrao.resx">
+      <DependentUpon>CabecalhoPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DesafioDataSet.xsc">
+      <DependentUpon>DesafioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DesafioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DesafioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DesafioDataSet.xss">
+      <DependentUpon>DesafioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataBase.Categoria.datasource" />
+    <None Include="Properties\DataSources\DataBase.Filho.datasource" />
+    <None Include="Properties\DataSources\DataBase.Pessoa.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBase\DataBase.csproj">
+      <Project>{efb3f419-622e-411a-bd58-4aecde65273d}</Project>
+      <Name>DataBase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ativado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnAnterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnConfigGerais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnEditar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnExcluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnFechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnFiltrosPTransp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnFormSubEditar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnFormSubExcluir.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnFuncionarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnImprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnNotificacoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnNovo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnPesquisaP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnPesquisaP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnProximo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSalvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarregarArquivo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desativado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIRO.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgDesabilitado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgHabilitado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoInferiorDireita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoInferiorDireitaPCortada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoSoftcom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotificacaoGerenciamento.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotificacaoOK.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotificacaoOK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotificacaoVermelha.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sino.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\softnick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoftnickBracosCruzadosLadoDireito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoftnickBracosCruzadosParteDeCima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\softnickPiscando.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnPesquisar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_drica_rodape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_login_retangulosombra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_softshop_titulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logosoftcom_topoesquerdo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Desafio.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Desafio_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Desafio.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
