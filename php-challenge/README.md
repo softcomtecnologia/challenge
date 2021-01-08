@@ -1,3 +1,25 @@
+#Instalação Passport
+
+php artisan passport:client --personal
+
+será gerado um id e um secret.
+no .env adicionar as informações.
+
+ex:
+PASSPORT_PERSONAL_ACCESS_CLIENT_ID=1
+PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=tc69Hpne0vmmw5vansqfDzAsTVGZy6akbelYhlYV
+
+#Cadastro de Usuario
+
+enviar um post para http://localhost:8000/api/user passando o json nome, email, password
+
+ex:
+{
+    "name": "nome",
+    "email": "email@gmail.com",
+    "password": "senha"
+}
+
 #Problema a ser resolvido
 
 Precisamos criar uma tela de venda de produtos para pequenos empreendedores. 
