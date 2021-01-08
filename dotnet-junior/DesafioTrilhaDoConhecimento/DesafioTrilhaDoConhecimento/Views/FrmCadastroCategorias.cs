@@ -72,6 +72,12 @@ namespace DesafioTrilhaDoConhecimento.Views
 
                     var categoria = controllerCategoria.BuscarPorId(id);
 
+                    if(categoria.PreCadastrada == true)
+                    {
+                        MessageBox.Show($"Categorias Pré-Cadastradas não podem ser editadas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+
                     cabecalhoPadrao.LblId = categoria.Id;
                     txtDescricao.Text = categoria.Nome;
 
@@ -80,12 +86,21 @@ namespace DesafioTrilhaDoConhecimento.Views
                 case "btnExcluir":
 
                     var returnMsg = MessageBox.Show($"Deseja Excluir!", "Pergunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    var idExcluir = (int)dtgCategorias.CurrentRow.Cells["Código"].Value;
+                    var categoriaExcluir = controllerCategoria.BuscarPorId(idExcluir);
 
                     if (returnMsg == DialogResult.Yes)
                     {
-                        controllerCategoria.Excluir((int)dtgCategorias.CurrentRow.Cells["Código"].Value);
+                        try
+                        {
+                            controllerCategoria.Excluir(categoriaExcluir);
 
-                        popularDataGrid();
+                            popularDataGrid();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Erro ao salvar:{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
 
                     break;
@@ -111,10 +126,16 @@ namespace DesafioTrilhaDoConhecimento.Views
             categoria.Nome = txtDescricao.Text;
 
             var controllerCategoria = new Categoria();
+            try
+            {
+                controllerCategoria.Salvar(categoria);
 
-            controllerCategoria.Salvar(categoria);
-
-            popularDataGrid();
+                popularDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao salvar:{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

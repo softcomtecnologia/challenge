@@ -38,6 +38,7 @@
             this.lblRegistro = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.tblLayoutCamposEdicao = new System.Windows.Forms.TableLayoutPanel();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.cboUf = new System.Windows.Forms.ComboBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
@@ -72,24 +73,23 @@
             this.lblSalarioBrutoValor = new System.Windows.Forms.Label();
             this.lblSalarioBruto = new System.Windows.Forms.Label();
             this.lblSalarioBase = new System.Windows.Forms.Label();
+            this.txtSalarioBase = new System.Windows.Forms.MaskedTextBox();
+            this.tblLayoutInferior = new System.Windows.Forms.TableLayoutPanel();
+            this.imgFoto = new System.Windows.Forms.PictureBox();
+            this.tblLayoutFilhos = new System.Windows.Forms.TableLayoutPanel();
+            this.cboFilhoSexo = new System.Windows.Forms.ComboBox();
+            this.txtFilhoIdade = new System.Windows.Forms.TextBox();
+            this.lblFilhoSexo = new System.Windows.Forms.Label();
+            this.lblFilhoIdade = new System.Windows.Forms.Label();
+            this.lblFilhoRegistro = new System.Windows.Forms.Label();
+            this.txtFilhoNome = new System.Windows.Forms.TextBox();
+            this.lblFilhoNome = new System.Windows.Forms.Label();
+            this.lblFilhoId = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.btnFilhoSalvar = new System.Windows.Forms.Button();
+            this.btnFilhoNovo = new System.Windows.Forms.Button();
             this.btnAdicionarFoto = new System.Windows.Forms.Button();
             this.lblCadastroDeFilhos = new System.Windows.Forms.Label();
-            this.txtSalarioBase = new System.Windows.Forms.MaskedTextBox();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.tblLayoutFilhos = new System.Windows.Forms.TableLayoutPanel();
-            this.btnFilhoNovo = new System.Windows.Forms.Button();
-            this.btnFilhoSalvar = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.lblFilhoId = new System.Windows.Forms.Label();
-            this.lblFilhoNome = new System.Windows.Forms.Label();
-            this.txtFilhoNome = new System.Windows.Forms.TextBox();
-            this.lblFilhoRegistro = new System.Windows.Forms.Label();
-            this.lblFilhoIdade = new System.Windows.Forms.Label();
-            this.lblFilhoSexo = new System.Windows.Forms.Label();
-            this.txtFilhoIdade = new System.Windows.Forms.TextBox();
-            this.cboFilhoSexo = new System.Windows.Forms.ComboBox();
-            this.imgFoto = new System.Windows.Forms.PictureBox();
-            this.tblLayoutInferior = new System.Windows.Forms.TableLayoutPanel();
             this.tblLayoutPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogoSoftcom)).BeginInit();
             this.tblLayoutBotoes.SuspendLayout();
@@ -97,10 +97,10 @@
             this.tblLayoutCamposEdicao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategorias)).BeginInit();
             this.tblLayoutSalario.SuspendLayout();
+            this.tblLayoutInferior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).BeginInit();
             this.tblLayoutFilhos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).BeginInit();
-            this.tblLayoutInferior.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblLayoutPrincipal
@@ -325,6 +325,17 @@
             this.tblLayoutCamposEdicao.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tblLayoutCamposEdicao.Size = new System.Drawing.Size(683, 236);
             this.tblLayoutCamposEdicao.TabIndex = 100;
+            // 
+            // txtComplemento
+            // 
+            this.tblLayoutCamposEdicao.SetColumnSpan(this.txtComplemento, 5);
+            this.txtComplemento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtComplemento.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(3, 215);
+            this.txtComplemento.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(677, 21);
+            this.txtComplemento.TabIndex = 15;
             // 
             // lblComplemento
             // 
@@ -746,32 +757,6 @@
             this.lblSalarioBase.TabIndex = 14;
             this.lblSalarioBase.Text = "Salário Base:";
             // 
-            // btnAdicionarFoto
-            // 
-            this.btnAdicionarFoto.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAdicionarFoto.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarFoto.Location = new System.Drawing.Point(575, 345);
-            this.btnAdicionarFoto.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAdicionarFoto.Name = "btnAdicionarFoto";
-            this.btnAdicionarFoto.Size = new System.Drawing.Size(108, 20);
-            this.btnAdicionarFoto.TabIndex = 103;
-            this.btnAdicionarFoto.Text = "Adicionar Foto";
-            this.btnAdicionarFoto.UseVisualStyleBackColor = true;
-            this.btnAdicionarFoto.Click += new System.EventHandler(this.btnAdicionarFoto_Click);
-            // 
-            // lblCadastroDeFilhos
-            // 
-            this.lblCadastroDeFilhos.AutoSize = true;
-            this.lblCadastroDeFilhos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCadastroDeFilhos.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastroDeFilhos.Location = new System.Drawing.Point(3, 347);
-            this.lblCadastroDeFilhos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
-            this.lblCadastroDeFilhos.Name = "lblCadastroDeFilhos";
-            this.lblCadastroDeFilhos.Size = new System.Drawing.Size(335, 18);
-            this.lblCadastroDeFilhos.TabIndex = 104;
-            this.lblCadastroDeFilhos.Text = "Cadastro de Filhos:";
-            this.lblCadastroDeFilhos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // txtSalarioBase
             // 
             this.txtSalarioBase.Location = new System.Drawing.Point(0, 20);
@@ -782,16 +767,37 @@
             this.txtSalarioBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSalarioBase.TextChanged += new System.EventHandler(this.txtSalarioBase_TextChanged);
             // 
-            // txtComplemento
+            // tblLayoutInferior
             // 
-            this.tblLayoutCamposEdicao.SetColumnSpan(this.txtComplemento, 5);
-            this.txtComplemento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtComplemento.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(3, 215);
-            this.txtComplemento.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(677, 21);
-            this.txtComplemento.TabIndex = 15;
+            this.tblLayoutInferior.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tblLayoutInferior.ColumnCount = 2;
+            this.tblLayoutPrincipal.SetColumnSpan(this.tblLayoutInferior, 2);
+            this.tblLayoutInferior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayoutInferior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tblLayoutInferior.Controls.Add(this.imgFoto, 1, 0);
+            this.tblLayoutInferior.Controls.Add(this.tblLayoutFilhos, 0, 0);
+            this.tblLayoutInferior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblLayoutInferior.Location = new System.Drawing.Point(3, 368);
+            this.tblLayoutInferior.Name = "tblLayoutInferior";
+            this.tblLayoutInferior.RowCount = 1;
+            this.tblLayoutInferior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tblLayoutInferior.Size = new System.Drawing.Size(677, 178);
+            this.tblLayoutInferior.TabIndex = 101;
+            // 
+            // imgFoto
+            // 
+            this.imgFoto.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.imgFoto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imgFoto.Image = global::DesafioTrilhaDoConhecimento.Properties.Resources.SoftnickBracosCruzadosParteDeCima;
+            this.imgFoto.Location = new System.Drawing.Point(477, 0);
+            this.imgFoto.Margin = new System.Windows.Forms.Padding(0);
+            this.imgFoto.Name = "imgFoto";
+            this.imgFoto.Size = new System.Drawing.Size(200, 178);
+            this.imgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFoto.TabIndex = 4;
+            this.imgFoto.TabStop = false;
+            this.imgFoto.DragDrop += new System.Windows.Forms.DragEventHandler(this.imgFoto_DragDrop);
+            this.imgFoto.DragEnter += new System.Windows.Forms.DragEventHandler(this.imgFoto_DragEnter);
             // 
             // tblLayoutFilhos
             // 
@@ -826,124 +832,6 @@
             this.tblLayoutFilhos.Size = new System.Drawing.Size(475, 176);
             this.tblLayoutFilhos.TabIndex = 5;
             // 
-            // btnFilhoNovo
-            // 
-            this.btnFilhoNovo.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.btnFilhoNovo.Location = new System.Drawing.Point(395, 56);
-            this.btnFilhoNovo.Margin = new System.Windows.Forms.Padding(0);
-            this.btnFilhoNovo.Name = "btnFilhoNovo";
-            this.btnFilhoNovo.Size = new System.Drawing.Size(75, 20);
-            this.btnFilhoNovo.TabIndex = 27;
-            this.btnFilhoNovo.Text = "Novo";
-            this.btnFilhoNovo.UseVisualStyleBackColor = true;
-            this.btnFilhoNovo.Click += new System.EventHandler(this.btnFilhoNovo_Click);
-            // 
-            // btnFilhoSalvar
-            // 
-            this.btnFilhoSalvar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFilhoSalvar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilhoSalvar.Location = new System.Drawing.Point(315, 56);
-            this.btnFilhoSalvar.Margin = new System.Windows.Forms.Padding(0);
-            this.btnFilhoSalvar.Name = "btnFilhoSalvar";
-            this.btnFilhoSalvar.Size = new System.Drawing.Size(80, 20);
-            this.btnFilhoSalvar.TabIndex = 26;
-            this.btnFilhoSalvar.Text = "Salvar";
-            this.btnFilhoSalvar.UseVisualStyleBackColor = true;
-            this.btnFilhoSalvar.Click += new System.EventHandler(this.btnFilhoSalvar_Click);
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblLayoutFilhos.SetColumnSpan(this.dataGridView, 4);
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(3, 79);
-            this.dataGridView.MultiSelect = false;
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(469, 94);
-            this.dataGridView.TabIndex = 3;
-            this.dataGridView.TabStop = false;
-            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
-            // 
-            // lblFilhoId
-            // 
-            this.lblFilhoId.AutoSize = true;
-            this.lblFilhoId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilhoId.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilhoId.Location = new System.Drawing.Point(3, 0);
-            this.lblFilhoId.Name = "lblFilhoId";
-            this.lblFilhoId.Size = new System.Drawing.Size(54, 18);
-            this.lblFilhoId.TabIndex = 18;
-            this.lblFilhoId.Text = "Registro:";
-            // 
-            // lblFilhoNome
-            // 
-            this.lblFilhoNome.AutoSize = true;
-            this.lblFilhoNome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilhoNome.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilhoNome.Location = new System.Drawing.Point(63, 0);
-            this.lblFilhoNome.Name = "lblFilhoNome";
-            this.lblFilhoNome.Size = new System.Drawing.Size(249, 18);
-            this.lblFilhoNome.TabIndex = 19;
-            this.lblFilhoNome.Text = "Nome do Filho:";
-            // 
-            // txtFilhoNome
-            // 
-            this.txtFilhoNome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFilhoNome.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilhoNome.Location = new System.Drawing.Point(63, 18);
-            this.txtFilhoNome.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txtFilhoNome.Name = "txtFilhoNome";
-            this.txtFilhoNome.Size = new System.Drawing.Size(249, 21);
-            this.txtFilhoNome.TabIndex = 20;
-            // 
-            // lblFilhoRegistro
-            // 
-            this.lblFilhoRegistro.AutoSize = true;
-            this.lblFilhoRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilhoRegistro.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilhoRegistro.Location = new System.Drawing.Point(3, 18);
-            this.lblFilhoRegistro.Name = "lblFilhoRegistro";
-            this.lblFilhoRegistro.Size = new System.Drawing.Size(54, 20);
-            this.lblFilhoRegistro.TabIndex = 21;
-            this.lblFilhoRegistro.Text = "0";
-            this.lblFilhoRegistro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblFilhoIdade
-            // 
-            this.lblFilhoIdade.AutoSize = true;
-            this.lblFilhoIdade.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilhoIdade.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilhoIdade.Location = new System.Drawing.Point(3, 39);
-            this.lblFilhoIdade.Margin = new System.Windows.Forms.Padding(3, 1, 3, 0);
-            this.lblFilhoIdade.Name = "lblFilhoIdade";
-            this.lblFilhoIdade.Size = new System.Drawing.Size(54, 17);
-            this.lblFilhoIdade.TabIndex = 22;
-            this.lblFilhoIdade.Text = "Idade:";
-            // 
-            // lblFilhoSexo
-            // 
-            this.lblFilhoSexo.AutoSize = true;
-            this.lblFilhoSexo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFilhoSexo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilhoSexo.Location = new System.Drawing.Point(63, 39);
-            this.lblFilhoSexo.Margin = new System.Windows.Forms.Padding(3, 1, 3, 0);
-            this.lblFilhoSexo.Name = "lblFilhoSexo";
-            this.lblFilhoSexo.Size = new System.Drawing.Size(249, 17);
-            this.lblFilhoSexo.TabIndex = 23;
-            this.lblFilhoSexo.Text = "Sexo:";
-            // 
-            // txtFilhoIdade
-            // 
-            this.txtFilhoIdade.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFilhoIdade.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilhoIdade.Location = new System.Drawing.Point(3, 56);
-            this.txtFilhoIdade.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.txtFilhoIdade.Name = "txtFilhoIdade";
-            this.txtFilhoIdade.Size = new System.Drawing.Size(54, 21);
-            this.txtFilhoIdade.TabIndex = 24;
-            // 
             // cboFilhoSexo
             // 
             this.cboFilhoSexo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
@@ -961,37 +849,149 @@
             this.cboFilhoSexo.Size = new System.Drawing.Size(249, 21);
             this.cboFilhoSexo.TabIndex = 25;
             // 
-            // imgFoto
+            // txtFilhoIdade
             // 
-            this.imgFoto.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.imgFoto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imgFoto.Image = global::DesafioTrilhaDoConhecimento.Properties.Resources.SoftnickBracosCruzadosParteDeCima;
-            this.imgFoto.Location = new System.Drawing.Point(477, 0);
-            this.imgFoto.Margin = new System.Windows.Forms.Padding(0);
-            this.imgFoto.Name = "imgFoto";
-            this.imgFoto.Size = new System.Drawing.Size(200, 178);
-            this.imgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFoto.TabIndex = 4;
-            this.imgFoto.TabStop = false;
-            this.imgFoto.DragDrop += new System.Windows.Forms.DragEventHandler(this.imgFoto_DragDrop);
-            this.imgFoto.DragEnter += new System.Windows.Forms.DragEventHandler(this.imgFoto_DragEnter);
+            this.txtFilhoIdade.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFilhoIdade.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilhoIdade.Location = new System.Drawing.Point(3, 56);
+            this.txtFilhoIdade.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txtFilhoIdade.Name = "txtFilhoIdade";
+            this.txtFilhoIdade.Size = new System.Drawing.Size(54, 21);
+            this.txtFilhoIdade.TabIndex = 24;
             // 
-            // tblLayoutInferior
+            // lblFilhoSexo
             // 
-            this.tblLayoutInferior.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tblLayoutInferior.ColumnCount = 2;
-            this.tblLayoutPrincipal.SetColumnSpan(this.tblLayoutInferior, 2);
-            this.tblLayoutInferior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblLayoutInferior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tblLayoutInferior.Controls.Add(this.imgFoto, 1, 0);
-            this.tblLayoutInferior.Controls.Add(this.tblLayoutFilhos, 0, 0);
-            this.tblLayoutInferior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblLayoutInferior.Location = new System.Drawing.Point(3, 368);
-            this.tblLayoutInferior.Name = "tblLayoutInferior";
-            this.tblLayoutInferior.RowCount = 1;
-            this.tblLayoutInferior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 177F));
-            this.tblLayoutInferior.Size = new System.Drawing.Size(677, 178);
-            this.tblLayoutInferior.TabIndex = 101;
+            this.lblFilhoSexo.AutoSize = true;
+            this.lblFilhoSexo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilhoSexo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilhoSexo.Location = new System.Drawing.Point(63, 39);
+            this.lblFilhoSexo.Margin = new System.Windows.Forms.Padding(3, 1, 3, 0);
+            this.lblFilhoSexo.Name = "lblFilhoSexo";
+            this.lblFilhoSexo.Size = new System.Drawing.Size(249, 17);
+            this.lblFilhoSexo.TabIndex = 23;
+            this.lblFilhoSexo.Text = "Sexo:";
+            // 
+            // lblFilhoIdade
+            // 
+            this.lblFilhoIdade.AutoSize = true;
+            this.lblFilhoIdade.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilhoIdade.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilhoIdade.Location = new System.Drawing.Point(3, 39);
+            this.lblFilhoIdade.Margin = new System.Windows.Forms.Padding(3, 1, 3, 0);
+            this.lblFilhoIdade.Name = "lblFilhoIdade";
+            this.lblFilhoIdade.Size = new System.Drawing.Size(54, 17);
+            this.lblFilhoIdade.TabIndex = 22;
+            this.lblFilhoIdade.Text = "Idade:";
+            // 
+            // lblFilhoRegistro
+            // 
+            this.lblFilhoRegistro.AutoSize = true;
+            this.lblFilhoRegistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilhoRegistro.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilhoRegistro.Location = new System.Drawing.Point(3, 18);
+            this.lblFilhoRegistro.Name = "lblFilhoRegistro";
+            this.lblFilhoRegistro.Size = new System.Drawing.Size(54, 20);
+            this.lblFilhoRegistro.TabIndex = 21;
+            this.lblFilhoRegistro.Text = "0";
+            this.lblFilhoRegistro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtFilhoNome
+            // 
+            this.txtFilhoNome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFilhoNome.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilhoNome.Location = new System.Drawing.Point(63, 18);
+            this.txtFilhoNome.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txtFilhoNome.Name = "txtFilhoNome";
+            this.txtFilhoNome.Size = new System.Drawing.Size(249, 21);
+            this.txtFilhoNome.TabIndex = 20;
+            // 
+            // lblFilhoNome
+            // 
+            this.lblFilhoNome.AutoSize = true;
+            this.lblFilhoNome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilhoNome.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilhoNome.Location = new System.Drawing.Point(63, 0);
+            this.lblFilhoNome.Name = "lblFilhoNome";
+            this.lblFilhoNome.Size = new System.Drawing.Size(249, 18);
+            this.lblFilhoNome.TabIndex = 19;
+            this.lblFilhoNome.Text = "Nome do Filho:";
+            // 
+            // lblFilhoId
+            // 
+            this.lblFilhoId.AutoSize = true;
+            this.lblFilhoId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFilhoId.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilhoId.Location = new System.Drawing.Point(3, 0);
+            this.lblFilhoId.Name = "lblFilhoId";
+            this.lblFilhoId.Size = new System.Drawing.Size(54, 18);
+            this.lblFilhoId.TabIndex = 18;
+            this.lblFilhoId.Text = "Registro:";
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblLayoutFilhos.SetColumnSpan(this.dataGridView, 4);
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(3, 79);
+            this.dataGridView.MultiSelect = false;
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(469, 94);
+            this.dataGridView.TabIndex = 3;
+            this.dataGridView.TabStop = false;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            // 
+            // btnFilhoSalvar
+            // 
+            this.btnFilhoSalvar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFilhoSalvar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilhoSalvar.Location = new System.Drawing.Point(315, 56);
+            this.btnFilhoSalvar.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFilhoSalvar.Name = "btnFilhoSalvar";
+            this.btnFilhoSalvar.Size = new System.Drawing.Size(80, 20);
+            this.btnFilhoSalvar.TabIndex = 26;
+            this.btnFilhoSalvar.Text = "Salvar";
+            this.btnFilhoSalvar.UseVisualStyleBackColor = true;
+            this.btnFilhoSalvar.Click += new System.EventHandler(this.btnFilhoSalvar_Click);
+            // 
+            // btnFilhoNovo
+            // 
+            this.btnFilhoNovo.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.btnFilhoNovo.Location = new System.Drawing.Point(395, 56);
+            this.btnFilhoNovo.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFilhoNovo.Name = "btnFilhoNovo";
+            this.btnFilhoNovo.Size = new System.Drawing.Size(75, 20);
+            this.btnFilhoNovo.TabIndex = 27;
+            this.btnFilhoNovo.Text = "Novo";
+            this.btnFilhoNovo.UseVisualStyleBackColor = true;
+            this.btnFilhoNovo.Click += new System.EventHandler(this.btnFilhoNovo_Click);
+            // 
+            // btnAdicionarFoto
+            // 
+            this.btnAdicionarFoto.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAdicionarFoto.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarFoto.Location = new System.Drawing.Point(575, 345);
+            this.btnAdicionarFoto.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdicionarFoto.Name = "btnAdicionarFoto";
+            this.btnAdicionarFoto.Size = new System.Drawing.Size(108, 20);
+            this.btnAdicionarFoto.TabIndex = 103;
+            this.btnAdicionarFoto.Text = "Adicionar Foto";
+            this.btnAdicionarFoto.UseVisualStyleBackColor = true;
+            this.btnAdicionarFoto.Click += new System.EventHandler(this.btnAdicionarFoto_Click);
+            // 
+            // lblCadastroDeFilhos
+            // 
+            this.lblCadastroDeFilhos.AutoSize = true;
+            this.lblCadastroDeFilhos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCadastroDeFilhos.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastroDeFilhos.Location = new System.Drawing.Point(3, 347);
+            this.lblCadastroDeFilhos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.lblCadastroDeFilhos.Name = "lblCadastroDeFilhos";
+            this.lblCadastroDeFilhos.Size = new System.Drawing.Size(335, 18);
+            this.lblCadastroDeFilhos.TabIndex = 104;
+            this.lblCadastroDeFilhos.Text = "Cadastro de Filhos:";
+            this.lblCadastroDeFilhos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmCadastroPessoas
             // 
@@ -1016,11 +1016,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCategorias)).EndInit();
             this.tblLayoutSalario.ResumeLayout(false);
             this.tblLayoutSalario.PerformLayout();
+            this.tblLayoutInferior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).EndInit();
             this.tblLayoutFilhos.ResumeLayout(false);
             this.tblLayoutFilhos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).EndInit();
-            this.tblLayoutInferior.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -328,13 +328,6 @@
     <None Include="Resources\img_check.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Desafio.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Desafio_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Desafio.mdf</DependentUpon>
-    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

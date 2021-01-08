@@ -32,7 +32,8 @@ namespace DesafioTrilhaDoConhecimento
             var categorias = dataTable.AsEnumerable().Select(linha => new DataBase.Categoria
             {
                 Id = linha.Field<Int32>("Id"),
-                Nome = linha.Field<String>("Nome")
+                Nome = linha.Field<String>("Nome"),
+                PreCadastrada = linha.Field<bool>("pre_cadastrado")
 
             }).ToList();
 
@@ -79,12 +80,16 @@ namespace DesafioTrilhaDoConhecimento
 
         }
 
-        public void Excluir(int id)
+        public void Excluir(DataBase.Categoria categoria)
         {
-            var queryString = "delete from Categorias where id=" + id;
+            if(categoria.PreCadastrada == true)
+                throw new Exception("Categorias Pré-cadastradas não podem ser excluídas.");
+
+            var queryString = "delete from Categorias where id=" + categoria.Id;
 
             var sqlCommand = new SqlCommand(queryString, connection);
-            sqlCommand.Connection.Open();
+            if (sqlCommand.Connection.State == ConnectionState.Closed)
+                sqlCommand.Connection.Open();
             sqlCommand.ExecuteNonQuery();
 
             connection.Close();
@@ -96,7 +101,8 @@ namespace DesafioTrilhaDoConhecimento
         {
             var queryString = "select * from Categorias where id=" + id;
             var sqlCommand = new SqlCommand(queryString, connection);
-            sqlCommand.Connection.Open();
+            if (sqlCommand.Connection.State == ConnectionState.Closed)
+                sqlCommand.Connection.Open();
 
             var adapter = new SqlDataAdapter();
             adapter.SelectCommand = sqlCommand;
@@ -107,7 +113,8 @@ namespace DesafioTrilhaDoConhecimento
             var categoria = table.AsEnumerable().Select(linha => new DataBase.Categoria
             {
                 Id = linha.Field<Int32>("Id"),
-                Nome = linha.Field<String>("Nome")
+                Nome = linha.Field<String>("Nome"),
+                PreCadastrada = linha.Field<bool>("pre_cadastrado")
 
             }).ToList().FirstOrDefault();
 
