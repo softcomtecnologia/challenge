@@ -11,7 +11,7 @@ namespace Business
     {
         public int Id { get; set; }
         public int IdPai { get; set; }
-        public string Nome { get; set; }
+        public string NomeFilho { get; set; }
         public int Idade { get; set; }
         public string Sexo { get; set; }
 
@@ -22,7 +22,7 @@ namespace Business
             try
             {
                 ExecutarSQL("INSERT INTO Filhos (IDPai, NomeFilho, Idade, Sexo)" +
-                           $"VALUES ('{this.IdPai}', '{this.Nome}', '{this.Idade}', '{this.Sexo}')");
+                           $"VALUES ('{this.IdPai}', '{this.NomeFilho}', '{this.Idade}', '{this.Sexo}')");
 
                 return true;
             }
@@ -36,7 +36,7 @@ namespace Business
         {
             try
             {
-                ExecutarSQL($"UPDATE Filhos SET NomeFilho='{this.Nome}', Idade='{this.Idade}', Sexo='{this.Sexo}' " +                            
+                ExecutarSQL($"UPDATE Filhos SET NomeFilho='{this.NomeFilho}', Idade='{this.Idade}', Sexo='{this.Sexo}' " +                            
                             $"WHERE Filhos.ID={filhoId}");
 
                 return true;

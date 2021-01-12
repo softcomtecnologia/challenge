@@ -106,22 +106,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reports\FrmPessoasReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\FrmPessoasReport.Designer.cs">
       <DependentUpon>FrmPessoasReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\FrmReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\FrmReport.Designer.cs">
-      <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Uteis\Util_Convert.cs" />
@@ -146,9 +135,7 @@
     <EmbeddedResource Include="Reports\FrmPessoasReport.resx">
       <DependentUpon>FrmPessoasReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\FrmReport.resx">
-      <DependentUpon>FrmReport.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptFilhos.rdlc" />
     <EmbeddedResource Include="Reports\RptPessoas.rdlc" />
     <None Include="KnowledgeTrail_LaercioDataSet.xsc">
       <DependentUpon>KnowledgeTrail_LaercioDataSet.xsd</DependentUpon>
@@ -162,6 +149,7 @@
       <DependentUpon>KnowledgeTrail_LaercioDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Business.Filho.datasource" />
     <None Include="Properties\DataSources\Business.Pessoas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,17 +160,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Reports\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Reports\DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Reports\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

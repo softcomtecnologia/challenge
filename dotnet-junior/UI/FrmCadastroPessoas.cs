@@ -197,7 +197,7 @@ namespace KnowledgeTrail
 
             var filho = new Filho();
             filho.IdPai = IdSelecionado;
-            filho.Nome = txtNomeFilho.Text;
+            filho.NomeFilho = txtNomeFilho.Text;
             
             if (!string.IsNullOrEmpty(txtIdadeFilho.Text))
             {

@@ -21,6 +21,7 @@ namespace KnowledgeTrail
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+            dgvPessoas.Columns.Remove("Salario");
             Buscar($"SELECT ID, CPF, Nome, Sobrenome, Categoria, SalarioBase FROM Pessoas WHERE [CPF] + ' ' + [Nome] + ' ' + [Sobrenome] LIKE '%{txtBuscar.Text}%'");
         }
 
@@ -34,7 +35,7 @@ namespace KnowledgeTrail
             dgvPessoas.DataSource = null;
 
             var pessoa = new Pessoas();
-            dgvPessoas.DataSource = pessoa.Buscar(instrucaoSQL);
+            dgvPessoas.DataSource = pessoa.Buscar(instrucaoSQL);            
             dgvPessoas.Columns.Add("Salario","Salario Calculado");
 
             foreach (DataGridViewColumn column in dgvPessoas.Columns)

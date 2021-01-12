@@ -11,7 +11,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.1428cm</Height>
+              <Height>1.41781cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -68,7 +68,7 @@
                           <Top>0.34396cm</Top>
                           <Left>5.29646cm</Left>
                           <Height>0.44684cm</Height>
-                          <Width>5.16472cm</Width>
+                          <Width>3.93472cm</Width>
                           <ZIndex>1</ZIndex>
                           <Style>
                             <Border>
@@ -149,6 +149,7 @@
                           <Value>=Fields!foto.Value</Value>
                           <MIMEType>image/bmp</MIMEType>
                           <Sizing>FitProportional</Sizing>
+                          <Top>0.0635cm</Top>
                           <Height>1.12164cm</Height>
                           <Width>1.10313cm</Width>
                           <ZIndex>4</ZIndex>
@@ -158,13 +159,43 @@
                             </Border>
                           </Style>
                         </Image>
+                        <Subreport Name="RptFilhos">
+                          <ReportName>RptFilhos</ReportName>
+                          <Parameters>
+                            <Parameter Name="IdPai">
+                              <Value>=Fields!Id.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>1.24114cm</Top>
+                          <Left>0.127cm</Left>
+                          <Height>0.02646cm</Height>
+                          <Width>18.21215cm</Width>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                        <Line Name="Line2">
+                          <Top>0.0364cm</Top>
+                          <Left>0.127cm</Left>
+                          <Height>0cm</Height>
+                          <Width>18.21215cm</Width>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>Dotted</Style>
+                            </Border>
+                          </Style>
+                        </Line>
                       </ReportItems>
                       <KeepTogether>true</KeepTogether>
                       <Style>
                         <Border>
                           <Style>None</Style>
                         </Border>
-                        <BackgroundColor>=iif(RowNumber(Nothing) mod 2, "PaleTurquoise", "White")</BackgroundColor>
+                        <BackgroundColor>=iif(RowNumber(Nothing) mod 2, "LightBlue", "White")</BackgroundColor>
                       </Style>
                     </Rectangle>
                   </CellContents>
@@ -188,7 +219,7 @@
         <DataSetName>PessoasDataSet</DataSetName>
         <Top>0.76652cm</Top>
         <Left>0.3937cm</Left>
-        <Height>1.1428cm</Height>
+        <Height>1.41781cm</Height>
         <Width>18.51806cm</Width>
         <Style>
           <Border>
@@ -329,7 +360,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>0.82701in</Height>
+    <Height>0.92247in</Height>
     <Style />
   </Body>
   <Width>7.53883in</Width>
@@ -440,7 +471,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.08914cm</Height>
+      <Height>0.95685cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
