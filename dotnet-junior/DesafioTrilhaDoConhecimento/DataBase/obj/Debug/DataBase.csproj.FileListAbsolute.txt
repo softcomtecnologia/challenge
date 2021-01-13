@@ -3,8 +3,3 @@ F:\Sistemas_2020\DesafioTrilhaDoConhecimento\DataBase\bin\Debug\DataBase.pdb
 F:\Sistemas_2020\DesafioTrilhaDoConhecimento\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
 F:\Sistemas_2020\DesafioTrilhaDoConhecimento\DataBase\obj\Debug\DataBase.dll
 F:\Sistemas_2020\DesafioTrilhaDoConhecimento\DataBase\obj\Debug\DataBase.pdb
-F:\Sistemas_2020\GitHub\challenge\dotnet-junior\DesafioTrilhaDoConhecimento\DataBase\bin\Debug\DataBase.dll
-F:\Sistemas_2020\GitHub\challenge\dotnet-junior\DesafioTrilhaDoConhecimento\DataBase\bin\Debug\DataBase.pdb
-F:\Sistemas_2020\GitHub\challenge\dotnet-junior\DesafioTrilhaDoConhecimento\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
-F:\Sistemas_2020\GitHub\challenge\dotnet-junior\DesafioTrilhaDoConhecimento\DataBase\obj\Debug\DataBase.dll
-F:\Sistemas_2020\GitHub\challenge\dotnet-junior\DesafioTrilhaDoConhecimento\DataBase\obj\Debug\DataBase.pdb
