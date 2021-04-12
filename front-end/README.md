@@ -1,4 +1,4 @@
-# Front-end Challenge (ReactJS) - Softcom
+# Softcom Challenge - Front-end com React
 
 Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo _README_ na raiz do projeto falando sobre o desenvolvimento do desafio.
 
@@ -6,44 +6,56 @@ Focamos aqui em design de código e design patterns em _TypeScript_ com e princi
 
 A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contato e vamos enviar um retorno do teste enviado. Faremos questão de falar seus pontos fortes e os pontos a melhorar. Então, aproveite essa oportunidade. =]
 
-## Principais responsabilidades que buscamos
+## 🚀Principais responsabilidades que buscamos
 
 - Colaborar com idéias que possam melhorar nossos sistemas e a vida dos nossos usuários;
 - Estar disposto a aprender e a ensinar;
 - Cuidar dos nossos sistemas como se fossem seus filhos;
 - Estar sempre atento a oportunidades para melhorar o código e nossos processos.
 
-## Requisitos e Skills
+## 🎓 Requisitos
 
 - Experiência com TypeScript;
+- SSR ou SSG com Next.js
 - HTML5 e CSS3;
-- React Hooks e Context API;
-- Styled Components;
+- React Hooks;
+- Context API;
+- Styled Components e/ou Sass;
 - Clean Code;
+
+## 🎓 Skills como diferenciais
+
 - Conhecer o básico de versionamento com Git;
-
-## Diferenciais
-
+- Experiência com criação de interfaces responsivas;
+- Experiência com Redux;
 - Experiência em construir formulários com Formik + Yup;
-- Experiência em consumir dados de Graphql e/ou API Rest;
+- Experiência em consumir API Rest;
 - Experiência em consumir o JWT Token;
-- Experiência com Material-UI e/ou React-Bootstrap;
-- Experiência com metodologia ágil;
-- Testes unitários com Jest;
+- Experiência com Testes unitários com Jest;
 - Experiência com Continuous integration/continuous delivery;
+- Experiência com metodologia ágil;
 - Conhecimento em inglês para escrita de comentários, revisão de PRs e leitura;
 
-## Problema
+## 🎯 Problema a ser resolvido
 
-No desafio back-end, criamos uma lojinha virtual para pequenos empreendedores. Temos basicamente o seguinte fluxo: Tela de login, tela de cadastro do usuário, Tela de listagem de itens cadastrados pelo usário. Também precisamos de telas ou modais para as seguintes ações do sistema: Cadastrar item, remover item e atualizar item.
-Pedimos que esse desafio seja feito em ReactJS e caso você também tenha feito o desafio do back-end, pode integrar sua API com esse desafio front-end.
+### **Lojinha Virtual**
 
-## Plus
+O nosso cliente necessita de uma lojinha virtual para vender os seus itens, o mesmo já possui uma interface onde ele pode cadastrar os seus produtos, atribuir promoções e sinalizar os mesmos como sugestão de venda, o que você precisa desenvolver para o mesmo é uma interface para consumidores que irá disponibilizar a listagem desses itens já cadastrados e os recursos necessários que o mesmo adicione esses itens em uma sacola de compras, essa tela é para aprovação, você deverá criar apenas as interfaces solicitadas:
 
-- Caso tenha optado por fazer também o desafio back-end e integrar os dois desafios, gostaríamos de ver como resolve a parte de segurança também no front-end consumindo o JWT Token.
+#### **Jornada do usuário:**
+
+O usuário deverá ter acesso a uma tela de home com a listagem dos produtos comercializados pela empresa, os produtos devem ser agrupados por sua categoria, com possibilidade de filtrar os mesmos por sua categoria ou pesquisar por qualquer parte o nome do produto, ao clicar no card de um terminado produto, deverá ser exibido um modal contendo as informações sobre o mesmo com a possibilidade de alterar a quantidade e de adicionar a mesmo ao carrinho, não será necessário criar a interface do carrinho de compras, toda via, conforme protótipo, exite no header da home um totalizador do carrinho que precisar ser alterado a cada adição de um produto.
+
+#### **Link para o protótipo do interface do desafio:**
+
+https://www.figma.com/file/ebcFb6dxwj4JkN7vENzgeQ/Desafio-UX?node-id=3585%3A0
+
+## 🚀 Plus
+
+- Como não disponibilizamos uma API para consumo nesse desafio, os dados devem ser simulados com um objeto JSON fixo ou outra maneira que você achar interessante para simular um consumo de um JSON, toda via, consideramos um diferencial simular a API REST através da instalação da dependência do JSON-Server.
 - Da mesma maneira não estamos cobrando testes. Mas caso queira ganhar pontos extras, testes unitários cairiam bem na entrega.
 
-## Avaliação
+## 📆 Avaliação
 
 Para nos enviar seu código, você pode:
 
