@@ -1,14 +1,14 @@
 # Softcom Challenge - Front-end com React
 
-Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo _README_ na raiz do projeto falando sobre o desenvolvimento do desafio.
+Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a vários níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo _README_ na raiz do projeto falando sobre o desenvolvimento do desafio.
 
-Focamos aqui em design de código e design patterns em _TypeScript_ com e principalmente criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
+Focamos aqui em design de código e design patterns em _TypeScript_ exercendo da sua criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
 
 A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contato e vamos enviar um retorno do teste enviado. Faremos questão de falar seus pontos fortes e os pontos a melhorar. Então, aproveite essa oportunidade. =]
 
 ## 🚀Principais responsabilidades que buscamos
 
-- Colaborar com idéias que possam melhorar nossos sistemas e a vida dos nossos usuários;
+- Colaborar com ideias que possam melhorar nossos sistemas e a vida dos nossos usuários;
 - Estar disposto a aprender e a ensinar;
 - Cuidar dos nossos sistemas como se fossem seus filhos;
 - Estar sempre atento a oportunidades para melhorar o código e nossos processos.
@@ -22,15 +22,15 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 - Context API;
 - Styled Components e/ou Sass;
 - Clean Code;
+- Conhecer o básico de versionamento com Git;
+- Experiência com criação de interfaces responsivas;
+- Experiência em consumir API Rest;
 
 ## 🎓 Skills como diferenciais
 
-- Conhecer o básico de versionamento com Git;
-- Experiência com criação de interfaces responsivas;
 - Experiência com Redux;
 - Experiência em construir formulários com Formik + Yup;
-- Experiência em consumir API Rest;
-- Experiência em consumir o JWT Token;
+- Experiência em autenticação JWT Token;
 - Experiência com Testes unitários com Jest;
 - Experiência com Continuous integration/continuous delivery;
 - Experiência com metodologia ágil;
@@ -44,7 +44,7 @@ O nosso cliente necessita de uma lojinha virtual para vender os seus itens, o me
 
 #### **Jornada do usuário:**
 
-O usuário deverá ter acesso a uma tela de home com a listagem dos produtos comercializados pela empresa, os produtos devem ser agrupados por sua categoria, com possibilidade de filtrar os mesmos por sua categoria ou pesquisar por qualquer parte o nome do produto, ao clicar no card de um terminado produto, deverá ser exibido um modal contendo as informações sobre o mesmo com a possibilidade de alterar a quantidade e de adicionar a mesmo ao carrinho, não será necessário criar a interface do carrinho de compras, toda via, conforme protótipo, exite no header da home um totalizador do carrinho que precisar ser alterado a cada adição de um produto.
+O usuário deverá ter acesso a uma tela de home com a listagem dos produtos comercializados pela empresa, os produtos devem ser agrupados por sua categoria, com possibilidade de filtrar os mesmos por sua categoria ou pesquisar por qualquer parte o nome do produto, ao clicar no card de um determinado produto, deverá ser exibido um modal contendo as informações sobre o mesmo com a possibilidade de alterar a quantidade e de adicionar a mesmo ao carrinho, não será necessário criar a interface do carrinho de compras, toda via, conforme protótipo, exibe no header da home um totalizador do carrinho que precisar ser alterado a cada adição de um produto.
 
 #### **Link para o protótipo do interface do desafio:**
 
