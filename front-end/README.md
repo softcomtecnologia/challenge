@@ -32,4 +32,7 @@ $ `npm run api`
 # Execute a aplicação em modo de desenvolvimento
 $ `npm run start`
 
+# Execute os testes da aplicação
+$ `npm run test`
+
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
