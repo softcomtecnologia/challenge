@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Softcom Challenge - Front-end com React
 
-## Available Scripts
+# Instalando e execultando
+- git clone
+- cd challenge/front-end
+- npm install
+- npx json-server --watch db.json ( JSON-SERVER ) - rodar na porta 3000
+- npm start - rodar na porta 3001
 
-In the project directory, you can run:
+# Lojinha Virtual Figma
+- https://www.figma.com/file/ebcFb6dxwj4JkN7vENzgeQ/Desafio-UX?node-id=3585%3A0
 
-### `yarn start`
+# Style
+- material-ui
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Resumo
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Lojinha Virtual
+- O nosso cliente necessita de uma lojinha virtual para vender os seus itens, o mesmo já possui uma interface onde ele pode cadastrar os seus produtos, atribuir promoções e sinalizar os mesmos como sugestão de venda, o que você precisa desenvolver para o mesmo é uma interface para consumidores que irá disponibilizar a listagem desses itens já cadastrados e os recursos necessários que o mesmo adicione esses itens em uma sacola de compras, essa tela é para aprovação, você deverá criar apenas as interfaces solicitadas:
 
-### `yarn test`
+# Jornada do usuário:
+- O usuário deverá ter acesso a uma tela de home com a listagem dos produtos comercializados pela empresa, os produtos devem ser agrupados por sua categoria, com possibilidade de filtrar os mesmos por sua categoria ou pesquisar por qualquer parte o nome do produto, ao clicar no card de um determinado produto, deverá ser exibido um modal contendo as informações sobre o mesmo com a possibilidade de alterar a quantidade e de adicionar a mesmo ao carrinho, não será necessário criar a interface do carrinho de compras, toda via, conforme protótipo, exibe no header da home um totalizador do carrinho que precisar ser alterado a cada adição de um produto.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# Experiencia Sobre o desafio
+- O desafio em si foi muito bom para aprender novas tecnicas e praticar tecnicas que eu ja tinha conhecimento, ainda faltou alguns pontos que poderia ser melhorado mas para se adequar ao prazo estabelecido não foram implementadas, mas estou muito satisfeito com o projeto, as maiores dificuldades que tive foi em relação ao estilo responsivo para mobile e passar as propriedades e funções do componente pai para o filho, tive muita dedicação a trilha mesmo não tendo muito tempo para trabalho, tenho muito orgulho de chegar até aqui...
