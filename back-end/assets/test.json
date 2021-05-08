@@ -1,0 +1,43 @@
+//Create item
+{
+  "nome": "Nokia 1100",
+  "descricao": "Celular moderno",
+  "preco": 399
+},
+{
+  "nome": "Nokia 3310",
+  "descricao": "Celular Indestrutivel",
+  "preco": 1299
+},
+{
+  "nome": "Motorola G3",
+  "descricao": "O melhor celular de todos atualizado novamente",
+  "preco": 499.7
+},
+{
+  "nome": "Notebook Lenovo",
+  "descricao": "Notebook meia boca",
+  "preco": 2499.7,
+  "user_id": 0
+},
+{
+  "nome": "Notebook Samsung",
+  "descricao": "Notebook bom+",
+  "preco": 3499.89
+}
+
+
+//Create user
+{
+	"nome": "Antonio",
+	"email": "antonio@hotmail.com",
+	"cnpj": "79784184000188",
+	"senha": "12345"
+}
+
+//Auth user
+{
+	"nome": "Antonio",
+	"cnpj": "79784184000188",
+	"senha": "12345"
+}
