@@ -6,6 +6,7 @@ const app = express();
 const routeIndex = require("./routes/index");
 const routeItens = require("./routes/itens");
 const routeUsers = require("./routes/users");
+const routeAuth  = require("./routes/auth"); 
 
 app.use(morgan("dev"));
 
@@ -27,7 +28,7 @@ app.use((req, res, next) => {
 });
 
 //Rotas
-app.use("/api/v1", routeIndex, routeItens, routeUsers);
+app.use("/api/v1", routeIndex, routeItens, routeUsers, routeAuth);
 
 //Tratamento para rotas não existentes
 app.use((req, res, next) => {
