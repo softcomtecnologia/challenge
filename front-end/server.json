@@ -1,0 +1,52 @@
+{
+    "products":[
+        {
+            "id":1,
+            "title":"Detergente",
+            "price": 12.00,
+            "image":"https://a-static.mlcdn.com.br/618x463/detergente-liquido-neutro-com-5-litros-ype/lepok1/90134/ca0a38ded424d6a00a364a5917adbe5d.jpg",
+            "amount":1
+
+        },
+        {
+            "id":2,
+            "title":"Bucha",
+            "price": 2.00,
+            "image":"https://http2.mlstatic.com/D_NQ_NP_708847-MLB42844134224_072020-V.jpg",
+            "amount":1
+
+        },
+        {
+            "id":3,
+            "title":"Ração",
+            "price": 62.00,
+            "image":"https://www.petlove.com.br/images/products/223194/large/Ra%C3%A7%C3%A3o_Seca_Pedigree_Carne__Frango_e_Cereais_para_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_3104832_1_10_1kg.jpg?1587145097",
+            "amount":1
+
+        },
+        {
+            "id":4,
+            "title":"Escova",
+            "price": 2.50,
+            "image":"https://a-static.mlcdn.com.br/618x463/escova-para-cachorro-animais-rasqueadeira-caracol-17cm-rio-tijucas/comercialize/10066292673/07d695528d4ec1119f65c6ed25390102.jpg",
+            "amount":1
+
+        },
+        {
+            "id":5,
+            "title":"Roupinha de cachorro",
+            "price": 17.50,
+            "image":"https://dicasboaspracachorro.com.br/wp-content/uploads/2018/02/roupas-para-cachorro-yorkshire.jpg",
+            "amount":1
+
+        },
+        {
+            "id":6,
+            "title":"Whiskas",
+            "price": 6.50,
+            "image":"https://www.petlove.com.br/images/products/202953/product/Ra%C3%A7%C3%A3o_Whiskas_Carne_para_Gatos_Adultos_-_10_1_Kg_31017729-4.jpg?1556481153",
+            "amount":1
+
+        }
+    ]
+}
