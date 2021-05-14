@@ -2,12 +2,12 @@ import React from 'react';
 import MainContentGrid from '../components/MainContentGrid';
 import MainSearchInput from '../components/MainSearchInput';
 
-const Sugestions = () => (
+const Toys = () => (
   <div>
     <MainSearchInput />
-    Sugestoes do Vendedor
+    Brinquerdos
     <MainContentGrid />
   </div>
 );
 
-export default Sugestions;
+export default Toys;
