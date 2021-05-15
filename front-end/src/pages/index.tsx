@@ -4,6 +4,7 @@ import { Container, Wrapper } from "../styles/App";
 import { IProduct } from '../interfaces/ExportInterfaces';
 
 import Main from "../components/Main";
+import { Api } from "../services/api";
 
 export default function Home(props) {
 
@@ -32,11 +33,11 @@ export default function Home(props) {
 
 export async function getServerSideProps(){
 
-  const responseProfile = await fetch(`http://localhost:3333/profile-info`);
-  const responseProducts = await fetch(`http://localhost:3333/products/?sectionQuery=sugestao`);
+  const responseProfile = await Api.get(`profile-info`);
+  const responseProducts = await Api.get(`products/?sectionQuery=sugestao`);
 
-  const dataProfile = await responseProfile.json();
-  const dataProducts = await responseProducts.json();
+  const dataProfile = await responseProfile.data;
+  const dataProducts = await responseProducts.data;
 
 
   const response = {

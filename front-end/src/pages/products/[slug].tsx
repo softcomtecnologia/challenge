@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import Main from "../../components/Main";
 
 import { IProduct } from '../../interfaces/ExportInterfaces';
+import { Api } from "../../services/api";
 
 export default function Products() {
 
@@ -14,8 +15,8 @@ export default function Products() {
   const [dataProductCategory, setDataProductCategory]  = useState<IProduct>({} as IProduct);
 
   useEffect(() =>{
-    fetch(`http://localhost:3333/products/?sectionQuery=${route.query.slug as string}`)
-      .then(response => response.json())
+    Api.get(`products/?sectionQuery=${route.query.slug as string}`)
+      .then(response => response.data)
       .then(data => {
         setDataProducts(data);
         setDataProductCategory(data[0]);
