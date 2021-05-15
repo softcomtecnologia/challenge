@@ -48,4 +48,5 @@ export const SearchIcon = styled(HiOutlineSearch)`
     width: 21px;
     height: 21px;
     color: var(--color-gray200);
+    cursor: pointer;
 `;

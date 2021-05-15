@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import ProductsSection from "../ProductsSection";
 
 import { 
@@ -26,7 +27,9 @@ const Main: React.FC<Props> = ({sectionName, sectionQuery, dataProducts}) => {
 
           <SearchWrapper>
             <SearchInput placeholder="O que você procura?"/>
-            <SearchIcon />
+            <Link href="/">
+              <SearchIcon />
+            </Link>
           </SearchWrapper>
 
           <ProductsSection

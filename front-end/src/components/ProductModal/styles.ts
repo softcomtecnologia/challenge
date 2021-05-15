@@ -17,7 +17,7 @@ export const Container = styled.div`
   > .modal {
     background-color: #fff;
     width: 60%;
-    height: 590px;
+    height: 470px;
     color: black;
     border-radius: 15px;
 
@@ -50,76 +50,72 @@ export const Container = styled.div`
 `;
 
 export const ModalContent = styled.div`
-    display: grid;
-    grid-template-columns: 65fr 35fr;
+  display: grid;
+  grid-template-columns: 65fr 35fr;
 `;
 
 export const ImageContainer = styled.div`
-    height: 400px;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  height: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 
-    > img{
-        height: 80%;
-    }
+  > img {
+    height: 70%;
+  }
 
-    > span{
-        top: 10px;
-        left: 45px;
-        width: 10rem;
-        position: absolute;
-        text-align: center;
-        background-color: var(--color-green);
-        padding: 4px;
-        font-size: 22px;
-        border-radius: 4px;
-        color: var(--color-white);
-    }
+  > span {
+    top: 10px;
+    left: 45px;
+    width: 10rem;
+    position: absolute;
+    text-align: center;
+    background-color: var(--color-green);
+    padding: 4px;
+    font-size: 22px;
+    border-radius: 4px;
+    color: var(--color-white);
+  }
 `;
 
 export const CardTitle = styled.div`
-    font-size: 26px;
-    text-align: left;
-    height: 4rem;
-    font-weight: 700;
+  font-size: 20px;
+  text-align: left;
+  height: 3rem;
+  font-weight: 700;
 `;
 
 export const CardPrice = styled.div`
-    margin-top: 30px;
-    font-size: 40px;
-    font-weight: 700;
-    height: 4rem;
+  margin-top: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  height: 4rem;
 `;
 
 export const CardAddCart = styled.div`
-  
   cursor: pointer;
   border: 1px solid var(--color-gray100);
   border-radius: 10px;
-  margin: 40px 30px ;
+  margin: 30px 20px;
   margin-left: -40px;
-  padding: 48px 20px;
+  padding: 38px 20px;
 
-  > .qtdProduct{
-        margin-top: 25px;
-  }
-
-  > div {
+  > .qtdProduct {
     width: 100%;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
     > span {
-      width: 2rem;
-      height: 2rem;
       margin-left: 25px;
-      font-size: 22px;
+      font-size: 17px;
     }
     > button {
       background-color: var(--color-background);
       color: var(--color-white);
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.2rem;
+      height: 2.2rem;
       border-radius: 4px;
       margin: 1px;
       cursor: pointer;
@@ -127,19 +123,18 @@ export const CardAddCart = styled.div`
     }
   }
 
-  > .buttonAddCart{
-
+  > .buttonAddCart {
     width: 100%;
 
     > button {
-        background-color: var(--color-background);
-        color: var(--color-white);
-        height: 3rem;
-        border-radius: 4px;
-        margin-top: 5rem;
-        width: 100%;
-        font-size: 19px;
-        cursor: pointer;
+      background-color: var(--color-background);
+      color: var(--color-white);
+      height: 2.5rem;
+      border-radius: 4px;
+      margin-top: 3rem;
+      width: 100%;
+      font-size: 15px;
+      cursor: pointer;
     }
   }
 `;
