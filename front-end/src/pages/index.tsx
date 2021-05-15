@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 
 import { Container, Wrapper } from "../styles/App";
 import { IProduct } from '../interfaces/ExportInterfaces';
+
+import { ProfileContext } from "../contexts/ProfileContext";
 
 import Main from "../components/Main";
 import { Api } from "../services/api";
@@ -12,7 +14,10 @@ export default function Home(props) {
   const [sectionQuery, setSectionQuery] = useState("sugestao");
   const [dataProducts, setDataProducts]  = useState<Array<IProduct>>([] as Array<IProduct>);
 
+  const { handleProfile } = useContext(ProfileContext);
+
   useEffect(() =>{
+    handleProfile(props.resp.profile[0]);
     setDataProducts(props.resp.products);
   }, []);
 

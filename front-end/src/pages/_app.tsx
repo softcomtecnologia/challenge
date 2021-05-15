@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CartProvider } from "../contexts/CartContext";
+import { ProfileProvider } from "../contexts/ProfileContext";
 
 import { Container, Wrapper } from "../styles/App";
 import GlobalStyles from "../styles/GlobalStyles";
@@ -7,29 +8,24 @@ import GlobalStyles from "../styles/GlobalStyles";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 
-import { IProfile } from "../interfaces/ExportInterfaces";
-
 function MyApp({ Component, pageProps }) {
-  const [dataProfile, setDataProfile] = useState<IProfile>({} as IProfile);
-
-  useEffect(() => {
-    setDataProfile(pageProps.resp.profile[0]);
-  }, []);
 
   return (
     <>
-      <CartProvider>
-        <Container>
-          <Wrapper>
-            <Header dataProfile={dataProfile} />
+      <ProfileProvider>
+        <CartProvider>
+          <Container>
+            <Wrapper>
+              <Header/>
 
-            <NavBar />
-          </Wrapper>
-        </Container>
+              <NavBar />
+            </Wrapper>
+          </Container>
 
-        <Component {...pageProps} />
-        <GlobalStyles />
-      </CartProvider>
+          <Component {...pageProps} />
+          <GlobalStyles />
+        </CartProvider>
+      </ProfileProvider>
     </>
   );
 }

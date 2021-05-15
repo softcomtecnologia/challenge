@@ -14,14 +14,13 @@ import {
 
 import { IProfile } from '../../interfaces/ExportInterfaces';
 import { CartContext } from "../../contexts/CartContext";
+import { ProfileContext } from "../../contexts/ProfileContext";
 
-interface IDataProfile{
-  dataProfile: IProfile;
-}
 
-const Header: React.FC<IDataProfile> = ({dataProfile}) => {
+const Header: React.FC<IDataProfile> = () => {
 
   const { cart } = useContext(CartContext);
+  const { dataProfile } = useContext(ProfileContext);
 
   const totalPrice = cart.reduce((acc, product) => acc + product.price * product.qtd, 0);
   const totalProducts = cart.reduce((acc, product) => acc + product.qtd, 0);
