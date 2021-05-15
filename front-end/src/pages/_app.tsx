@@ -13,11 +13,7 @@ function MyApp({ Component, pageProps }) {
   const [dataProfile, setDataProfile] = useState<IProfile>({} as IProfile);
 
   useEffect(() => {
-    fetch("http://localhost:3333/profile-info")
-      .then((response) => response.json())
-      .then((data) => {
-        setDataProfile(data[0]);
-      });
+    setDataProfile(pageProps.resp.profile[0]);
   }, []);
 
   return (

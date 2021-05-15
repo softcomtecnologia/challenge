@@ -16,7 +16,7 @@ export const Container = styled.div`
 
   > .modal {
     background-color: #fff;
-    width: 60%;
+    width: 900px;
     height: 470px;
     color: black;
     border-radius: 15px;
@@ -47,6 +47,13 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media(max-width: 1080px){
+    > .modal {
+      width: 80%;
+    }
+  }
+
 `;
 
 export const ModalContent = styled.div`
