@@ -1,7 +1,18 @@
-/* .adicionar {
-  background-color: #B41C8B;
-} */
+.show {
+  display: flex;
+  align-items: center;
+}
 
-/* .adicionar button:hover {
-  background-color: #B41C8B!important;
-} */
+.fade {
+  display: flex;
+  align-items: center;
+}
+
+.modal {
+  display: flex!important;
+  align-items: center;
+}
+
+.free-shipping {
+  color: #1BBB16;
+}

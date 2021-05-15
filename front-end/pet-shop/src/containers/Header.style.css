@@ -41,3 +41,7 @@
   margin-right: 10px;
   height: 12px;
 }
+
+.navbar-toggler {
+  border: 2px solid #B41C8B!important;
+}

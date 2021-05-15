@@ -3,6 +3,11 @@
   font-size: 19px;
 }
 
+.card {
+  margin: 10px!important;
+  border-left: 1px solid rgba(0,0,0,.125)!important
+}
+
 .card button:hover {
   background-color: #ff83de;
 }

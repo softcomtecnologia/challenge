@@ -14,13 +14,16 @@ const MainContentGrid = () => {
   return (
     <CardGroup>
       {data.map((e) => (
-
         <Card
           key={ e.id }
-          style={ { margin: '10px',
-            borderLeft: ' 1px solid rgba(0,0,0,.125)' } }
         >
-          <CardItemModal>
+          <CardItemModal
+            image={ e.thumbnail }
+            description={ e.title }
+            maxQuantity={ e.available_quantity }
+            price={ e.price }
+            freeShipping={ e.shipping.free_shipping }
+          >
             <CardBody>
               <CardImg top width="100%" src={ e.thumbnail } alt="Card image cap" />
               <CardText

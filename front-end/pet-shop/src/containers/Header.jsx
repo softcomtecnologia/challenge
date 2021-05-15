@@ -33,6 +33,11 @@ const Header = () => {
               </NavbarText>
             </NavItem>
             <NavItem>
+              <NavbarText>
+                Avenida Rio Grande do Sul, 1520, Estados | 58030-021 | João Pessoa - PB
+              </NavbarText>
+            </NavItem>
+            <NavItem>
               <img className="delivery-icon" src={ delivery } alt="delivery" />
               Delivery:
               <NavbarText className="delivery">
