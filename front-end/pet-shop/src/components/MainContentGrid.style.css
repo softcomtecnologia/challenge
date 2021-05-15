@@ -1,0 +1,8 @@
+.description {
+  color: #3F3F3F;
+  font-size: 19px;
+}
+
+.card button:hover {
+  background-color: #ff83de;
+}

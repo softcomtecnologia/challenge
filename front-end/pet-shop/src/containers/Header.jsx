@@ -6,6 +6,10 @@ import {
 import HeaderTabs from '../components/HeaderTabs';
 import PetFriendsLogo from '../assets/PetFriendsLogo.svg';
 import ShoppingCartButton from '../components/ShoppingCartButton';
+import open from '../assets/Open.svg';
+import delivery from '../assets/Delivery.svg';
+
+import './Header.style.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,18 +19,29 @@ const Header = () => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/"><img src={ PetFriendsLogo } alt="logo" /></NavbarBrand>
+        <NavbarBrand href="/">
+          <img className="logo" src={ PetFriendsLogo } alt="logo" />
+        </NavbarBrand>
         <NavbarToggler onClick={ toggle } />
         <Collapse isOpen={ isOpen } navbar style={ { justifyContent: 'space-around' } }>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavbarText>Aberto agora</NavbarText>
+            <NavItem className="title">
+              Pet Friend Acessories
+              <NavbarText className="open-now">
+                <img src={ open } alt="open" />
+                ABERTO AGORA
+              </NavbarText>
             </NavItem>
             <NavItem>
-              <NavbarText>Delivery:</NavbarText>
+              <img className="delivery-icon" src={ delivery } alt="delivery" />
+              Delivery:
+              <NavbarText className="delivery">
+                35min - 1h:40m
+              </NavbarText>
             </NavItem>
             <NavItem>
-              <NavbarText>Entregas: À partir de R$ 3,00</NavbarText>
+              Entrega:
+              <NavbarText className="delivery">À partir de R$ 3,00</NavbarText>
             </NavItem>
           </Nav>
           <ShoppingCartButton />

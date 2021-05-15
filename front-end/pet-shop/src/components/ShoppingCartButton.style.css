@@ -1,0 +1,14 @@
+.badge {
+  color: #3F3F3F!important;
+  font-size: medium!important;
+}
+
+.shopping-cart {
+  display: block;
+}
+
+.price {
+  margin-left: 35px;
+  color: #B41C8B!important;
+  font-weight: bold;
+}

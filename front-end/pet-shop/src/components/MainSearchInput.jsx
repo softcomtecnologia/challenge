@@ -1,13 +1,16 @@
 import React from 'react';
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import search from '../assets/Search.svg';
+
+import './MainSearchInput.style.css';
 
 const MainSearchInput = () => (
-  <div>
+  <div className="input-container">
     <br />
-    <InputGroup style={ { width: '340px', margin: '10px' } }>
+    <InputGroup>
       <Input placeholder="Digite um termo para busca" />
       <InputGroupAddon addonType="prepend">
-        <InputGroupText>@</InputGroupText>
+        <InputGroupText><img src={ search } alt="search" /></InputGroupText>
       </InputGroupAddon>
     </InputGroup>
     <br />

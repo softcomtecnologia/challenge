@@ -4,7 +4,7 @@ import MainSearchInput from '../components/MainSearchInput';
 
 import './Sugestions.style.css';
 
-const Sugestions = () => (
+const MainContent = () => (
   <main className="main-content">
     <MainSearchInput />
     Sugestoes do Vendedor
@@ -12,4 +12,4 @@ const Sugestions = () => (
   </main>
 );
 
-export default Sugestions;
+export default MainContent;

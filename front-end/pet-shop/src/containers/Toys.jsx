@@ -2,12 +2,14 @@ import React from 'react';
 import MainContentGrid from '../components/MainContentGrid';
 import MainSearchInput from '../components/MainSearchInput';
 
+import './Toys.style.css';
+
 const Toys = () => (
-  <div>
+  <main className="main-content">
     <MainSearchInput />
     Brinquerdos
     <MainContentGrid />
-  </div>
+  </main>
 );
 
 export default Toys;

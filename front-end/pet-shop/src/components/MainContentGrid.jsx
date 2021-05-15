@@ -1,35 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-  Card, CardImg, CardTitle, CardText, CardGroup,
-  CardSubtitle, CardBody,
+  Card, CardImg, CardText, CardGroup, CardBody,
 } from 'reactstrap';
 import CardItemModal from './CardItemModal';
+import './MainContentGrid.style.css';
+
+import mockedQuery from '../mocks/mockedQuery';
+
+const MAX_TEXT_LENGTH = 20;
 
 const MainContentGrid = () => {
-  const array = ['0', '1', '2', '3', '4'];
+  const [data] = useState(mockedQuery.results);
   return (
     <CardGroup>
-      {array.map((e) => (
+      {data.map((e) => (
 
         <Card
-          key={ e }
-          // tag="a"
-          // href="/"
+          key={ e.id }
           style={ { margin: '10px',
             borderLeft: ' 1px solid rgba(0,0,0,.125)' } }
         >
           <CardItemModal>
-            <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
             <CardBody>
-              <CardTitle tag="h5">Card title</CardTitle>
-              <CardSubtitle tag="h6" className="mb-2 text-muted">
-                Card subtitle
-
-              </CardSubtitle>
-              <CardText>
-                This is a wider card with supporting text below as a natural
-                {' '}
-
+              <CardImg top width="100%" src={ e.thumbnail } alt="Card image cap" />
+              <CardText
+                className="description"
+              >
+                {e.title.substr(0, MAX_TEXT_LENGTH)}
+                ...
               </CardText>
             </CardBody>
           </CardItemModal>

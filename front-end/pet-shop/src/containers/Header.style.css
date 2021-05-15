@@ -1,0 +1,43 @@
+.logo {
+  border: 2px #B41C8B solid;
+  border-radius: 50%;
+}
+
+.navbar {
+  border-bottom: 5px #B41C8B solid;
+}
+
+.navbar-brand {
+  margin: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav {
+    flex-direction: column; 
+  }
+}
+
+.navbar-nav {
+  flex-direction: column!important; 
+}
+
+.title {
+  font-size: x-large;
+  font-weight: 500;
+}
+
+.open-now {
+  font-size: x-small;
+  color: #1BBB16!important;
+  margin-left: 15px;
+  float: right;
+}
+
+.delivery {
+  margin-left: 10px;
+}
+
+.delivery-icon {
+  margin-right: 10px;
+  height: 12px;
+}

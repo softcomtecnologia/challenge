@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+import './CardItemModal.style.css';
+
 const ModalExample = (props) => {
   const {
     // buttonLabel,
@@ -16,16 +18,16 @@ const ModalExample = (props) => {
 
   return (
     <div>
-      <Button color="danger" onClick={ toggle }>{children}</Button>
+      <Button color="light" onClick={ toggle }>{children}</Button>
       <Modal isOpen={ modal } toggle={ toggle } className={ className }>
         <ModalHeader toggle={ toggle }>Modal title</ModalHeader>
         <ModalBody>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={ toggle }>Do Something</Button>
+          <Button color="success" onClick={ toggle }>Adicionar</Button>
           {' '}
-          <Button color="secondary" onClick={ toggle }>Cancel</Button>
+          <Button color="danger" onClick={ toggle }>Cancelar</Button>
         </ModalFooter>
       </Modal>
     </div>

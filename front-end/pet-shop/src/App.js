@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
 import { Route, Switch } from 'react-router';
 import Sugestions from './containers/Sugestions';
 import Header from './containers/Header';
 import Toys from './containers/Toys';
+
+import './App.css';
 
 function App() {
   return (
     <div>
       <Header />
       <Switch>
-        <Route path="/sugestions" component={ Sugestions } />
-        <Route path="/toys" component={ Toys } />
+        <Route path="/sugestoes" component={ Sugestions } />
+        <Route path="/brinquedos" component={ Toys } />
       </Switch>
     </div>
   );
