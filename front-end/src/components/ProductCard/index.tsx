@@ -15,6 +15,7 @@ function ProductCard({ productid, productImage, productName, price, offer }) {
 
 
   function setVisibiliti(state: boolean){
+    window.scrollTo(0, 0);
     setIsModalVisible(state);
   }
 
