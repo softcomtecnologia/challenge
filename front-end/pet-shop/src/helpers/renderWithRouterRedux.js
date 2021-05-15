@@ -3,13 +3,17 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { render } from '@testing-library/react';
 
-import search from '../store/reducers/search';
+import searchReducer from '../store/reducers/searchReducer';
+import tabsReducer from '../store/reducers/tabsReducer';
+import cartReducer from '../store/reducers/cartReducer';
+
+const rootReducer = combineReducers({ searchReducer, tabsReducer, cartReducer });
 
 export const getStore = (initialState) => {
-  if (!initialState) return createStore(search, applyMiddleware(thunk));
+  if (!initialState) return createStore(rootReducer, applyMiddleware(thunk));
   return createStore(search, initialState, applyMiddleware(thunk));
 };
 

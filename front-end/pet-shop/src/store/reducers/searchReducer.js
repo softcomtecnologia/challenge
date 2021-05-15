@@ -6,12 +6,13 @@ const initialState = {
   error: '',
 };
 
-function search(state = initialState, action) {
+function searchReducer(state = initialState, action) {
   switch (action.type) {
   case HANDLE_INPUT:
     return {
       ...state,
       inputQuery: action.inputQuery,
+      results: action.results,
     };
   // case HANDLE_ERROR:
   //   return {
@@ -23,4 +24,4 @@ function search(state = initialState, action) {
   }
 }
 
-export default search;
+export default searchReducer;

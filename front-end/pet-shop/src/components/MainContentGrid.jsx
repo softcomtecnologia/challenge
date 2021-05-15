@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import {
   Card, CardImg, CardText, CardGroup, CardBody,
 } from 'reactstrap';
 import CardItemModal from './CardItemModal';
+// import NotFound from './NotFound';
+
 import './MainContentGrid.style.css';
 
 import mockedQuery from '../mocks/mockedQuery';
@@ -40,4 +43,9 @@ const MainContentGrid = () => {
   );
 };
 
-export default MainContentGrid;
+const mapStateToProps = (state) => ({
+  a: console.log(state),
+  results: state.searchReducer.results,
+});
+
+export default connect(mapStateToProps)(MainContentGrid);

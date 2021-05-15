@@ -1,10 +1,12 @@
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import search from './reducers/search';
+import searchReducer from './reducers/searchReducer';
+import tabsReducer from './reducers/tabsReducer';
+import cartReducer from './reducers/cartReducer';
 
 const store = createStore(
-  combineReducers({ search }),
+  combineReducers({ searchReducer, tabsReducer, cartReducer }),
   composeWithDevTools(applyMiddleware(thunk)),
 );
 

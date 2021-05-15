@@ -1,11 +1,11 @@
-/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { InputGroup, InputGroupAddon, InputGroupText, Input, Button,
   Form, FormFeedback } from 'reactstrap';
-import { handleInput } from '../store/actions/search';
+import { handleInput, searchQuery } from '../store/actions/search';
 
 import search from '../assets/Search.svg';
 
@@ -15,21 +15,23 @@ const initialValues = {
   queryInput: '',
 };
 
+const MAX_CHAR_NUM_25 = 25;
+
 // creating the validation schema
 const validationSchema = yup.object().shape({
   queryInput: yup
     .string()
     .required('É necessário um termo para busca')
-    .matches(/^[aA-zZ\s]+$/, 'Somente letras de A a Z')
-    .min(2, 'Pelo menos duas letras'),
+    .matches(/^[aA-zZ\s]+$/, 'Somente letras de aA a zZ')
+    .min(2, 'Pelo menos duas letras')
+    .max(MAX_CHAR_NUM_25, 'Máximo 25 caracteres'),
 });
 
-const MainSearchInput = ({ onSubmit, handleQuery }) => {
+const MainSearchInput = ({ handleSearch }) => {
   // using useFormik
   const formik = useFormik({
     initialValues,
     validationSchema,
-    onSubmit,
   });
 
   // use formik.getFieldProps for input fields
@@ -43,12 +45,13 @@ const MainSearchInput = ({ onSubmit, handleQuery }) => {
       <Form>
         <InputGroup>
           <Input
-            invalid={ formik.touched.queryInput && formik.errors.queryInput }
+            invalid={ (formik.touched.queryInput && !formik.isValid) }
             name={ name }
             onBlur={ onBlur }
             value={ value }
             onChange={ onChange }
             placeholder="O que você procura?"
+            maxLength={ MAX_CHAR_NUM_25 }
           />
           <InputGroupAddon addonType="prepend">
             <InputGroupText><img src={ search } alt="search" /></InputGroupText>
@@ -63,7 +66,7 @@ const MainSearchInput = ({ onSubmit, handleQuery }) => {
             color="secondary"
             disabled={ !(formik.isValid && formik.dirty) }
             // type="submit"
-            onClick={ () => handleQuery(value) }
+            onClick={ () => handleSearch(value.replaceAll(' ', '+')) }
           >
             Pesquisar
           </Button>
@@ -74,12 +77,17 @@ const MainSearchInput = ({ onSubmit, handleQuery }) => {
   );
 };
 
+MainSearchInput.propTypes = {
+  handleSearch: PropTypes.func,
+}.isRequired;
+
 const mapStateToProps = (state) => ({
   inputQuery: state.inputQuery,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   handleQuery: (queryInput) => dispatch(handleInput(queryInput)),
+  handleSearch: (query) => dispatch(searchQuery(query)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainSearchInput);
