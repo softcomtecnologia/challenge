@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   Card, CardImg, CardText, CardGroup, CardBody,
@@ -8,15 +9,19 @@ import CardItemModal from './CardItemModal';
 
 import './MainContentGrid.style.css';
 
-import mockedQuery from '../mocks/mockedQuery';
+// import mockedQuery from '../mocks/mockedQuery';
+import NotFound from './NotFound';
 
 const MAX_TEXT_LENGTH = 20;
 
-const MainContentGrid = () => {
-  const [data] = useState(mockedQuery.results);
+const MainContentGrid = ({ results }) => {
+  // const [data] = useState(mockedQuery.results);
+  if (results.length === 0) {
+    return <NotFound />;
+  }
   return (
     <CardGroup>
-      {data.map((e) => (
+      {results.map((e) => (
         <Card
           key={ e.id }
         >
@@ -43,8 +48,11 @@ const MainContentGrid = () => {
   );
 };
 
+MainContentGrid.propTypes = {
+  results: PropTypes.array,
+}.isRequired;
+
 const mapStateToProps = (state) => ({
-  a: console.log(state),
   results: state.searchReducer.results,
 });
 

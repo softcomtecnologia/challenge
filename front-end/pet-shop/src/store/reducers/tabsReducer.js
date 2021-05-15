@@ -1,7 +1,7 @@
 import { HANDLE_TABS } from '../actions/tabs';
 
 const initialState = {
-  tabName: '',
+  tabName: 'Sugestões do Vendedor',
 };
 
 function tabsReducer(state = initialState, action) {
@@ -9,9 +9,14 @@ function tabsReducer(state = initialState, action) {
   case HANDLE_TABS:
     return {
       ...state,
-      tabName: action.inputQuery,
+      tabName: action.tabName,
       // results: action.results,
     };
+  // case HANDLE_TAB_NAME:
+  //   return {
+  //     ...state,
+  //     tabName: action.tabName,
+  //   };
   // case HANDLE_ERROR:
   //   return {
   //     ...state,

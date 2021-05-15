@@ -7,23 +7,23 @@ import { handleTabs } from '../store/actions/tabs';
 
 import headerTabsNames from '../constants/headerTabsNames';
 
-import './Toys.style.css';
+// import './BadsAndHouses.style.css';
 
-const Toys = ({ getResults }) => {
+const BedsAndHouses = ({ getResults }) => {
   useEffect(() => {
-    getResults(headerTabsNames.toys.replaceAll(' ', '+'));
+    getResults(headerTabsNames.bedHouse.replaceAll(' ', '+'));
   }, [getResults]);
 
   return (
     <main className="main-content">
       <MainSearchInput />
-      {headerTabsNames.toys}
+      {headerTabsNames.bedHouse}
       <MainContentGrid />
     </main>
   );
 };
 
-Toys.propTypes = {
+BedsAndHouses.propTypes = {
   getResults: PropTypes.func,
 }.isRequired;
 
@@ -35,4 +35,4 @@ const mapDispatchToProps = (dispatch) => ({
   getResults: (query, value) => dispatch(handleTabs(query, value)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Toys);
+export default connect(mapStateToProps, mapDispatchToProps)(BedsAndHouses);

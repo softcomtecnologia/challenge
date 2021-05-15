@@ -1,9 +1,15 @@
 export const HANDLE_INPUT = 'HANDLE_INPUT';
+export const HANDLE_RESULT = 'HANDLE_RESULT';
 // export const HANDLE_ERROR = 'HANDLE_ERROR';
 
 export const handleInput = (inputQuery) => ({
   type: HANDLE_INPUT,
   inputQuery,
+});
+
+export const handleResult = (data) => ({
+  type: HANDLE_RESULT,
+  results: data.results,
 });
 
 // export const handleError = (error) => ({

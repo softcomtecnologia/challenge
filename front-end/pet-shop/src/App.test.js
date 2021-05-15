@@ -4,7 +4,7 @@ import App from './App';
 import { renderWithRouterAndStore } from './helpers/renderWithRouterRedux';
 
 test('renders learn react link', () => {
-  renderWithRouterAndStore(<App />, { route: '/sugestoes' });
+  renderWithRouterAndStore(<App />, { route: '/' });
   const linkElement = screen.getByText(/sugestoes/i);
   expect(linkElement).toBeInTheDocument();
 });
