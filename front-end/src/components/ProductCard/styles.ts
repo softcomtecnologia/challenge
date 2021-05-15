@@ -17,7 +17,6 @@ export const Container = styled.div`
 
     &:hover{
         box-shadow: 0px 0px 5px 0px;
-        cursor: pointer;
     }
 `;
 
@@ -52,8 +51,8 @@ export const CardPrice = styled.div`
     padding: 0.5rem;
     font-size: 22px;
     display: flex;
-    margin-left: 5px;
-    align-items: flex-end;
+    align-items: center;
+    justify-content:center;
 `;
 
 export const CardAddCart = styled.div`
