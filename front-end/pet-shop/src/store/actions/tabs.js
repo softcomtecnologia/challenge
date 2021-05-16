@@ -1,3 +1,4 @@
+import apiML from '../../services/apiMercadoLivre';
 import { handleResult } from './search';
 
 export const HANDLE_TABS = 'HANDLE_TABS';
@@ -13,7 +14,7 @@ const handleQueryData = (query, data) => (dispatch) => {
   dispatch(handleTabsN(query));
 };
 
-export const handleTabs = (query = '', value = '') => async (dispatch) => fetch(`https://api.mercadolibre.com/sites/MLB/search?category=MLB1072&q=${value}+${query}&limit=5`)
+export const handleTabs = (query = '') => async (dispatch) => apiML(query)
   .then((response) => response.json())
   .then((data) => dispatch(handleQueryData(query, data)));
   // .catch((error) => handleError(error.message));

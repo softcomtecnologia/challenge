@@ -53,14 +53,18 @@ const MainSearchInput = ({ handleSearch }) => {
             placeholder="O que você procura?"
             maxLength={ MAX_CHAR_NUM_25 }
           />
+
           <InputGroupAddon addonType="prepend">
             <InputGroupText><img src={ search } alt="search" /></InputGroupText>
           </InputGroupAddon>
+
           {formik.touched.queryInput && formik.errors.queryInput ? (
             <FormFeedback data-testid="feedback">{formik.errors.queryInput}</FormFeedback>
           ) : null}
         </InputGroup>
+
         <br />
+
         <InputGroupAddon addonType="append">
           <Button
             color="secondary"

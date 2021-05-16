@@ -18,8 +18,11 @@ const CardItemModal = ({ children, className, image, description, maxQuantity,
   return (
     <section>
       <Button color="light" onClick={ toggle }>{children}</Button>
+
       <Modal isOpen={ modal } toggle={ toggle } className={ className }>
+
         <ModalHeader toggle={ toggle }><img src={ image } alt="thumbnail" /></ModalHeader>
+
         <ModalBody>
           <ul>
             <li>
@@ -45,6 +48,7 @@ const CardItemModal = ({ children, className, image, description, maxQuantity,
             </li>
           </ul>
         </ModalBody>
+
         <ModalFooter>
           <Button
             color="success"

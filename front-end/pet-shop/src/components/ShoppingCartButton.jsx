@@ -15,6 +15,7 @@ const ShoppingCartButton = ({ cartItems, total }) => (
         Produtos no Carrinho
       </NavbarText>
     </NavItem>
+
     <NavItem className="shopping-cart">
       <NavbarText className="price">
         {`R$ ${total.toFixed(2)}`}

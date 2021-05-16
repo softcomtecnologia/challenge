@@ -1,3 +1,5 @@
+import apiML from '../../services/apiMercadoLivre';
+
 export const HANDLE_INPUT = 'HANDLE_INPUT';
 export const HANDLE_RESULT = 'HANDLE_RESULT';
 // export const HANDLE_ERROR = 'HANDLE_ERROR';
@@ -23,7 +25,7 @@ const handleQueryData = (query, data) => ({
   results: data.results,
 });
 
-export const searchQuery = (query) => async (dispatch) => fetch(`https://api.mercadolibre.com/sites/MLB/search?category=MLB1072&q=${query}&limit=5`)
+export const searchQuery = (query = '') => async (dispatch) => apiML(query)
   .then((response) => response.json())
   .then((data) => dispatch(handleQueryData(query, data)));
   // .catch((error) => dispatch(handleError(error.message)));

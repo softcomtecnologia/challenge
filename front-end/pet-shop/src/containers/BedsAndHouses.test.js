@@ -6,7 +6,7 @@ import BedsAndHouses from './BedsAndHouses';
 import mockedShoppingCart from '../mocks/mockedShoppiingCart';
 import mockedQuery from '../mocks/mockedQuery';
 
-const MOCKED_QUERY_URL = 'https://api.mercadolibre.com/sites/MLB/search?category=MLB1072&q=+Casinhas+e Camas&limit=5';
+const MOCKED_QUERY_URL = 'https://api.mercadolibre.com/sites/MLB/search?category=MLB1072&q=Casinhas+e Camas&limit=5';
 
 afterEach(cleanup);
 

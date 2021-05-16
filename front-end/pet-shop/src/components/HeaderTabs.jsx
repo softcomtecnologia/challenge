@@ -21,6 +21,7 @@ const HeaderTabs = ({ tabName }) => (
         </NavLink>
       </Link>
     </NavItem>
+
     <NavItem>
       <Link
         className="section-links"
@@ -31,6 +32,7 @@ const HeaderTabs = ({ tabName }) => (
         </NavLink>
       </Link>
     </NavItem>
+
     <NavItem>
       <Link
         className="section-links"
@@ -41,6 +43,7 @@ const HeaderTabs = ({ tabName }) => (
         </NavLink>
       </Link>
     </NavItem>
+
     <NavItem>
       <Link
         className="section-links"
@@ -51,6 +54,7 @@ const HeaderTabs = ({ tabName }) => (
         </NavLink>
       </Link>
     </NavItem>
+
     <NavItem>
       <Link
         className="section-links"
