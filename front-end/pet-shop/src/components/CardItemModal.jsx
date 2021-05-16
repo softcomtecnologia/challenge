@@ -21,7 +21,9 @@ const CardItemModal = ({ children, className, image, description, maxQuantity,
 
       <Modal isOpen={ modal } toggle={ toggle } className={ className }>
 
-        <ModalHeader toggle={ toggle }><img src={ image } alt="thumbnail" /></ModalHeader>
+        <ModalHeader toggle={ toggle }>
+          <img className="thumbnail" src={ image } alt="thumbnail" />
+        </ModalHeader>
 
         <ModalBody>
           <ul>

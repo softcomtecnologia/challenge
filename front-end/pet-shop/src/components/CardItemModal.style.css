@@ -16,3 +16,7 @@
 .free-shipping {
   color: #1BBB16;
 }
+
+.thumbnail {
+  max-width: 50vw;
+}
