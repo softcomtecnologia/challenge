@@ -17,7 +17,9 @@ const BedsAndHouses = ({ getResults }) => {
   return (
     <main className="main-content">
       <MainSearchInput />
-      {headerTabsNames.bedHouse}
+
+      <h1>{headerTabsNames.bedHouse}</h1>
+
       <MainContentGrid />
     </main>
   );

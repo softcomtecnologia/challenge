@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import QuantityModal from './QuantityModal';
+import { handleCartItem } from '../store/actions/cart';
 
 import './CardItemModal.style.css';
-import { connect } from 'react-redux';
-import QuantityModal from './QuantityModal';
 
 const CardItemModal = ({ children, className, image, description, maxQuantity,
-  price, freeShipping }) => {
+  price, freeShipping, addToCart }) => {
   const [modal, setModal] = useState(false);
 
   const [quantity, setQuantity] = useState(0);
@@ -15,7 +16,7 @@ const CardItemModal = ({ children, className, image, description, maxQuantity,
   const toggle = () => setModal(!modal);
 
   return (
-    <div>
+    <section>
       <Button color="light" onClick={ toggle }>{children}</Button>
       <Modal isOpen={ modal } toggle={ toggle } className={ className }>
         <ModalHeader toggle={ toggle }><img src={ image } alt="thumbnail" /></ModalHeader>
@@ -45,12 +46,17 @@ const CardItemModal = ({ children, className, image, description, maxQuantity,
           </ul>
         </ModalBody>
         <ModalFooter>
-          <Button color="success" onClick={ toggle }>Adicionar</Button>
+          <Button
+            color="success"
+            onClick={ () => addToCart((quantity * price), quantity) }
+          >
+            Adicionar
+          </Button>
           {' '}
           <Button color="danger" onClick={ toggle }>Cancelar</Button>
         </ModalFooter>
       </Modal>
-    </div>
+    </section>
   );
 };
 
@@ -61,10 +67,17 @@ CardItemModal.propTypes = {
   maxQuantity: PropTypes.number,
   price: PropTypes.number,
   freeShipping: PropTypes.bool,
+  addToCart: PropTypes.func,
+  addItems: PropTypes.func,
 }.isRequired;
 
 const mapStateToProps = (state) => ({
   total: state.cartReducer.total,
 });
 
-export default connect(mapStateToProps)(CardItemModal);
+const mapDispatchToProps = (dispatch) => ({
+  addToCart: (price, quantity) => dispatch(handleCartItem(price, quantity)),
+  // addItems: (price) => dispatch(handleItems(price)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardItemModal);

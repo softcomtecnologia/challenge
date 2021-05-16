@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import Sugestions from './containers/Sugestions';
 import Header from './containers/Header';
 import Toys from './containers/Toys';
@@ -12,14 +13,16 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={ Sugestions } />
-        <Route path="/brinquedos" component={ Toys } />
-        <Route path="/camas-e-casinhas" component={ BedsAndHouses } />
-        <Route path="/coleiras" component={ Leaches } />
-        <Route path="/ossos-e-petiscos" component={ Snacks } />
-      </Switch>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={ Sugestions } />
+          <Route path="/brinquedos" component={ Toys } />
+          <Route path="/camas-e-casinhas" component={ BedsAndHouses } />
+          <Route path="/coleiras" component={ Leaches } />
+          <Route path="/ossos-e-petiscos" component={ Snacks } />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

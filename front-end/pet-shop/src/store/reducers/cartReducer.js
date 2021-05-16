@@ -1,7 +1,7 @@
 import { HANDLE_CART_ITEM } from '../actions/cart';
 
 const initialState = {
-  cartItems: [],
+  cartItems: 0,
   total: 0,
 };
 
@@ -10,9 +10,8 @@ function cartReducer(state = initialState, action) {
   case HANDLE_CART_ITEM:
     return {
       ...state,
+      cartItems: state.cartItems + action.quantity,
       total: state.total + action.price,
-      cartItems: [...state.cartItems, action.price],
-      // results: action.results,
     };
   // case HANDLE_ERROR:
   //   return {

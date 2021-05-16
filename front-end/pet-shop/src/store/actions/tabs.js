@@ -1,18 +1,7 @@
 import { handleResult } from './search';
 
 export const HANDLE_TABS = 'HANDLE_TABS';
-// export const HANDLE_RESULT = 'HANDLE_RESULT';
 export const HANDLE_TAB_NAME = 'HANDLE_TAB_NAME';
-
-// const handleResult = (data) => ({
-//   type: HANDLE_RESULT,
-//   results: data.results,
-// });
-
-// const handleTabName = (query) => ({
-//   type: HANDLE_TAB_NAME,
-//   tabName: query,
-// });
 
 const handleTabsN = (query) => ({
   type: HANDLE_TABS,

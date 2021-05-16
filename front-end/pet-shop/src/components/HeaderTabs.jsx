@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Nav, NavItem, NavLink } from 'reactstrap';
@@ -11,44 +12,54 @@ import './HeaderTabs.style.css';
 const HeaderTabs = ({ tabName }) => (
   <Nav tabs>
     <NavItem>
-      <NavLink
-        href="/"
-        active={ tabName === headerTabsNames.sugestions }
+      <Link
+        className="section-links"
+        to="/"
       >
-        {headerTabsNames.sugestions}
-      </NavLink>
+        <NavLink tag="button" active={ tabName === headerTabsNames.sugestions }>
+          {headerTabsNames.sugestions}
+        </NavLink>
+      </Link>
     </NavItem>
     <NavItem>
-      <NavLink
-        href="/brinquedos"
-        active={ tabName === headerTabsNames.toys }
+      <Link
+        className="section-links"
+        to="/brinquedos"
       >
-        {headerTabsNames.toys}
-      </NavLink>
+        <NavLink tag="button" active={ tabName === headerTabsNames.toys }>
+          {headerTabsNames.toys}
+        </NavLink>
+      </Link>
     </NavItem>
     <NavItem>
-      <NavLink
-        href="/camas-e-casinhas"
-        active={ tabName === headerTabsNames.bedHouse }
+      <Link
+        className="section-links"
+        to="/camas-e-casinhas"
       >
-        {headerTabsNames.bedHouse}
-      </NavLink>
+        <NavLink tag="button" active={ tabName === headerTabsNames.bedHouse }>
+          {headerTabsNames.bedHouse}
+        </NavLink>
+      </Link>
     </NavItem>
     <NavItem>
-      <NavLink
-        href="/coleiras"
-        active={ tabName === headerTabsNames.leach }
+      <Link
+        className="section-links"
+        to="/coleiras"
       >
-        {headerTabsNames.leach}
-      </NavLink>
+        <NavLink tag="button" active={ tabName === headerTabsNames.leach }>
+          {headerTabsNames.leach}
+        </NavLink>
+      </Link>
     </NavItem>
     <NavItem>
-      <NavLink
-        href="/ossos-e-petiscos"
-        active={ tabName === headerTabsNames.snacks }
+      <Link
+        className="section-links"
+        to="/ossos-e-petiscos"
       >
-        {headerTabsNames.snacks}
-      </NavLink>
+        <NavLink tag="button" active={ tabName === headerTabsNames.snacks }>
+          {headerTabsNames.snacks}
+        </NavLink>
+      </Link>
     </NavItem>
   </Nav>
 );

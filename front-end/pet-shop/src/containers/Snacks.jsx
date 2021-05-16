@@ -17,7 +17,9 @@ const Snacks = ({ getResults }) => {
   return (
     <main className="main-content">
       <MainSearchInput />
-      {headerTabsNames.snacks}
+
+      <h1>{headerTabsNames.snacks}</h1>
+
       <MainContentGrid />
     </main>
   );

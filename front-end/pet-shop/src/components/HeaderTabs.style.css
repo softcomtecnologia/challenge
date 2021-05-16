@@ -18,3 +18,8 @@
 .nav-link {
   color: #3F3F3F!important;
 }
+
+.section-links {
+  color: inherit;
+  text-decoration: none;
+}

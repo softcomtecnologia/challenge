@@ -11,20 +11,20 @@ const ShoppingCartButton = ({ cartItems, total }) => (
     <NavItem className="shopping-cart">
       <NavbarText>
         <img src={ cart } alt="cart" />
-        <Badge color="danger">{cartItems.length}</Badge>
+        <Badge color="danger">{cartItems}</Badge>
         Produtos no Carrinho
       </NavbarText>
     </NavItem>
     <NavItem className="shopping-cart">
       <NavbarText className="price">
-        {`R$ ${total}`}
+        {`R$ ${total.toFixed(2)}`}
       </NavbarText>
     </NavItem>
   </div>
 );
 
 ShoppingCartButton.propTypes = {
-  cartItems: PropTypes.array,
+  cartItems: PropTypes.number,
   total: PropTypes.number,
 }.isRequired;
 

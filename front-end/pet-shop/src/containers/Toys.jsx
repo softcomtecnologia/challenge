@@ -17,7 +17,9 @@ const Toys = ({ getResults }) => {
   return (
     <main className="main-content">
       <MainSearchInput />
-      {headerTabsNames.toys}
+
+      <h1>{headerTabsNames.toys}</h1>
+
       <MainContentGrid />
     </main>
   );

@@ -10,13 +10,7 @@ function tabsReducer(state = initialState, action) {
     return {
       ...state,
       tabName: action.tabName,
-      // results: action.results,
     };
-  // case HANDLE_TAB_NAME:
-  //   return {
-  //     ...state,
-  //     tabName: action.tabName,
-  //   };
   // case HANDLE_ERROR:
   //   return {
   //     ...state,

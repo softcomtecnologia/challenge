@@ -17,7 +17,9 @@ const Leaches = ({ getResults }) => {
   return (
     <main className="main-content">
       <MainSearchInput />
-      {headerTabsNames.leach}
+
+      <h1>{headerTabsNames.leach}</h1>
+
       <MainContentGrid />
     </main>
   );

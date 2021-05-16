@@ -1,8 +1,5 @@
 import * as sugestions from '../../constants/initialState';
-import { HANDLE_INPUT } from '../actions/search';
-// import { HANDLE_RESULT } from '../actions/tabs';
-
-export const HANDLE_RESULT = 'HANDLE_RESULT';
+import { HANDLE_INPUT, HANDLE_RESULT } from '../actions/search';
 
 const initialState = {
   inputQuery: '',
