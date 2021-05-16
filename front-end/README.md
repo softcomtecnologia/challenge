@@ -125,7 +125,7 @@ Um commit.
 Agradeço desde já a oportunidade para mostrar minhas skills. Me identifico muito com a filosofia da empresa. Gotei muito do tratamento e da atenção desde o início. Estou familiarizado com `Metodologias ágeis` e boas práticas como `pair-programming`. Faço parte de um bootcamp onde tenho oportunidade de aprender e ensinar com meus colégas. Com projetos e simulação de ambiente de empresa. Aprendi muita coisa em pouco tempo porque tive oportunidade de trabalhar e conviver (mesmo que vitualmente) com pessoas desenvolvedoras. O olhar de fora sempre enxerga coisas que não estamos vendo.
 Tenho interesse em fazer o projeto de back-end também. Minha meta é ser full-stack. Mas como comecei no front-end, então estou aproveitando ao máximo. E já estudei `banco de dados` MySQL e MongoDB. Além de `Node`, arquitetura REST, entre outros assuntos.
 
-[Deploy Amazon](https://main.d1w0urkkuf4jt2.amplifyapp.com/)
+[Deploy Amazon](https://main.dtxwvs3wwbvit.amplifyapp.com/)
 
 ### Contatos
 
