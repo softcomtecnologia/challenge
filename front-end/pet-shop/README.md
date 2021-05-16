@@ -7,6 +7,38 @@ Tentei ser o mais fiel possível ao [Protótipo](https://www.figma.com/file/ebcF
 
 Este aplicativo foi criado com `npx create-react-app`. Mais detalhes na documentação do [create-react-app](https://create-react-app.dev/).
 Os detalhes do desenvolimento, tomada de decições, ferramentas e considerações vem a seguir.
+
+### Instruções
+
+Clonar o repositório do desafio [softcomtecnologia/challenge](https://github.com/softcomtecnologia/challenge).
+
+Acessar a branch `challenge-front-end-hugo-leonardo`.
+
+Instalar as dependencias do projeto `npm i`.
+
+Rodar com `npm start`.
+
+Para obter a cobertura de testes `npm run test-coverage`.
+
+### Features
+
+1) Header com logomarca, título, informações e display do carrinho de compras.
+
+2) NavTabs com scrolling horizontal e rotas configuradas.
+
+3) Campo de busca validado com Formik+Yup e feedback para a pessoa usuária acerca da validação.
+
+4) Grid responsivo.
+
+5) Card com Modal para informações do produto e adição ao carrinho.
+
+**BONUS**
+
+`Existem mais dipositivos mobile do que pessoas no mundo.`
+
+Com base nessa afirmação:
+
+6) Responsive web design com interface para dispositivos web e mobile
 ### Por que React?
 
 É um dos framworks mais modernos do mundo. Principalmente para `Single Page Aplications`. Possui inúmeras vantagens. Que vão desde a quantidade de processamento até a experiencia do usuário final. Por ser desenvolvido e mantido por uma das maiores empresas de tecnologia do mundo, está em constante atualização e manutenção. É muito popular. Está entre os mais usados no mundo todo. Tem uma comunidade bastante ativa. Não é dificil encontrar artigos, textos, vídeos, aulas, etc. A documentção também é muito clara e objetiva. E está em várias línguas. Inclusive português. Possui diversos recursos avançados para otizmiação como o Lazy Load, exemplo. Tudo isso sem contar todo o ecossistema de bibliotecas oficias e de terceiros. `Jest`, `Redux` e `Testing Library` incluidos. Também é um framework para aplicações mobile. Com praticamente a mesma API para web.
@@ -27,7 +59,7 @@ Os detalhes do desenvolimento, tomada de decições, ferramentas e consideraçõ
 
 [Redux Thunk](https://github.com/reduxjs/redux-thunk): um `middleware` para Redux lidar com actions assíncronas.
 
-[ES Lint](https://reactjs.org/docs/hooks-rules.html#eslint-plugin): formatção de código, padronização, correção automática, avisos e erros relacionados a escrita e organização do código. Também é indicado pelo pessoal do React. Avisa quando um useEffect está com array de dependencias exausto. O que ajuda a previnir loops, renderização desnecessária e processamento de dados repetidos.
+[ES Lint](https://reactjs.org/docs/hooks-rules.html#eslint-plugin): formatção de código, padronização, correção automática, avisos e erros relacionados a escrita e organização do código. Também é indicado pelo pessoal do React. Avisa quando um `useEffect` está com array de dependencias exausto. O que ajuda a previnir loops, renderização desnecessária e processamento de dados repetidos.
 
 [Jest](https://jestjs.io/pt-BR/): melhor framewok de testes. pricipalmente por causa do modo `watchAll`. que permite desenvolver e testar em tempo real. E ir acompanhando os impactos de mudanças no código da apliação. Também é necessário para configurar e testar o React junto com Redux no ambiente de testes.
 
@@ -35,7 +67,7 @@ Os detalhes do desenvolimento, tomada de decições, ferramentas e consideraçõ
 
 [react-router-dom](https://reactrouter.com/web/guides/quick-start): configura rotas, switches, links entre outras features. Armazena o histórico de navegação e persiste o estado da store. Não era necessáriamente obrigatório, mas facilita muito a configurar as paginas. Dava pra fazer tudo sem rotas. Em uma única landing page. Atualizando somente os componentes. Mas as rotas ajudam a compartimentar tudo. E também oferecem um aspécto semantico na hora da busca. Sendo que o usuário pode encontrar um rota específica com um tema que ele procuru no Google, por exemplo. 
 
-[Insomnia](https://insomnia.rest/download): para realizar requisições GET a api do Mercado Lire, detalhar objetos e montar queries
+[Insomnia](https://insomnia.rest/download): para realizar requisições GET a api do Mercado Livre, detalhar objetos e montar queries
 
 [CodeSandBox](https://codesandbox.io/u/hugoleonardo.dev): ambiente virtual para desenvolvimento, uso muito para pesquisar componentes, bibliotecas e frameworks. Ou quando quero testar algum componente. Só renderizar.
 Para não ter que crair um React App toda vez que tiver uma idéia ou pesquiser uma tecnologia nova.
@@ -73,6 +105,13 @@ O gerenciamento de estado global com `Redux` facilita muito a vida na hora de re
 
 Logo de cara, a primeira melhoria que eu faria seria na parte da interface. Implementar algumas features. Como por exemplo um botão flutuante que retorna para o topo. É muito importante. Principalmente no mobile.
 Persistir o estado depois que ocorre um erro e voltar para a tela anterior. Transpilar para que possa rodar em ambientes com código legado. Empacotar conteúdos `dinámicos e torná-los estáticos`. Armazenando informação no `cache`. Implementar `Lazy Load` onde for possível. Otimização da engine de busca. Transformar em `Progressive Web Aplication` com modo `off-line` e dowload na máquina.Testes `end-to-end` e testes manuais. Dark mode. Melhorias na acessibilidade. Entre outras features como carrinho de compras, checkout e até mesmo um login para autenticar usuários.
+
+### Importancia dos testes automatizados
+
+Tenho contato com testes automatizados desde o primeiro dia que comecei a desenvolver. No início, mesmo não entendendo muito bem o porque daquilo tudo, achava muito interessante e atraente a ideia de o cumputador fazer verificações automaticamente. Desde que devidamente programado.
+De lá pra cá venho tentando incorporar ao máximo a prática de `Test-Driven Development` no meu dia a dia. E, conforme o tempo vai passando, e vou adquirindo mais entendimento, a percepção da importancia dos testes só aumenta. Tanto nas minhas vivencias e experiencias, quanto na experiencia com colegas desenvolvedores. Hoje, tudo faz sentdo. Principalmente em um contexto de computação em núvem. Como na `AWS`.
+Nos meus trabalhos individuais e em grupo, consegui verficar que os testes revelam muitos problemas que o nosso olho não enxerga. Mesmo se a aplicação funciona perfeitamente. A olho nú. Porém, não é muito difícil em um contexto de testes, você verificar um componente sendo renderizado 25, 30 vezes. Uma requisição sendo feita dezenas de vezes para um end-pont. Entre outros problemas. Isso pode gerar custos desnecessários de processamento e consequentemente perdas.
+Então quando estamos falando de testes, estamos falando diretamente de dinheiro. Sem meias palavras. Fora outros tantos benefícios que a prática de testes traz.
 
 ### Sobre mim:
 
