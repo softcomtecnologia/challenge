@@ -1,6 +1,6 @@
 const mockedNoResults = {
   searchReducer: {
-    inputQuery: '',
+    inputQuery: 'ZZZZZZZZZ',
     results: [],
     error: '',
   },

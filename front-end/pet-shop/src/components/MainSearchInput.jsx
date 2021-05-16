@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { InputGroup, InputGroupAddon, InputGroupText, Input, Button,
   Form, FormFeedback } from 'reactstrap';
-import { handleInput, searchQuery } from '../store/actions/search';
+import { searchQuery } from '../store/actions/search';
 
 import search from '../assets/Search.svg';
 
@@ -23,7 +23,7 @@ const validationSchema = yup.object().shape({
     .string()
     .required('É necessário um termo para busca')
     .matches(/^[aA-zZ\s]+$/, 'Somente letras de aA a zZ')
-    .min(2, 'Pelo menos duas letras')
+    .min(1, 'Pelo menos duas letras')
     .max(MAX_CHAR_NUM_25, 'Máximo 25 caracteres'),
 });
 
@@ -57,7 +57,7 @@ const MainSearchInput = ({ handleSearch }) => {
             <InputGroupText><img src={ search } alt="search" /></InputGroupText>
           </InputGroupAddon>
           {formik.touched.queryInput && formik.errors.queryInput ? (
-            <FormFeedback>{formik.errors.queryInput}</FormFeedback>
+            <FormFeedback data-testid="feedback">{formik.errors.queryInput}</FormFeedback>
           ) : null}
         </InputGroup>
         <br />
@@ -65,8 +65,7 @@ const MainSearchInput = ({ handleSearch }) => {
           <Button
             color="secondary"
             disabled={ !(formik.isValid && formik.dirty) }
-            // type="submit"
-            onClick={ () => handleSearch(value.replaceAll(' ', '+')) }
+            onClick={ () => handleSearch(value.replace(' ', '+')) }
           >
             Pesquisar
           </Button>
@@ -86,7 +85,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleQuery: (queryInput) => dispatch(handleInput(queryInput)),
   handleSearch: (query) => dispatch(searchQuery(query)),
 });
 
