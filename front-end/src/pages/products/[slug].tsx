@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container, Wrapper } from "../../styles/App";
-import GlobalStyles from "../../styles/GlobalStyles";
 import { useRouter } from "next/router";
 
 import Main from "../../components/Main";
@@ -12,14 +11,32 @@ export default function Products() {
 
   const route = useRouter();
   const [dataProducts, setDataProducts]  = useState<Array<IProduct>>([] as Array<IProduct>);
-  const [dataProductCategory, setDataProductCategory]  = useState<IProduct>({} as IProduct);
+  const [dataProductCategory, setDataProductCategory]  = useState("Buscando...");
 
   useEffect(() =>{
-    Api.get(`products/?sectionQuery=${route.query.slug as string}`)
+    let query = route.query.slug as string;
+    let isSearch = false;
+
+    if(query.includes("search=")){
+      query = `?q=${query.replace("search=", "")}`;
+      isSearch = true;
+    }else{
+      query = `?sectionQuery=${query}`;
+    }
+
+    Api.get(`products/${query}`)
       .then(response => response.data)
       .then(data => {
+        if(isSearch){
+          setDataProductCategory("Resultado da busca");
+        }else{
+          setDataProductCategory(data[0].categoria);
+        }
         setDataProducts(data);
-        setDataProductCategory(data[0]);
+
+        if(data.length == 0){
+          setDataProductCategory("Nenhum resultado encontrado...");
+        }
       });
   }, [route.query.slug]);
 
@@ -29,7 +46,7 @@ export default function Products() {
         <Wrapper>
 
           <Main 
-            sectionName={dataProductCategory.categoria} 
+            sectionName={dataProductCategory} 
             sectionQuery={route.query.slug as string}
             dataProducts={dataProducts}
           />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import ProductsSection from "../ProductsSection";
 
@@ -20,14 +20,31 @@ interface Props{
 
 const Main: React.FC<Props> = ({sectionName, sectionQuery, dataProducts}) => {
 
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    if (document.getElementById("searchId")) {
+      const temp = (document.getElementById("searchId") as HTMLInputElement).value;
+      setSearch(`/products/search=${temp}`);
+    }
+  };
+
   return(
     <Container>
 
         <SellerContainer>
 
           <SearchWrapper>
-            <SearchInput placeholder="O que você procura?"/>
-            <Link href="/">
+            <SearchInput
+              onChange={handleSearch}
+              id="searchId"
+              placeholder="O que você procura?"
+            />
+            <Link
+              href={{
+                pathname: search,
+              }}
+            >
               <SearchIcon />
             </Link>
           </SearchWrapper>

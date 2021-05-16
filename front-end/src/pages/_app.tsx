@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Head from 'next/head'
 import { CartProvider } from "../contexts/CartContext";
 import { ProfileProvider } from "../contexts/ProfileContext";
 
@@ -12,6 +13,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+    <Head>
+      <title>Pet Friends</title>
+     </Head>
       <ProfileProvider>
         <CartProvider>
           <Container>
@@ -23,9 +27,9 @@ function MyApp({ Component, pageProps }) {
           </Container>
 
           <Component {...pageProps} />
-          <GlobalStyles />
         </CartProvider>
       </ProfileProvider>
+      <GlobalStyles />
     </>
   );
 }
