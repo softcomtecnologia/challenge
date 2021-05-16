@@ -9,16 +9,18 @@ import headerTabsNames from '../constants/headerTabsNames';
 
 import './Sugestions.style.css';
 
+const SUGESTIONS = 'Sugestões do Vendedor';
+
 const Sugestions = ({ getResults }) => {
   useEffect(() => {
-    getResults('pedigree');
+    getResults(SUGESTIONS.replace('do Vendedor', 'Pedigree'));
   }, [getResults]);
 
   return (
     <main className="main-content">
       <MainSearchInput />
 
-      <h1>{headerTabsNames[0]}</h1>
+      <h1>{headerTabsNames.sugestions}</h1>
 
       <MainContentGrid />
     </main>

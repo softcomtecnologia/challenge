@@ -14,7 +14,7 @@ const rootReducer = combineReducers({ searchReducer, tabsReducer, cartReducer })
 
 export const getStore = (initialState) => {
   if (!initialState) return createStore(rootReducer, applyMiddleware(thunk));
-  return createStore(search, initialState, applyMiddleware(thunk));
+  return createStore(rootReducer, initialState, applyMiddleware(thunk));
 };
 
 export const renderWithRouterAndStore = (
