@@ -9,7 +9,9 @@ import initialState from '../constants/initialState';
 
 let INIT_QUANT = 0;
 
-afterEach(cleanup);
+beforeEach(cleanup);
+
+afterEach(() => jest.clearAllMocks());
 
 const setQuantity = (signal) => {
   if (signal === '+') {

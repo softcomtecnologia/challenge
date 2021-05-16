@@ -13,7 +13,7 @@ const SUGESTIONS = 'Sugestões do Vendedor';
 
 const Sugestions = ({ getResults }) => {
   useEffect(() => {
-    getResults(SUGESTIONS.replace('do Vendedor', 'Pedigree'));
+    getResults(SUGESTIONS.replace(' ', '+'));
   }, [getResults]);
 
   return (

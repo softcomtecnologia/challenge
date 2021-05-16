@@ -11,7 +11,7 @@ import headerTabsNames from '../constants/headerTabsNames';
 
 const BedsAndHouses = ({ getResults }) => {
   useEffect(() => {
-    getResults(headerTabsNames.bedHouse.replaceAll(' ', '+'));
+    getResults(headerTabsNames.bedHouse.replace(' ', '+'));
   }, [getResults]);
 
   return (

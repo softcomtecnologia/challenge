@@ -11,7 +11,7 @@ import './Toys.style.css';
 
 const Toys = ({ getResults }) => {
   useEffect(() => {
-    getResults(headerTabsNames.toys.replaceAll(' ', '+'));
+    getResults(headerTabsNames.toys.replace(' ', '+'));
   }, [getResults]);
 
   return (

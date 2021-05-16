@@ -11,7 +11,7 @@ import headerTabsNames from '../constants/headerTabsNames';
 
 const Snacks = ({ getResults }) => {
   useEffect(() => {
-    getResults(headerTabsNames.snacks.replaceAll(' ', '+'));
+    getResults(headerTabsNames.snacks.replace(' ', '+'));
   }, [getResults]);
 
   return (

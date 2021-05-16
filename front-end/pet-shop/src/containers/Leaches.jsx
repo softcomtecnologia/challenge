@@ -11,7 +11,7 @@ import headerTabsNames from '../constants/headerTabsNames';
 
 const Leaches = ({ getResults }) => {
   useEffect(() => {
-    getResults(headerTabsNames.leach.replaceAll(' ', '+'));
+    getResults(headerTabsNames.leach.replace(' ', '+'));
   }, [getResults]);
 
   return (

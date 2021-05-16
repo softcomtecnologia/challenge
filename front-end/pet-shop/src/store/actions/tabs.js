@@ -5,7 +5,7 @@ export const HANDLE_TAB_NAME = 'HANDLE_TAB_NAME';
 
 const handleTabsN = (query) => ({
   type: HANDLE_TABS,
-  tabName: query.replaceAll('+', ' '),
+  tabName: query.replace('+', ' '),
 });
 
 const handleQueryData = (query, data) => (dispatch) => {
