@@ -14,7 +14,7 @@ const QuantityModal = ({ maxQuantity, quantity, setQuantity }) => (
       </PaginationLink>
     </PaginationItem>
     <PaginationItem>
-      <PaginationLink href="#">
+      <PaginationLink disabled>
         {quantity}
       </PaginationLink>
     </PaginationItem>

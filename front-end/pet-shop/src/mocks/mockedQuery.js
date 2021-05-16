@@ -114,7 +114,7 @@ const mockedQuery = {
         city_name: 'São Paulo',
       },
       shipping: {
-        free_shipping: false,
+        free_shipping: true,
         mode: 'me2',
         tags: [
           'self_service_in',
