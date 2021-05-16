@@ -1,15 +1,16 @@
-/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import './CardItemModal.style.css';
+import { connect } from 'react-redux';
 import QuantityModal from './QuantityModal';
 
 const CardItemModal = ({ children, className, image, description, maxQuantity,
   price, freeShipping }) => {
   const [modal, setModal] = useState(false);
+
+  const [quantity, setQuantity] = useState(0);
 
   const toggle = () => setModal(!modal);
 
@@ -35,7 +36,11 @@ const CardItemModal = ({ children, className, image, description, maxQuantity,
               {`Quantidade máxima ${maxQuantity}`}
             </li>
             <li>
-              <QuantityModal />
+              <QuantityModal
+                maxQuantity={ maxQuantity }
+                setQuantity={ setQuantity }
+                quantity={ quantity }
+              />
             </li>
           </ul>
         </ModalBody>
@@ -58,4 +63,8 @@ CardItemModal.propTypes = {
   freeShipping: PropTypes.bool,
 }.isRequired;
 
-export default CardItemModal;
+const mapStateToProps = (state) => ({
+  total: state.cartReducer.total,
+});
+
+export default connect(mapStateToProps)(CardItemModal);
