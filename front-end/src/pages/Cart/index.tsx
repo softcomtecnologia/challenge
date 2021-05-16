@@ -10,9 +10,11 @@ import { getLists, setRemoveCart, setUpdadeAmounIncrement, setUpdadeAmountDecrem
 const Cart = () => {
     const dispatch = useDispatch();
     const product = useSelector((state: RootState) => state.list.products);
+    
     const total = product.reduce((total, product) => {
         return total + product.price * product.amount;
     }, 0);
+
     useSelector((state: RootState) => state.list.amount);
 
     const deleteProd = (prod: product) => {
@@ -43,8 +45,8 @@ const Cart = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {product.map(prod => (
-                        <tr key={prod.id}>
+                    {product.map((prod,index) => (
+                        <tr key={index}>
                             <td>
                                 <img src={prod.image} alt={prod.title} />
                             </td>

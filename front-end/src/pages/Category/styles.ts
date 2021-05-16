@@ -64,3 +64,48 @@ export const ProductList = styled.ul`
         }
     }
 `;
+export const CategoryList = styled.nav`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    h2{
+        padding: 10px 5px;
+        text-decoration: none;
+        white-space: nowrap;
+        font-size: 1.6rem;
+        color:#fff
+
+    }
+    @media(max-width: 800px) {
+        flex-direction: column;
+        position: relative;
+      }
+    ul{
+        display: flex;
+        justify-content: center;
+        background:#fff;
+        border-radius:4px;
+        list-style: none;
+        padding:5px;
+        @media(max-width: 800px) {
+            flex-direction: column;
+            position: relative;
+          }
+            li{
+                padding: 10px 5px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all .3s ease;
+                text-transform: capitalize;
+                white-space: nowrap;
+                margin-right: 6px;
+                font-size: 1.4rem;
+                &:hover{
+                    transform: scale(1.1);
+                    text-decoration: underline;
+        }
+    }
+  }
+
+
+`;

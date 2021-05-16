@@ -4,7 +4,7 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 0;
+    margin: 25px 0;
     font-color:#fff;
     img {
         max-width:250px;
@@ -17,7 +17,7 @@ export const Container = styled.header`
 export const Cart = styled(Link)`
     display: flex;
     align-items: center;
-    text-decoration:nome;
+    text-decoration:none;
     color:#fff;
     transition:opacity 0.2s;
 

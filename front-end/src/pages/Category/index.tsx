@@ -1,46 +1,44 @@
 import { ProductList } from './styles';
 import { MdAddShoppingCart } from 'react-icons/md';
-import api from 'services/api';
 import { category, product } from 'types/types';
-import { useEffect, useState } from 'react';
 import { formatPrice } from 'utils/format';
-import { useDispatch } from 'react-redux';
-import { getLists, setCart } from 'store/actions/listActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCart } from 'store/actions/listActions';
+import { RootState } from 'store';
+import { useEffect, useState } from 'react';
+import api from 'services/api';
 import Categories from 'components/Categories';
 
 
-type productData = {
-    products: product[];
-}
-const Home = () => {
+const Category = () => {
     const dispatch = useDispatch();
+    const category = useSelector((state: RootState) => state.list.category);
 
-    const [productData, setProductData] = useState<productData>({
-        products:[]
+    //console.log(category)
+    const [catData, setCatData] = useState<category>({
+        id: 0,
+        title: '',
+        product:[] 
+
     });
 
     useEffect(() => {
-        api.get('categories')
+        api.get(`categories/${category}`)
             .then(response => {
-                const data = response.data as category[];
-                const category = data.map(x => x);
-                const p2 = category.map(x=>x.product);
-                const p1 = Object.values(p2).flatMap(x=>x);
-                setProductData({ products:p1 });
+                setCatData(response.data);
             });
-    }, []);
-    useEffect(() => {
-        dispatch(getLists());
-    }, [dispatch]);
+    }, [category]);
 
     const handleAddProduct = (prod: product) => {
         dispatch(setCart(prod));
     };
     return (
+        
         <>
-                    <Categories />
-                    <ProductList>
-                    {productData.products.map(prod => (                        
+
+            <Categories />
+            <ProductList>
+                    {catData.product.map(prod => (                        
                         <li key={prod.price}>
                             <img src={prod.image} alt={prod.title} />
                             <strong>{prod.title}</strong>
@@ -53,10 +51,10 @@ const Home = () => {
                             </button>
                         </li>
                     ))}
-                    </ProductList>
-              
-          </>  
-        
+            </ProductList>
+        </>
+
+
     );
 }
-export default Home;
+export default Category;
