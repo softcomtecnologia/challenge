@@ -1,5 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
+import { ICartProduct } from "../../interfaces/ExportInterfaces";
 
 import {
   Container,
@@ -11,9 +12,9 @@ import {
 } from "./styles";
 
 interface Props {
+  onClose?: (arg0: any) => void;
   idModal?: string;
-  readonly onClose?: (arg0: boolean) => void;
-  productid: string;
+  productid: number;
   productImage: string;
   productName: string;
   price: number;
@@ -22,8 +23,8 @@ interface Props {
 
 const ProductModal: React.FC<Props> = ({
   idModal = "modal",
-  onClose = () => {},
   productid,
+  onClose = () => {},
   productImage,
   productName,
   price,
@@ -31,6 +32,11 @@ const ProductModal: React.FC<Props> = ({
 }) => {
   const { handleAddItemCart } = useContext(CartContext);
   const [qtdItens, setQtdItens] = useState(1);
+  const [product, setProduct] = useState<ICartProduct>({} as ICartProduct);
+
+  useEffect(()=>{
+    setProduct({id: productid, price: price, qtd: qtdItens});
+  }, [qtdItens]);
 
   const handleOutsideClick = (event) => {
     if (event.target.id === idModal) {
@@ -38,12 +44,16 @@ const ProductModal: React.FC<Props> = ({
     }
   };
 
-  function handleIncrement(count) {
-    setQtdItens(count + 1);
+  function handleIncrement() {
+    let temp = qtdItens + 1;
+    setQtdItens(temp);
   }
 
-  function handleDecrement(count) {
-    if (count > 1) setQtdItens(count - 1);
+  function handleDecrement() {
+    if(qtdItens > 1){
+      let temp = qtdItens -1;
+      setQtdItens(temp);
+    }
   }
 
   return (
@@ -64,15 +74,15 @@ const ProductModal: React.FC<Props> = ({
                 <div>R$ {price.toFixed(2)}</div>
               </CardPrice>
               <div className="qtdProduct">
-                <button onClick={() => handleIncrement(qtdItens)}>+</button>
-                <button onClick={() => handleDecrement(qtdItens)}>-</button>
+                <button onClick={() => handleIncrement()}>+</button>
+                <button onClick={() => handleDecrement()}>-</button>
                 <span>Quantidade: {qtdItens}</span>
               </div>
 
               <div className="buttonAddCart">
                 <button
                   className="addToCart"
-                  onClick={() => handleAddItemCart(productid, price, qtdItens)}
+                  onClick={() => handleAddItemCart(product)}
                 >
                   ADICIONAR AO CARRINHO
                 </button>

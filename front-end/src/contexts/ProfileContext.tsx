@@ -1,14 +1,19 @@
 import { createContext, useState } from "react";
-import { IProfile } from "../interfaces/ExportInterfaces";
+import { IProfile,ProfileContextState } from "../interfaces/ExportInterfaces";
 
-export const ProfileContext = createContext({});
+const contextDefaultValues: ProfileContextState = {
+  dataProfile: {} as IProfile,
+  handleProfile: () => {}
+}
+
+export const ProfileContext = createContext<ProfileContextState>(contextDefaultValues);
 
 export const ProfileProvider = ({ children }) => {
 
-  const [dataProfile, setDataProfile] = useState<IProfile>({} as IProfile);
+  const [dataProfile, setDataProfile] = useState<IProfile>(contextDefaultValues.dataProfile);
 
-   function handleProfile(prof: IProfile) {
-    setDataProfile(prof);
+   async function handleProfile(profile: IProfile) {
+    await setDataProfile(profile);
   }
 
   return (

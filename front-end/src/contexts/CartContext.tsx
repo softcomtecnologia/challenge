@@ -1,31 +1,23 @@
-import { setUncaughtExceptionCaptureCallback } from "process";
-import { createContext, useState } from "react";
-import { IProduct } from "../interfaces/ExportInterfaces";
+import { createContext, useState} from "react";
+import { ICartProduct, CartContextState } from "../interfaces/ExportInterfaces";
 
-export const CartContext = createContext({});
+const contextDefaultValues: CartContextState = {
+  cart: [],
+  handleAddItemCart: () => {}
+};
+
+export const CartContext = createContext<CartContextState>(contextDefaultValues);
 
 export const CartProvider = ({ children }) => {
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<ICartProduct[]>(contextDefaultValues.cart);
 
-  function handleAddItemCart(id, price, qtd) {
-    const product = { id, price, qtd };
+  function handleAddItemCart(product: ICartProduct) {
     setCart([...cart, product]);
   }
 
-  function handleRemoveItemFromCart(clickerItemIndex) {
-    const filteredCart = cart.filter(
-      (cardIdem) => cart.indexOf(cardIdem) !== clickerItemIndex
-    );
-    setCart(filteredCart);
-  }
-
-  function clearCart() {
-    setCart([]);
-  }
-
   return (
-    <CartContext.Provider value={{ cart, handleAddItemCart, clearCart }}>
+    <CartContext.Provider value={{ cart, handleAddItemCart }}>
       {children}
     </CartContext.Provider>
   );

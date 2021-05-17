@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import ProductsSection from "../ProductsSection";
 
@@ -11,7 +11,6 @@ import {
 } from "./styles";
 
 import { IProduct } from '../../interfaces/ExportInterfaces';
-
 interface Props{
   sectionName?: string;
   sectionQuery?: string;
@@ -29,6 +28,12 @@ const Main: React.FC<Props> = ({sectionName, sectionQuery, dataProducts}) => {
     }
   };
 
+  const searchValidate = (e)=>{
+    if(search.length <= 0){
+      e.preventDefault();
+    }
+  }
+
   return(
     <Container>
 
@@ -45,7 +50,7 @@ const Main: React.FC<Props> = ({sectionName, sectionQuery, dataProducts}) => {
                 pathname: search,
               }}
             >
-              <SearchIcon />
+              <SearchIcon onClick={searchValidate} />
             </Link>
           </SearchWrapper>
 

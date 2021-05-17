@@ -12,12 +12,11 @@ import {
   ClockIcon
 } from "./styles";
 
-import { IProfile } from '../../interfaces/ExportInterfaces';
 import { CartContext } from "../../contexts/CartContext";
 import { ProfileContext } from "../../contexts/ProfileContext";
 
 
-const Header: React.FC<IDataProfile> = () => {
+const Header: React.FC = () => {
 
   const { cart } = useContext(CartContext);
   const { dataProfile } = useContext(ProfileContext);
