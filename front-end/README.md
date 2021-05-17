@@ -5,7 +5,7 @@ O desafio consiste em construir uma interface para a loja e integra-la a API.
 Como não foi fornecido uma API para o desfio e eu não quis fazer mockado com JSON, pois usei mocks para testes, então resolvi usar a API do [Mercado Lire](https://developers.mercadolivre.com.br/pt_br/api-docs-pt-br).
 Tentei ser o mais fiel possível ao [Protótipo](https://www.figma.com/file/ebcFb6dxwj4JkN7vENzgeQ/Desafio-UX?node-id=3585%3A0). E aos requisitos do projeto. Focando no produto e nas soluções. E não somente em skills e ferramentas. E também tentando me desapegar ao máximo das minhas ideias. Respeitando o que o cliente pediu.
 
-<img src='/pet-shop/src/assets/verify-amazon.png' alt='verify' />
+<img src='/verify-amazon.png' alt='verify' />
 
 Este aplicativo foi criado com `npx create-react-app`. Mais detalhes na documentação do [create-react-app](https://create-react-app.dev/).
 Os detalhes do desenvolimento, tomada de decições, ferramentas e considerações vem a seguir.
