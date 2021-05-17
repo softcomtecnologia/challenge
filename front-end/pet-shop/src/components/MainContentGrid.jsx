@@ -2,20 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
-  Card, CardImg, CardText, CardGroup, CardBody,
+  Card, CardImg, CardText, CardGroup, CardBody, Badge,
 } from 'reactstrap';
 import CardItemModal from './CardItemModal';
-// import NotFound from './NotFound';
+import NotFound from './NotFound';
+import cart from '../assets/CartPurple.svg';
 
 import './MainContentGrid.style.css';
 
-// import mockedQuery from '../mocks/mockedQuery';
-import NotFound from './NotFound';
-
-const MAX_TEXT_LENGTH = 20;
-
 const MainContentGrid = ({ results }) => {
-  // const [data] = useState(mockedQuery.results);
   if (results.length === 0) {
     return <NotFound />;
   }
@@ -37,8 +32,13 @@ const MainContentGrid = ({ results }) => {
               <CardText
                 className="description"
               >
-                {e.title.substr(0, MAX_TEXT_LENGTH)}
-                ...
+                {e.title}
+              </CardText>
+              <CardText className="card-footer-display">
+                <Badge>
+                  {`R$ ${e.price}`}
+                </Badge>
+                <img className="cart-icon-purple" src={ cart } alt="cart" />
               </CardText>
             </CardBody>
           </CardItemModal>

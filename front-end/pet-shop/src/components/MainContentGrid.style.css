@@ -1,6 +1,6 @@
 .description {
   color: #3F3F3F;
-  font-size: 19px;
+  font-size: 14px;
 }
 
 .card {
@@ -10,4 +10,13 @@
 
 .card button:hover {
   background-color: #ff83de;
+}
+
+.cart-icon-purple {
+  height: 18px;
+}
+
+.card-footer-display {
+  display: flex;
+  justify-content: space-between;
 }

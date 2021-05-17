@@ -7,6 +7,12 @@
   display: block;
 }
 
+@media (max-width: 768px) {
+  .shopping-cart {
+    display: none; 
+  }
+}
+
 .price {
   margin-left: 35px;
   color: #B41C8B!important;

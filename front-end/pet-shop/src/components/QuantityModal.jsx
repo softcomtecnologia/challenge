@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
+import './QuantityModal.style.css';
+
 const QuantityModal = ({ maxQuantity, quantity, setQuantity }) => (
   <Pagination aria-label="Page navigation example">
     <PaginationItem>
@@ -15,7 +17,7 @@ const QuantityModal = ({ maxQuantity, quantity, setQuantity }) => (
     </PaginationItem>
 
     <PaginationItem>
-      <PaginationLink disabled>{quantity}</PaginationLink>
+      <PaginationLink className="counter" disabled>{quantity}</PaginationLink>
     </PaginationItem>
 
     <PaginationItem>

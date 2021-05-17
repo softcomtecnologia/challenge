@@ -7,6 +7,8 @@ import Toys from './containers/Toys';
 import BedsAndHouses from './containers/BedsAndHouses';
 import Leaches from './containers/Leaches';
 import Snacks from './containers/Snacks';
+import MobileFooter from './components/MobileFooter';
+import Footer from './containers/Footer';
 
 import './App.css';
 
@@ -22,6 +24,8 @@ function App() {
           <Route path="/coleiras" component={ Leaches } />
           <Route path="/ossos-e-petiscos" component={ Snacks } />
         </Switch>
+        <MobileFooter />
+        <Footer />
       </BrowserRouter>
     </div>
   );
