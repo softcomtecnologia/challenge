@@ -9,7 +9,7 @@ import { handleCartItem } from '../store/actions/cart';
 import './CardItemModal.style.css';
 
 const CardItemModal = ({ children, className, image, description, maxQuantity,
-  price, freeShipping, addToCart, total }) => {
+  price, freeShipping, addToCart, total, index }) => {
   const [modal, setModal] = useState(false);
 
   const [quantity, setQuantity] = useState(0);
@@ -17,7 +17,7 @@ const CardItemModal = ({ children, className, image, description, maxQuantity,
   const toggle = () => setModal(!modal);
 
   return (
-    <section>
+    <section data-testid={ `card-item-${index}` }>
       <Button className="card-height" color="light" onClick={ toggle }>{children}</Button>
 
       <Modal isOpen={ modal } toggle={ toggle } className={ className }>

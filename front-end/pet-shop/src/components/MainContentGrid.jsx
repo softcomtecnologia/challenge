@@ -16,7 +16,7 @@ const MainContentGrid = ({ results }) => {
   }
   return (
     <CardGroup>
-      {results.map((e) => (
+      {results.map((e, i) => (
         <Card
           key={ e.id }
         >
@@ -26,6 +26,7 @@ const MainContentGrid = ({ results }) => {
             maxQuantity={ e.available_quantity }
             price={ e.price }
             freeShipping={ e.shipping.free_shipping }
+            index={ i }
           >
             <CardBody>
               <CardImg top width="100%" src={ e.thumbnail } alt="Card image cap" />

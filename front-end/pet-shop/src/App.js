@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Sugestions from './containers/Sugestions';
 import Header from './containers/Header';
@@ -14,20 +14,18 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={ Sugestions } />
-          <Route path="/brinquedos" component={ Toys } />
-          <Route path="/camas-e-casinhas" component={ BedsAndHouses } />
-          <Route path="/coleiras" component={ Leaches } />
-          <Route path="/ossos-e-petiscos" component={ Snacks } />
-        </Switch>
-        <MobileFooter />
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={ Sugestions } />
+        <Route path="/brinquedos" component={ Toys } />
+        <Route path="/camas-e-casinhas" component={ BedsAndHouses } />
+        <Route path="/coleiras" component={ Leaches } />
+        <Route path="/ossos-e-petiscos" component={ Snacks } />
+      </Switch>
+      <MobileFooter />
+      <Footer />
+    </>
   );
 }
 
