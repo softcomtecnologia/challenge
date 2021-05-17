@@ -32,13 +32,10 @@ Para obter a cobertura de testes `npm run test-coverage`.
 
 5) Card com Modal para informações do produto e adição ao carrinho.
 
-**BONUS**
+6) Responsive web design com interface para dispositivos web e mobile.
 
-`Existem mais dipositivos mobile do que pessoas no mundo.`
+8) Footer versão web e Footer versão mobile
 
-Com base nessa afirmação:
-
-6) Responsive web design com interface para dispositivos web e mobile
 ### Por que React?
 
 É um dos framworks mais modernos do mundo. Principalmente para `Single Page Aplications`. Possui inúmeras vantagens. Que vão desde a quantidade de processamento até a experiencia do usuário final. Por ser desenvolvido e mantido por uma das maiores empresas de tecnologia do mundo, está em constante atualização e manutenção. É muito popular. Está entre os mais usados no mundo todo. Tem uma comunidade bastante ativa. Não é dificil encontrar artigos, textos, vídeos, aulas, etc. A documentção também é muito clara e objetiva. E está em várias línguas. Inclusive português. Possui diversos recursos avançados para otizmiação como o Lazy Load, exemplo. Tudo isso sem contar todo o ecossistema de bibliotecas oficias e de terceiros. `Jest`, `Redux` e `Testing Library` incluidos. Também é um framework para aplicações mobile. Com praticamente a mesma API para web.
