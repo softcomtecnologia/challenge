@@ -28,6 +28,7 @@
 
 .cart-btn {
   background-color: #B41C8B!important;
+  display: flex;
   color: white!important;
   width: -webkit-fill-available;
 }
