@@ -1,5 +1,5 @@
 import React from "react";
-import Head from 'next/head'
+import Head from "next/head";
 import { CartProvider } from "../contexts/CartContext";
 import { ProfileProvider } from "../contexts/ProfileContext";
 
@@ -10,17 +10,17 @@ import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 
 function MyApp({ Component, pageProps }) {
-
   return (
     <>
-    <Head>
-      <title>Pet Friends</title>
-     </Head>
+      <GlobalStyles />
+      <Head>
+        <title>Pet Friends</title>
+      </Head>
       <ProfileProvider>
         <CartProvider>
           <Container>
             <Wrapper>
-              <Header/>
+              <Header />
 
               <NavBar />
             </Wrapper>
@@ -29,7 +29,6 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </CartProvider>
       </ProfileProvider>
-      <GlobalStyles />
     </>
   );
 }
