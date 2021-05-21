@@ -3,3 +3,5 @@ export { default as MotoIcon } from "./moto.svg";
 export { default as Clock } from "./clock.svg";
 export { default as CartIcon } from "./cartIcon.svg";
 export { default as SearchIcon } from "./SearchIcon.svg";
+export { default as CartIconPink } from "./cartIconPink.svg";
+export { default as ImageDefault } from "./imageDefault.png";

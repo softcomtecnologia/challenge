@@ -1,4 +1,4 @@
-import { Header, Navbar, SearchBar } from "../../components";
+import { Header, Navbar, SearchBar, CardProductMap } from "../../components";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Header />
       <Navbar />
       <SearchBar />
+      <CardProductMap />
     </>
   );
 }
