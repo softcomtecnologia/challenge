@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 import Card from "./Card";
 
@@ -17,6 +18,7 @@ export default function CardProductMap({
   categories = data.categories,
   sections = data.sections,
 }) {
+  const history = useHistory();
   const { productsOnCart } = useSelector((state) => state);
   const dispatch = useDispatch();
   function handleUpDateCartStates({ target }) {
@@ -29,15 +31,14 @@ export default function CardProductMap({
       productsOnCart.forEach(({ price }) => {
         _priceCount += price;
       });
-      console.log(_priceCount);
       dispatch(updatePriceOfProductsOnCart(_priceCount));
     }
     dispatch(updateProductsOnCart(productsOnCart));
   }
-  // function handleShowDetails() {
-  //   dispatch(updateDetailsMod(!desableDetailsScreen));
-  //   console.log(desableDetailsScreen);
-  // }
+  function handleShowDetails({ target }) {
+    const { id } = target;
+    history.push(`/productDetails/${id}`);
+  }
   return (
     <>
       {categories.map((category) => (
@@ -45,7 +46,8 @@ export default function CardProductMap({
           <CategoryMap>{category}</CategoryMap>
           <ProductsContainer>
             <Card
-              onClick={handleUpDateCartStates}
+              handleAddToCart={handleUpDateCartStates}
+              handleShowDetails={handleShowDetails}
               products={sections[category].products}
             />
           </ProductsContainer>

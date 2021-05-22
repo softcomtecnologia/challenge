@@ -1,9 +1,11 @@
+import { sections } from "../services/mock.json";
+
 const INITIAL_STATE = {
   productsOnCart: [],
   priceOfProductsOnCart: 0,
   desableDetailsScreen: true,
   query: "",
-  products: [],
+  products: sections.products,
 };
 
 const CATEGORIES = [
