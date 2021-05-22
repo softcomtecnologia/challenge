@@ -1,10 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import CartShop from "../CartShop";
 
 import { Logo, MotoIcon, Clock } from "../../assets";
 import * as S from "./styles";
 
 export default function () {
+  const { productsOnCart, priceOfProductsOnCart } = useSelector(
+    (state) => state
+  );
   return (
     <S.Header>
       <S.HeaderImage alt="Imagem Logo da Empresa" src={Logo} />
@@ -22,7 +26,10 @@ export default function () {
         <S.HeaderService>Entrega: </S.HeaderService>
         <S.HeaderServicePrice>À partir de R$ 3,00</S.HeaderServicePrice>
       </S.HeaderContainer>
-      <CartShop numberOfProductsOnCart={0} valueOfProductsOnCart={0} />
+      <CartShop
+        numberOfProductsOnCart={productsOnCart.length}
+        valueOfProductsOnCart={priceOfProductsOnCart}
+      />
     </S.Header>
   );
 }
