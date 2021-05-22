@@ -6,7 +6,7 @@ import * as S from "./styles";
 export default function Card({ products, handleShowDetails }) {
   return (
     <S.CardContainerFlex>
-      {products.map(({ id, thumbnail, product_name, price, promotion }) => (
+      {products.map(({ id, thumbnail, product_name, price }) => (
         <S.CardContainerProduct id={id} onClick={handleShowDetails} key={id}>
           {/* <span>{promotion || ""}</span> */}
           <S.CardImageProdyct id={id} src={thumbnail || ImageDefault} />

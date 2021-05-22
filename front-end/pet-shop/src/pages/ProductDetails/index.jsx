@@ -28,7 +28,7 @@ export default function ProductDetails() {
   function handleUpDateCartStates() {
     let _priceCount = 0;
     const newProductToCart = products.find((product) => product.id == id);
-    for (let i = 0; i <= qtd; i += 1) {
+    for (let i = 0; i < qtd; i += 1) {
       productsOnCart.push(newProductToCart);
     }
     if (productsOnCart.length > 0) {
