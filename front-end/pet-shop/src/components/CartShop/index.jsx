@@ -1,16 +1,16 @@
 import React from "react";
 
-import { CartIcon } from "../../assets";
-import * as S from "./styles";
-
 export default function CartShop({
   numberOfProductsOnCart = null,
   valueOfProductsOnCart = null,
+  styles = null,
+  icon = null,
 }) {
+  const S = styles;
   return (
     <S.CartContainer>
       <div>
-        <S.CartShopIcon src={CartIcon} />
+        <S.CartShopIcon src={icon} />
         <S.CartShopQTD>
           {numberOfProductsOnCart} Produtos no Carrinho
         </S.CartShopQTD>

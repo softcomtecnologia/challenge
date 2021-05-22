@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import CartShop from "../CartShop";
 
-import { Logo, MotoIcon, Clock, BackBtn } from "../../assets";
+import { Logo, MotoIcon, Clock, BackBtn, CartIcon } from "../../assets";
 import * as S from "./styles";
 
 export default function ({ desableDetailsScreen }) {
@@ -38,6 +38,8 @@ export default function ({ desableDetailsScreen }) {
           <CartShop
             numberOfProductsOnCart={productsOnCart.length}
             valueOfProductsOnCart={priceOfProductsOnCart}
+            styles={S}
+            icon={CartIcon}
           />
         </S.Header>
       ) : (

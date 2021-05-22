@@ -53,3 +53,45 @@ export const ButtonAddToCart = styled.button`
   line-height: 20px;
   letter-spacing: 0em;
 `;
+
+export const CartContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #b41c8b;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 0;
+`;
+
+export const CartShopIcon = styled.img`
+  object-fit: cover;
+`;
+
+export const CartShopQTD = styled.span`
+  margin-left: 5px;
+  color: #ffffff;
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+`;
+
+export const CartShopValue = styled.p`
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 1000px;
+  margin-left: 5px;
+  color: #333333;
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0em;
+`;

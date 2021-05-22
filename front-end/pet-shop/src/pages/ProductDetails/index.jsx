@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import { ImageDefault } from "../../assets";
+import { ImageDefault, CartIconWhite } from "../../assets";
 
-import { Header, SwitchQTD } from "../../components";
+import { CartShop, Header, SwitchQTD } from "../../components";
 
 import {
   updatePriceOfProductsOnCart,
@@ -14,7 +14,9 @@ import {
 import * as S from "./styles";
 
 export default function ProductDetails() {
-  const { products, productsOnCart } = useSelector((state) => state);
+  const { products, productsOnCart, priceOfProductsOnCart } = useSelector(
+    (state) => state
+  );
   const [qtd, setQtd] = useState(1);
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -65,6 +67,12 @@ export default function ProductDetails() {
           </S.ProductDetailsContainer>
         )
       )}
+      <CartShop
+        numberOfProductsOnCart={productsOnCart.length}
+        valueOfProductsOnCart={priceOfProductsOnCart}
+        styles={S}
+        icon={CartIconWhite}
+      />
     </>
   );
 }
