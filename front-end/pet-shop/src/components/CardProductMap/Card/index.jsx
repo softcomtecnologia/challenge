@@ -3,7 +3,7 @@ import React from "react";
 import { ImageDefault, CartIconPink } from "../../../assets";
 import * as S from "./styles";
 
-export default function Card({ products }) {
+export default function Card({ products, onClick }) {
   return (
     <S.CardContainerFlex>
       {products.map(({ id, thumbnail, product_name, price, promotion }) => (
@@ -14,7 +14,7 @@ export default function Card({ products }) {
           <S.CardSubContainer>
             <S.CardPrice>R$ {price.toFixed(2)}</S.CardPrice>
             <S.CardBtnAdd>
-              <img id={id} src={CartIconPink} />
+              <img id={id} onClick={onClick} src={CartIconPink} />
             </S.CardBtnAdd>
           </S.CardSubContainer>
         </S.CardContainerProduct>
