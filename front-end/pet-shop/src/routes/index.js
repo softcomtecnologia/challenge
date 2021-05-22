@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import { Home, NotFound, ProductDetails } from "../pages";
 
@@ -9,7 +9,8 @@ export default function Routes() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/productDetails/:id" exact component={ProductDetails} />
-        <Route path="*" component={NotFound} />
+        {/* <Route path="*" component={NotFound} /> */}
+        <Redirect path="*" to="/" />
       </Switch>
     </BrowserRouter>
   );

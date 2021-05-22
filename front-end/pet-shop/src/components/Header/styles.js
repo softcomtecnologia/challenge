@@ -92,3 +92,16 @@ export const HeaderServicePrice = styled.span`
   letter-spacing: 0em;
   text-align: left;
 `;
+
+export const HeaderDetails = styled.header`
+  background: #b41c8b;
+  padding: 3px 15px;
+`;
+
+export const BackBtn = styled.button`
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 0;
+  background: none;
+`;

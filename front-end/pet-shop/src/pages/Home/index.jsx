@@ -9,7 +9,7 @@ import {
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header desableDetailsScreen={true} />
       <Navbar />
       <SearchBar />
       <CardProductMap />

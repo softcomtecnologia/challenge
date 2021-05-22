@@ -15,7 +15,7 @@ export const filterProductsThroughSearchBar = (value) => ({
   payload: value,
 });
 
-export const updateDetailsMod = (value) => ({
+export const showProductsOnCart = (value) => ({
   type: ActionsTypes.UPDATE_DETAILS_MOD,
   payload: value,
 });

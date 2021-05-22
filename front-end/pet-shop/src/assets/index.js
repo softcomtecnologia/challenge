@@ -6,3 +6,4 @@ export { default as SearchIcon } from "./SearchIcon.svg";
 export { default as CartIconPink } from "./cartIconPink.svg";
 export { default as ImageDefault } from "./imageDefault.png";
 export { default as SoftcomIcon } from "./Softcom.svg";
+export { default as BackBtn } from "./backbtn.png";

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import * as S from "./styles";
+
 export default function SwitchQTD({ value, handleChange, max }) {
   const [quantity, setQuantity] = useState(value);
 
@@ -29,19 +31,19 @@ export default function SwitchQTD({ value, handleChange, max }) {
     }
   };
   return (
-    <div className="input-quantity">
-      <button type="button" onClick={handleIncClick}>
-        <i className="fas fa-plus" />
-      </button>
-      <input
+    <S.SwitchContainer>
+      <S.DecrementBtn type="button" onClick={handleDecClick}>
+        -
+      </S.DecrementBtn>
+      <S.QuantityInput
         min="0"
         type="number"
         value={quantity}
         onChange={handleInputChange}
       />
-      <button type="button" onClick={handleDecClick}>
-        <i className="fas fa-minus" />
-      </button>
-    </div>
+      <S.IncrementBtn type="button" onClick={handleIncClick}>
+        +
+      </S.IncrementBtn>
+    </S.SwitchContainer>
   );
 }
