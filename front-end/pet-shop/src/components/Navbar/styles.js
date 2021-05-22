@@ -4,6 +4,9 @@ export const NavbarContainer = styled.nav`
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
   margin: 0;
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;
 
 export const NavbarCategories = styled.ul`

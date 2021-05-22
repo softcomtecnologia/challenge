@@ -13,7 +13,12 @@ export const CardContainerProduct = styled.div`
   border-radius: 5px;
   width: 254px;
   height: 440px;
-  margin: 0 25px;
+  margin: 5px;
+  @media (max-width: 980px) {
+    margin: 3px;
+    width: 180px;
+    height: 300px;
+  }
 `;
 
 export const CardImageProdyct = styled.img`
@@ -21,6 +26,10 @@ export const CardImageProdyct = styled.img`
   border: 1px solid #ffffff;
   width: 224px;
   height: 224px;
+  @media (max-width: 980px) {
+    width: 144px;
+    height: 144px;
+  }
 `;
 
 export const CardProdyctName = styled.p`
@@ -33,6 +42,9 @@ export const CardProdyctName = styled.p`
   letter-spacing: 0em;
   text-align: left;
   margin: 0 42px 0px 15px;
+  @media (max-width: 980px) {
+    font-size: 14px;
+  }
 `;
 
 export const CardSubContainer = styled.div`
@@ -41,6 +53,9 @@ export const CardSubContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 980px) {
+    padding: 0;
+  }
 `;
 
 export const CardPrice = styled.p`
@@ -52,9 +67,15 @@ export const CardPrice = styled.p`
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+  @media (max-width: 980px) {
+    font-size: 14px;
+  }
 `;
 
 export const CardBtnAdd = styled.button`
   background: #ffffff;
   border: none;
+  @media (max-width: 980px) {
+    font-size: 14px;
+  }
 `;

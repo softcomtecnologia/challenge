@@ -12,6 +12,9 @@ export const FooterContainer = styled.footer`
   bottom: 0;
   width: 100%;
   padding: 32px 0;
+  @media (max-width: 1218px) {
+    display: none;
+  }
 `;
 
 export const FooterImageSoftcom = styled.img`
