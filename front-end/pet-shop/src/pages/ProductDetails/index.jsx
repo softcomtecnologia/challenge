@@ -58,6 +58,7 @@ export default function ProductDetails() {
               max={30} // Esta informação viria do stock caso houvesse
             />
             <S.ButtonAddToCart
+              role="AddToCart"
               className="button-add-cart"
               type="button"
               onClick={handleUpDateCartStates}

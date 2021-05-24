@@ -14,7 +14,7 @@ export default function Card({ products, handleShowDetails }) {
           <S.CardSubContainer>
             <S.CardPrice>R$ {price.toFixed(2)}</S.CardPrice>
             <S.CardBtnAdd>
-              <img id={id} src={CartIconPink} />
+              <img role="AddToCart" id={id} src={CartIconPink} />
             </S.CardBtnAdd>
           </S.CardSubContainer>
         </S.CardContainerProduct>

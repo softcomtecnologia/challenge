@@ -9,7 +9,7 @@ describe("This are some tests on the home page", () => {
     const { pathname } = history.location;
     expect(pathname).toBe("/");
   });
-  it("test if any router redirect to home page", () => {
+  it("checks if the title in the header is present on the screen", () => {
     const { getByText } = render(<App />);
     const title = getByText(/Pet Friends Acessories/i);
     expect(title).toBeInTheDocument();
