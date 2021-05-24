@@ -8,7 +8,7 @@ export default function Navbar({ categories = CATEGORIES }) {
     <S.NavbarContainer>
       <S.NavbarCategories>
         {categories.map((category) => (
-          <S.NavbarCategoriesItem key={category} id={category}>
+          <S.NavbarCategoriesItem role="category" key={category} id={category}>
             <a>{category}</a>
           </S.NavbarCategoriesItem>
         ))}
