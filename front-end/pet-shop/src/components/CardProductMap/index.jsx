@@ -5,7 +5,7 @@ import Card from "./Card";
 
 import data from "../../services/mock.json";
 
-import { CategoryMap, ProductsContainer } from "./styles";
+import * as S from "./styles";
 
 export default function CardProductMap({
   categories = data.categories,
@@ -20,13 +20,13 @@ export default function CardProductMap({
     <>
       {categories.map((category) => (
         <>
-          <CategoryMap>{category}</CategoryMap>
-          <ProductsContainer>
+          <S.CategoryMap>{category}</S.CategoryMap>
+          <S.ProductsContainer>
             <Card
               handleShowDetails={handleShowDetails}
               products={sections[category].products}
             />
-          </ProductsContainer>
+          </S.ProductsContainer>
         </>
       ))}
     </>

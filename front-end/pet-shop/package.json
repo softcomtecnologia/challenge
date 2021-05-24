@@ -36,12 +36,13 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
+    "axios": "^0.21.1",
     "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
-    "axios": "^0.21.1",
     "eslint": "^7.26.0",
+    "json-server": "^0.16.3",
     "prettier": "^2.3.0"
   }
 }

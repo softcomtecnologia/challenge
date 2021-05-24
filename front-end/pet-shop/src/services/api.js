@@ -1,6 +1,10 @@
 import axios from "axios";
-// Caso fosse consumir uma API Rest faria uso de axios da seguinte forma
+import data from "./mock.json";
+
 export const getFromAPI = async (url) => {
+  if (!url) {
+    return data;
+  }
   const res = await axios.get(url);
   const {
     data: { response },
