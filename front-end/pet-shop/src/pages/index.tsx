@@ -1,7 +1,17 @@
+import {
+    Header,
+    Navbar,
+  SearchBar,
+  CardProductMap,
+  Footer,
+} from '../components';
+
+import * as S from "./styles";
+
 export default () => {
   return (
-    <>
-      <h1>Hello Challenge Softcom</h1>
-    </>
+    <S.main>
+      <Header desableDetailsScreen={true} />
+    </S.main>
   );
 };
