@@ -1,0 +1,10 @@
+export const Logo = '/images/capas-de-cachorro-fofo-1 1.png';
+export const MotoIcon = '/images/moto.svg';
+export const Clock = '/images/clock.svg';
+export const CartIcon = '/images/cartIcon.svg';
+export const SearchIcon = '/images/SearchIcon.svg';
+export const CartIconPink = '/images/cartIconPink.svg';
+export const ImageDefault = '/images/imageDefault.png';
+export const SoftcomIcon = '/images/Softcom.svg';
+export const BackBtn = '/images/backbtn.png';
+export const CartIconWhite = '/images/cartIconWhite.svg'
