@@ -9,7 +9,7 @@ import CartShop from "../CartShop";
 export default function Header({ disableDetailsScreen }) {
   const history = useHistory();
   function handleBack() {
-    history.push("/")
+    // history.push("/")
   }
   return (
     <>
