@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 
 import * as S from "./styles";
 
@@ -7,9 +7,9 @@ import { Logo, Clock, MotoIcon, CartIcon } from '../../common/assetsPaths'
 import CartShop from "../CartShop";
 
 export default function Header({ disableDetailsScreen }) {
-  const history = useHistory();
+  const router = useRouter();
   function handleBack() {
-    // history.push("/")
+    router.push('/')
   }
   return (
     <>
