@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-import data from '../../mock/index.json'
 import { CartShop, Header, SwitchQTD } from "../../components";
 import { ImageDefault, CartIconWhite } from "../../common/assetsPaths";
+
+import {
+  updatePriceOfProductsOnCart,
+  updateProductsOnCart,
+} from "../../actions"
+
 import * as S from "./styles";
 
 interface Context {
@@ -18,6 +24,20 @@ interface Product {
   price: number;
 }
 
+interface I_Initial_State {
+  productsOnCart: any[];
+  priceOfProductsOnCart: number;
+  query: string;
+  products: {
+    id: number;
+    thumbnail: string;
+    product_name: string;
+    price: number;
+    promotion: number;
+    description: string[];
+  }[];
+}
+
 export async function getServerSideProps(context: Context) {
   const id = context.query.id;
 
@@ -29,11 +49,31 @@ export async function getServerSideProps(context: Context) {
 }
 
 export default function ProductDetails({ id }) {
+  const { products, productsOnCart, priceOfProductsOnCart } = useSelector(
+    (state: I_Initial_State) => state
+  );
   const [qtd, setQtd] = useState(1);
+  const dispatch = useDispatch();
+
   const handleChangeQuantity = (value: number) => {
     setQtd(value);
   };
-  const products = data.sections.products
+
+  function handleUpDateCartStates() {
+    let _priceCount = 0;
+    const newProductToCart = products.find((product) => product.id == id);
+    for (let i = 0; i < qtd; i += 1) {
+      productsOnCart.push(newProductToCart);
+    }
+    if (productsOnCart.length > 0) {
+      productsOnCart.forEach(({ price }) => {
+        _priceCount += price;
+      });
+      dispatch(updatePriceOfProductsOnCart(_priceCount));
+    }
+    dispatch(updateProductsOnCart(productsOnCart));
+  }
+
   return (
     <>
       <Header disableDetailsScreen={false} />
@@ -60,7 +100,7 @@ export default function ProductDetails({ id }) {
               role="AddToCart"
               className="button-add-cart"
               type="button"
-              //   onClick={handleUpDateCartStates}
+              onClick={handleUpDateCartStates}
             >
               Adicionar ao Carrinho
             </S.ButtonAddToCart>
@@ -68,8 +108,8 @@ export default function ProductDetails({ id }) {
         )
       )}
       <CartShop
-        numberOfProductsOnCart={0}
-        valueOfProductsOnCart={0}
+        numberOfProductsOnCart={productsOnCart.length}
+        valueOfProductsOnCart={priceOfProductsOnCart}
         styles={S}
         icon={CartIconWhite}
       />
