@@ -1,6 +1,10 @@
-import Header from "../components/Header";
-import Navbar from "../components/NavBar";
-import SearchBar from "../components/SearchBar";
+import {
+  Header,
+  Navbar,
+  SearchBar,
+  CardProductMap,
+  Footer,
+} from "../components";
 
 export default function Home() {
   return (
@@ -8,6 +12,8 @@ export default function Home() {
       <Header disableDetailsScreen={true} />
       <Navbar />
       <SearchBar />
+      <CardProductMap />
+      <Footer />
     </>
   );
 }
