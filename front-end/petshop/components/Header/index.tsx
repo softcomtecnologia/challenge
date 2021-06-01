@@ -1,15 +1,39 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 import * as S from "./styles";
 
-import { Logo, Clock, MotoIcon, CartIcon } from '../../common/assetsPaths'
+import {
+  Logo,
+  Clock,
+  MotoIcon,
+  CartIcon,
+  BackBtn,
+} from "../../common/assetsPaths";
 import CartShop from "../CartShop";
 
+interface I_Initial_State {
+  productsOnCart: any[];
+  priceOfProductsOnCart: number;
+  query: string;
+  products: {
+    id: number;
+    thumbnail: string;
+    product_name: string;
+    price: number;
+    promotion: number;
+    description: string[];
+  }[];
+}
+
 export default function Header({ disableDetailsScreen }) {
+  const { productsOnCart, priceOfProductsOnCart } = useSelector(
+    (state: I_Initial_State) => state
+  );
   const router = useRouter();
   function handleBack() {
-    router.push('/')
+    router.push("/");
   }
   return (
     <>
@@ -31,8 +55,8 @@ export default function Header({ disableDetailsScreen }) {
             <S.HeaderServicePrice>À partir de R$ 3,00</S.HeaderServicePrice>
           </S.HeaderContainer>
           <CartShop
-            numberOfProductsOnCart={0}
-            valueOfProductsOnCart={0}
+            numberOfProductsOnCart={productsOnCart.length}
+            valueOfProductsOnCart={priceOfProductsOnCart}
             styles={S}
             icon={CartIcon}
           />
@@ -40,7 +64,7 @@ export default function Header({ disableDetailsScreen }) {
       ) : (
         <S.HeaderDetails>
           <S.BackBtn onClick={handleBack}>
-            <img src="/images/backbtn.png" />
+            <img src={BackBtn} />
           </S.BackBtn>
         </S.HeaderDetails>
       )}
