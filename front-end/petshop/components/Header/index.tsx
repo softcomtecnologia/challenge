@@ -3,7 +3,8 @@ import { useHistory } from "react-router-dom";
 
 import * as S from "./styles";
 
-import { Logo, Clock, MotoIcon, CartIcon } from '../common/assetsPaths'
+import { Logo, Clock, MotoIcon, CartIcon } from '../../common/assetsPaths'
+import CartShop from "../CartShop";
 
 export default function Header({ disableDetailsScreen }) {
   const history = useHistory();
@@ -29,12 +30,12 @@ export default function Header({ disableDetailsScreen }) {
             <S.HeaderService>Entrega: </S.HeaderService>
             <S.HeaderServicePrice>À partir de R$ 3,00</S.HeaderServicePrice>
           </S.HeaderContainer>
-          {/* <CartShop
+          <CartShop
             numberOfProductsOnCart={0}
             valueOfProductsOnCart={0}
             styles={S}
             icon={CartIcon}
-          /> */}
+          />
         </S.Header>
       ) : (
         <S.HeaderDetails>
