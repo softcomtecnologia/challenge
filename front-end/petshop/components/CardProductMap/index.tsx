@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 
 import Card from "./Card";
 
@@ -11,10 +11,10 @@ export default function CardProductMap({
   categories = data.categories,
   sections = data.sections,
 }) {
-  const history = useHistory();
+  const router = useRouter();
   function handleShowDetails({ target }) {
     const { id } = target;
-    history.push(`/productDetails/${id}`);
+    router.push(`/productDetails/${id}`);
   }
   return (
     <>
