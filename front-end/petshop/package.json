@@ -8,15 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
-    "@types/react-router-dom": "^5.1.7",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-router-dom": "^5.2.0"
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",
     "@types/react": "^17.0.8",
+    "@types/react-redux": "^7.1.16",
     "@types/styled-components": "^5.1.9",
     "eslint": "^7.27.0",
     "prettier": "^2.3.0",
