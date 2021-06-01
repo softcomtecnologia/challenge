@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 
+import data from '../../mock/index.json'
 import { CartShop, Header, SwitchQTD } from "../../components";
 import { ImageDefault, CartIconWhite } from "../../common/assetsPaths";
 import * as S from "./styles";
 
-export async function getServerSideProps(context) {
+interface Context {
+  query: {
+    id: string;
+  };
+}
+
+interface Product {
+  id: number;
+  thumbnail: string;
+  product_name: string;
+  price: number;
+}
+
+export async function getServerSideProps(context: Context) {
   const id = context.query.id;
 
   return {
@@ -16,21 +30,21 @@ export async function getServerSideProps(context) {
 
 export default function ProductDetails({ id }) {
   const [qtd, setQtd] = useState(1);
-  const handleChangeQuantity = (value) => {
+  const handleChangeQuantity = (value: number) => {
     setQtd(value);
   };
-  const products = null;
+  const products = data.sections.products
   return (
     <>
       <Header disableDetailsScreen={false} />
-      {[products?.find((product) => product.id == id)].map(
+      {[products?.find((product: Product) => product.id == id)].map(
         ({
           id = null,
           thumbnail = null,
           product_name = null,
           price = null,
         }) => (
-          <S.ProductDetailsContainer id={id}>
+          <S.ProductDetailsContainer id={id.toString()}>
             <S.ImageProductOnDetails src={thumbnail || ImageDefault} />
             <S.TitleProductDetails>{product_name}</S.TitleProductDetails>
             <S.PriceInfo>Preço por unidade: R$ {price.toFixed(2)}</S.PriceInfo>
