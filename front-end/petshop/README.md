@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Repositório do Desafio Front-End Softcom
 
-## Getting Started
+Esta aplicação foi desenvolvida por mim para o desafio da empresa Softcom, para nivelamento de nível.
 
-First, run the development server:
+## Como foi feito?
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Esta aplicaçao foi feita em Nextjs com TypeScript, Styled Components e muito carinho.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como iniciar o projeto?
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Clone este repositório em sua máquina local, em seguida instale as dependências através do `npm install` ou `yarn`.
+Inicie a aplicação com `npm run dev` ou `yarn dev`.
+Agora se deu tudo certo, pode abrir clicando aqui [aqui](http://localhost:3000).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Desafios e aprendizados
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Durante o desenvolvimento desta aplicação aprendi a lidar com arquiteturas, boas práticas e clean code, rotas dinamicas e compreendendo melhor agora a importância da responsividade para dispositivos moveis.
