@@ -7,7 +7,7 @@ import { ImageDefault, CartIconWhite } from "../../common/assetsPaths";
 import {
   updatePriceOfProductsOnCart,
   updateProductsOnCart,
-} from "../../actions"
+} from "../../actions";
 
 import * as S from "./styles";
 
