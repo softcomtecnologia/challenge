@@ -144,16 +144,15 @@ export const CartContainer = styled.div`
   border-left: 1px solid #ececec;
   justify-content: space-evenly;
   align-items: bottom;
-  @media (max-width: 1218px) {
+  @media (max-width: 591px) {
     position: fixed;
     top: 90%;
+    left: 10px;
     z-index: +1;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     background: #b41c8b;
-    border-radius: 15px;
-    max-width: 600px;
+    border-radius: 5px;
+    width: 551px;
     padding: 10px;
   }
 `;
@@ -162,9 +161,8 @@ export const CartShopIcon = styled.img`
   height: 22.41px;
   width: 26px;
   margin: 0 13px;
-  @media (max-width: 1218px) {
-    color: #ffffff;
-    object-fit: cover;
+  @media (max-width: 591px) {
+    display: none;
   }
 `;
 
@@ -176,7 +174,7 @@ export const CartShopQTD = styled.span`
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
-  @media (max-width: 1218px) {
+  @media (max-width: 591px) {
     margin-left: 5px;
     color: #ffffff;
     font-family: "Quicksand";
@@ -199,17 +197,17 @@ export const CartShopValue = styled.p`
   line-height: 25px;
   letter-spacing: 0em;
   text-align: left;
-  @media (max-width: 1218px) {
+  @media (max-width: 591px) {
     background: #ffffff;
     padding: 5px;
     border-radius: 1000px;
     margin-left: 5px;
-    color: #333333;
+    color: #b41c8b;
     font-family: "Quicksand";
-    font-size: 18px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
+    font-weight: 700;
+    line-height: 20px;
     letter-spacing: 0em;
   }
 `;
