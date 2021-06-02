@@ -8,6 +8,9 @@ export const Header = styled.header`
   flex-direction: row;
   padding: 23px 58px;
   margin: 0;
+  @media (max-width: 591px) {
+    padding: 0;
+  }
 `;
 
 export const HeaderImage = styled.img`
@@ -15,11 +18,17 @@ export const HeaderImage = styled.img`
   border-radius: 100%;
   height: 144px;
   width: 144px;
+  @media (max-width: 591px) {
+    margin: 0 17px;
+  }
 `;
 
 export const HeaderContainer = styled.div`
   flex: auto;
   margin: 0 30px;
+  @media (max-width: 591px) {
+    margin: 0 auto;
+  }
 `;
 
 export const HeaderTitle = styled.span`
@@ -31,10 +40,15 @@ export const HeaderTitle = styled.span`
   line-height: 35px;
   letter-spacing: 0em;
   text-align: left;
+  @media (max-width: 591px) {
+    font-size: 24px;
+  }
 `;
 
 export const HeaderClockIcon = styled.img`
-  margin: 0 0 0 20px;
+  width: 10px;
+  height: 10px;
+  margin: 0 2px 0 20px;
 `;
 
 export const HeaderStatus = styled.span`
@@ -57,6 +71,21 @@ export const HeaderStreet = styled.h3`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  @media (max-width: 591px) {
+    margin: 15px auto;
+  }
+`;
+
+export const HeaderDeliveryInfo = styled.span`
+  @media (max-width: 591px) {
+    float:left;
+  }
+`;
+
+export const HeaderMotoIcon = styled.img`
+  width: 16px;
+  height: 9px;
+  margin: 0 3px;
 `;
 
 export const HeaderService = styled.span`
@@ -68,6 +97,9 @@ export const HeaderService = styled.span`
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
+  @media (max-width: 591px) {
+    display: block
+  }
 `;
 
 export const HeaderServiceTime = styled.span`
