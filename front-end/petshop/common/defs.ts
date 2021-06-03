@@ -1,24 +1,9 @@
-import { sections } from "../mock/index.json";
-
-interface I_Initial_State {
-  productsOnCart: any[];
-  priceOfProductsOnCart: number;
-  query: string;
-  products: {
-    id: number;
-    thumbnail: string;
-    product_name: string;
-    price: number;
-    promotion: number;
-    description: string[];
-  }[];
-}
-
-export const INITIAL_STATE: I_Initial_State = {
+export const INITIAL_STATE = {
   productsOnCart: [],
   priceOfProductsOnCart: 0,
+  categories: [""],
   query: "",
-  products: sections.products,
+  sections: [],
 };
 
 export const CATEGORIES = [
@@ -29,3 +14,5 @@ export const CATEGORIES = [
   "Ossos e Petiscos",
   "Saúde",
 ];
+
+export const END_POINT = "http://localhost:3000/api/petshopDatabase";
