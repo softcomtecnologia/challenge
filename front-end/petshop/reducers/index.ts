@@ -1,24 +1,7 @@
 import { INITIAL_STATE } from "../common/defs";
 import * as ActionsTypes from "../common/actionsTypes";
 
-interface I_Initial_State {
-  productsOnCart: any[];
-  priceOfProductsOnCart: number;
-  query: string;
-  products: {
-    id: number;
-    thumbnail: string;
-    product_name: string;
-    price: number;
-    promotion: number;
-    description: string[];
-  }[];
-}
-
-const storeReducer = (
-  state: I_Initial_State = INITIAL_STATE,
-  action = null
-) => {
+const storeReducer = (state = INITIAL_STATE, action = null) => {
   switch (action.type) {
     case ActionsTypes.FILTER_PRODUCTS_BY_QUERY:
       return { ...state, products: action.payload };
@@ -28,6 +11,16 @@ const storeReducer = (
       return {
         ...state,
         priceOfProductsOnCart: action.payload,
+      };
+    case ActionsTypes.UPDATE_CATEGORIES_STORE:
+      return {
+        ...state,
+        categories: action.payload,
+      };
+    case ActionsTypes.UPDATE_SECTIONS_STORE:
+      return {
+        ...state,
+        sections: action.payload,
       };
     default:
       return state;
