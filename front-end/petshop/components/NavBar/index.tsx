@@ -1,9 +1,8 @@
 import React from "react";
 
-import { CATEGORIES } from "../../common/defs";
 import * as S from "./styles";
 
-export default function Navbar({ categories = CATEGORIES }) {
+export default function Navbar({ categories }) {
   return (
     <S.NavbarContainer>
       <S.NavbarCategories>

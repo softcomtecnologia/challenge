@@ -13,23 +13,11 @@ import {
 } from "../../common/assetsPaths";
 import CartShop from "../CartShop";
 
-interface I_Initial_State {
-  productsOnCart: any[];
-  priceOfProductsOnCart: number;
-  query: string;
-  products: {
-    id: number;
-    thumbnail: string;
-    product_name: string;
-    price: number;
-    promotion: number;
-    description: string[];
-  }[];
-}
+import { initialState } from '../../common/interfaces'
 
 export default function Header({ disableDetailsScreen }) {
   const { productsOnCart, priceOfProductsOnCart } = useSelector(
-    (state: I_Initial_State) => state
+    (state: initialState) => state
   );
   const router = useRouter();
   function handleBack() {

@@ -3,14 +3,9 @@ import { useRouter } from "next/router";
 
 import Card from "./Card";
 
-import data from "../../mock/index.json";
-
 import * as S from "./styles";
 
-export default function CardProductMap({
-  categories = data.categories,
-  sections = data.sections,
-}) {
+export default function CardProductMap({ categories, sections }) {
   const router = useRouter();
   function handleShowDetails({ target }) {
     const { id } = target;
@@ -18,17 +13,19 @@ export default function CardProductMap({
   }
   return (
     <>
-      {categories.map((category) => (
-        <>
-          <S.CategoryMap>{category}</S.CategoryMap>
-          <S.ProductsContainer>
-            <Card
-              handleShowDetails={handleShowDetails}
-              products={sections[category].products}
-            />
-          </S.ProductsContainer>
-        </>
-      ))}
+      {categories.map((category: string) =>
+        sections[category] ? (
+          <>
+            <S.CategoryMap>{category}</S.CategoryMap>
+            <S.ProductsContainer>
+              <Card
+                handleShowDetails={handleShowDetails}
+                products={sections[category].products}
+              />
+            </S.ProductsContainer>
+          </>
+        ) : null
+      )}
     </>
   );
 }
