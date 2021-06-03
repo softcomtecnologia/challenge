@@ -9,36 +9,11 @@ import {
   updateProductsOnCart,
 } from "../../actions";
 
+import { context, initialState, product } from "../../common/interfaces";
+
 import * as S from "./styles";
 
-interface Context {
-  query: {
-    id: string;
-  };
-}
-
-interface Product {
-  id: number;
-  thumbnail: string;
-  product_name: string;
-  price: number;
-}
-
-interface I_Initial_State {
-  productsOnCart: any[];
-  priceOfProductsOnCart: number;
-  query: string;
-  products: {
-    id: number;
-    thumbnail: string;
-    product_name: string;
-    price: number;
-    promotion: number;
-    description: string[];
-  }[];
-}
-
-export async function getServerSideProps(context: Context) {
+export async function getServerSideProps(context: context) {
   const id = context.query.id;
 
   return {
@@ -49,8 +24,8 @@ export async function getServerSideProps(context: Context) {
 }
 
 export default function ProductDetails({ id }) {
-  const { products, productsOnCart, priceOfProductsOnCart } = useSelector(
-    (state: I_Initial_State) => state
+  const { sections, productsOnCart, priceOfProductsOnCart } = useSelector(
+    (state: initialState) => state
   );
   const [qtd, setQtd] = useState(1);
   const dispatch = useDispatch();
@@ -61,7 +36,7 @@ export default function ProductDetails({ id }) {
 
   function handleUpDateCartStates() {
     let _priceCount = 0;
-    const newProductToCart = products.find((product) => product.id == id);
+    const newProductToCart = sections.products.find((product: product) => product.id == id);
     for (let i = 0; i < qtd; i += 1) {
       productsOnCart.push(newProductToCart);
     }
@@ -77,7 +52,7 @@ export default function ProductDetails({ id }) {
   return (
     <>
       <Header disableDetailsScreen={false} />
-      {[products?.find((product: Product) => product.id == id)].map(
+      {[sections.products?.find((product: product) => product.id == id)].map(
         ({
           id = null,
           thumbnail = null,
