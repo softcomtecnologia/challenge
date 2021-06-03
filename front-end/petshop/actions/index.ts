@@ -1,15 +1,7 @@
+import { product, sections } from "./../common/interfaces";
 import * as ActionsTypes from "../common/actionsTypes";
 
-interface I_Product {
-  id: number;
-  thumbnail: string;
-  product_name: string;
-  price: number;
-  promotion: number;
-  description: string[];
-}
-
-export const updateProductsOnCart = (value: I_Product[]) => ({
+export const updateProductsOnCart = (value: product[]) => ({
   type: ActionsTypes.ADD_PRODUCTS_TO_CART,
   payload: value,
 });
@@ -24,7 +16,17 @@ export const filterProductsThroughSearchBar = (value: string) => ({
   payload: value,
 });
 
-export const showProductsOnCart = (value: I_Product) => ({
+export const showProductsOnCart = (value: product) => ({
   type: ActionsTypes.UPDATE_DETAILS_MOD,
+  payload: value,
+});
+
+export const updateSectionsStore = (value: sections) => ({
+  type: ActionsTypes.UPDATE_SECTIONS_STORE,
+  payload: value,
+});
+
+export const updateCategoriesStore = (value: string[]) => ({
+  type: ActionsTypes.UPDATE_CATEGORIES_STORE,
   payload: value,
 });
