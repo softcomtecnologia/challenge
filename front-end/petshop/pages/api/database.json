@@ -1,0 +1,558 @@
+{
+  "categories": [
+    "Sugestão do Vendedor",
+    "Brinquedos",
+    "Camas e Casinhas",
+    "Coleiras",
+    "Ossos e Petiscos",
+    "Saúde"
+  ],
+  "sections": {
+    "Sugestão do Vendedor": {
+      "products": [
+        {
+          "id": 1,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": [
+            "Indicado para cães",
+            "Contém extrato de aloe e vera e silicone",
+            "Ph neutro",
+            "Uso veterinário",
+            "Produto de alta qualidade",
+            "Disponível em embalagens de 500ml e 5 litros"
+          ]
+        },
+        {
+          "id": 2,
+          "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+          "product_name": "Cama Londres Azul - Chicxs",
+          "price": 69.9,
+          "promotion": 10,
+          "description": [
+            "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+            "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+            "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+            "Escolha um cantinho bem aconchegante na cada para colocar"
+          ]
+        },
+        {
+          "id": 3,
+          "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+          "product_name": "Comedouro Pesado Lilás NF Pet",
+          "price": 15.9,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 4,
+          "thumbnail": null,
+          "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": null
+        }
+      ]
+    },
+    "Brinquedos": {
+      "products": [
+        {
+          "id": 5,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 6,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 7,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+          "price": 27.5,
+          "promotion": 7,
+          "description": null
+        },
+        {
+          "id": 8,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Brinquedo Chalesco para Cães com Bola de Tênis - Cores Sortidas",
+          "price": 27.99,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 9,
+          "thumbnail": "https://chalesco.com.br/wp-content/uploads/2020/05/70741.jpg",
+          "product_name": "Brinquedo Chalesco Sapo",
+          "price": 36.99,
+          "promotion": null,
+          "description": null
+        }
+      ]
+    },
+    "Camas e Casinhas": {
+      "products": [
+        {
+          "id": 10,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": [
+            "Indicado para cães",
+            "Contém extrato de aloe e vera e silicone",
+            "Ph neutro",
+            "Uso veterinário",
+            "Produto de alta qualidade",
+            "Disponível em embalagens de 500ml e 5 litros"
+          ]
+        },
+        {
+          "id": 11,
+          "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+          "product_name": "Cama Londres Azul - Chicxs",
+          "price": 69.9,
+          "promotion": 10,
+          "description": [
+            "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+            "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+            "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+            "Escolha um cantinho bem aconchegante na cada para colocar"
+          ]
+        },
+        {
+          "id": 12,
+          "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+          "product_name": "Comedouro Pesado Lilás NF Pet",
+          "price": 15.9,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 13,
+          "thumbnail": null,
+          "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": null
+        }
+      ]
+    },
+    "Coleiras": {
+      "products": [
+        {
+          "id": 14,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": [
+            "Indicado para cães",
+            "Contém extrato de aloe e vera e silicone",
+            "Ph neutro",
+            "Uso veterinário",
+            "Produto de alta qualidade",
+            "Disponível em embalagens de 500ml e 5 litros"
+          ]
+        },
+        {
+          "id": 15,
+          "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+          "product_name": "Cama Londres Azul - Chicxs",
+          "price": 69.9,
+          "promotion": 10,
+          "description": [
+            "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+            "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+            "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+            "Escolha um cantinho bem aconchegante na cada para colocar"
+          ]
+        },
+        {
+          "id": 16,
+          "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+          "product_name": "Comedouro Pesado Lilás NF Pet",
+          "price": 15.9,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 17,
+          "thumbnail": null,
+          "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": null
+        }
+      ]
+    },
+    "Ossos e Petiscos": {
+      "products": [
+        {
+          "id": 18,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": [
+            "Indicado para cães",
+            "Contém extrato de aloe e vera e silicone",
+            "Ph neutro",
+            "Uso veterinário",
+            "Produto de alta qualidade",
+            "Disponível em embalagens de 500ml e 5 litros"
+          ]
+        },
+        {
+          "id": 19,
+          "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+          "product_name": "Cama Londres Azul - Chicxs",
+          "price": 69.9,
+          "promotion": 10,
+          "description": [
+            "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+            "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+            "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+            "Escolha um cantinho bem aconchegante na cada para colocar"
+          ]
+        },
+        {
+          "id": 20,
+          "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+          "product_name": "Comedouro Pesado Lilás NF Pet",
+          "price": 15.9,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 21,
+          "thumbnail": null,
+          "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": null
+        }
+      ]
+    },
+    "Saúde": {
+      "products": [
+        {
+          "id": 22,
+          "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+          "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": [
+            "Indicado para cães",
+            "Contém extrato de aloe e vera e silicone",
+            "Ph neutro",
+            "Uso veterinário",
+            "Produto de alta qualidade",
+            "Disponível em embalagens de 500ml e 5 litros"
+          ]
+        },
+        {
+          "id": 23,
+          "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+          "product_name": "Cama Londres Azul - Chicxs",
+          "price": 69.9,
+          "promotion": 10,
+          "description": [
+            "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+            "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+            "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+            "Escolha um cantinho bem aconchegante na cada para colocar"
+          ]
+        },
+        {
+          "id": 24,
+          "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+          "product_name": "Comedouro Pesado Lilás NF Pet",
+          "price": 15.9,
+          "promotion": null,
+          "description": null
+        },
+        {
+          "id": 25,
+          "thumbnail": null,
+          "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+          "price": 69.9,
+          "promotion": null,
+          "description": null
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 1,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": [
+          "Indicado para cães",
+          "Contém extrato de aloe e vera e silicone",
+          "Ph neutro",
+          "Uso veterinário",
+          "Produto de alta qualidade",
+          "Disponível em embalagens de 500ml e 5 litros"
+        ]
+      },
+      {
+        "id": 2,
+        "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+        "product_name": "Cama Londres Azul - Chicxs",
+        "price": 69.9,
+        "promotion": 10,
+        "description": [
+          "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+          "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+          "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+          "Escolha um cantinho bem aconchegante na cada para colocar"
+        ]
+      },
+      {
+        "id": 3,
+        "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+        "product_name": "Comedouro Pesado Lilás NF Pet",
+        "price": 15.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 4,
+        "thumbnail": null,
+        "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 5,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 6,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 7,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+        "price": 27.5,
+        "promotion": 7,
+        "description": null
+      },
+      {
+        "id": 8,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Brinquedo Chalesco para Cães com Bola de Tênis - Cores Sortidas",
+        "price": 27.99,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 9,
+        "thumbnail": "https://chalesco.com.br/wp-content/uploads/2020/05/70741.jpg",
+        "product_name": "Brinquedo Chalesco Sapo",
+        "price": 36.99,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 10,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": [
+          "Indicado para cães",
+          "Contém extrato de aloe e vera e silicone",
+          "Ph neutro",
+          "Uso veterinário",
+          "Produto de alta qualidade",
+          "Disponível em embalagens de 500ml e 5 litros"
+        ]
+      },
+      {
+        "id": 11,
+        "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+        "product_name": "Cama Londres Azul - Chicxs",
+        "price": 69.9,
+        "promotion": 10,
+        "description": [
+          "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+          "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+          "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+          "Escolha um cantinho bem aconchegante na cada para colocar"
+        ]
+      },
+      {
+        "id": 12,
+        "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+        "product_name": "Comedouro Pesado Lilás NF Pet",
+        "price": 15.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 13,
+        "thumbnail": null,
+        "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 14,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": [
+          "Indicado para cães",
+          "Contém extrato de aloe e vera e silicone",
+          "Ph neutro",
+          "Uso veterinário",
+          "Produto de alta qualidade",
+          "Disponível em embalagens de 500ml e 5 litros"
+        ]
+      },
+      {
+        "id": 15,
+        "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+        "product_name": "Cama Londres Azul - Chicxs",
+        "price": 69.9,
+        "promotion": 10,
+        "description": [
+          "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+          "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+          "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+          "Escolha um cantinho bem aconchegante na cada para colocar"
+        ]
+      },
+      {
+        "id": 16,
+        "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+        "product_name": "Comedouro Pesado Lilás NF Pet",
+        "price": 15.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 17,
+        "thumbnail": null,
+        "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 18,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": [
+          "Indicado para cães",
+          "Contém extrato de aloe e vera e silicone",
+          "Ph neutro",
+          "Uso veterinário",
+          "Produto de alta qualidade",
+          "Disponível em embalagens de 500ml e 5 litros"
+        ]
+      },
+      {
+        "id": 19,
+        "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+        "product_name": "Cama Londres Azul - Chicxs",
+        "price": 69.9,
+        "promotion": 10,
+        "description": [
+          "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+          "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+          "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+          "Escolha um cantinho bem aconchegante na cada para colocar"
+        ]
+      },
+      {
+        "id": 20,
+        "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+        "product_name": "Comedouro Pesado Lilás NF Pet",
+        "price": 15.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 21,
+        "thumbnail": null,
+        "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 22,
+        "thumbnail": "https://a-static.mlcdn.com.br/1500x1500/shampoo-tradicional-i-love-pet-5-litros/royalpets/11126/a14ea4e5fcd9fb0214b8d14e5c9ebd19.jpg",
+        "product_name": "Shampoo Tradicional I Love Pet 5 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": [
+          "Indicado para cães",
+          "Contém extrato de aloe e vera e silicone",
+          "Ph neutro",
+          "Uso veterinário",
+          "Produto de alta qualidade",
+          "Disponível em embalagens de 500ml e 5 litros"
+        ]
+      },
+      {
+        "id": 23,
+        "thumbnail": "https://cobasi.vteximg.com.br/arquivos/ids/299579/Cama-Londres-Azul-Bichinho-Chic.jpg?v=637152325568000000",
+        "product_name": "Cama Londres Azul - Chicxs",
+        "price": 69.9,
+        "promotion": 10,
+        "description": [
+          "Cuidados com a Cama para Cachorro Londres Bichinho Chic Azul",
+          "Mantenha a caminha do seu pet sempre limpa e higienizada.",
+          "Escolha o tamanho da caminha de acordo com o porte do seu cachorro ou gato",
+          "Escolha um cantinho bem aconchegante na cada para colocar"
+        ]
+      },
+      {
+        "id": 24,
+        "thumbnail": "https://www.petlove.com.br/images/products/199824/large/Comedouro_NF_Pet_Pesado_Lil%C3%A1s_-_Tam.P_1954075_2.jpg?1556469668",
+        "product_name": "Comedouro Pesado Lilás NF Pet",
+        "price": 15.9,
+        "promotion": null,
+        "description": null
+      },
+      {
+        "id": 25,
+        "thumbnail": null,
+        "product_name": "Shampoo Tradicional I Love Pet 10 Litros",
+        "price": 69.9,
+        "promotion": null,
+        "description": null
+      }
+    ]
+  }
+}
