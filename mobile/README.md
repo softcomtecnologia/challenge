@@ -11,16 +11,16 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 - Colaborar com ideias que possam melhorar nossos sistemas e a vida dos nossos usuários;
 - Estar disposto a aprender e a ensinar;
 - Cuidar dos nossos sistemas como se fossem seus filhos;
-- Estar sempre atento a oportunidades para melhorar o código e nossos processos.
+- Estar sempre atento a oportunidades para melhorar o código e nossos processos;
 
 ## 🎓 Requisitos
 
 - Experiência com Android;
-- Linguagem de programação Kotlin ou Java
-- Arquiterura Android MVVM
-- Biblioteva AndroidX;
-- ORM ActiveAndroid
-- Trabalhar com Cliente HTTP usando Retrofit ;
+- Linguagem de programação Kotlin ou Java;
+- Arquitetura Android MVVM;
+- Biblioteca AndroidX;
+- ORM ActiveAndroid;
+- Trabalhar com Cliente HTTP usando Retrofit;
 - Solid Principles;
 - Clean Code;
 - Conhecer o básico de versionamento com Git;
@@ -32,24 +32,25 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 
 - Experiência com Gradle Scripts;
 - Experiência em autenticação JWT Token;
-- GIT Flow
+- GIT Flow;
 - Experiência com Testes unitários;
 - Experiência com metodologia ágil;
 - Experiência com Arquiterura Offline First;
-- Conhecimento em inglês para escrita de comentários, revisão de PRs e leitura;
 - Experiência em publicação de aplicações nas lojas (Play Store e Apple Store);
+- Conhecimento em inglês para escrita de comentários, revisão de PRs e leitura;
+
 
 ## 🎯 Problema a ser resolvido
 
 ### **Lojinha Virtual**
 
-O nosso cliente necessita de um aplicativo mobile para para funcionar como sua lojinha virtual para que o mesmo possa vender os seus itens, o cliente já possui uma interface onde ele pode cadastrar os seus produtos, classifica-los em suas respectivas categorias e atribuir promoções, o que você vair precisar desenvolver para o mesmo é uma interface mobile para os consumidores que irá disponibilizar a listagem desses itens já cadastrados e os recursos necessários que o mesmo adicione esses itens em uma sacola de compras, essa tela é para aprovação, você deverá criar apenas as interfaces solicitadas.
+O nosso cliente necessita de um aplicativo mobile para funcionar como sua lojinha virtual para que o mesmo possa vender os seus itens, o cliente já possui uma interface onde ele pode cadastrar os seus produtos, classifica-los em suas respectivas categorias e atribuir promoções, o que você vai precisar desenvolver para o mesmo é uma interface mobile voltada para o consumidor final que irá disponibilizar a listagem dos itens cadastrados e os recursos necessários que o mesmo adicione esses itens em um carrinho de compras. Essa tela é para aprovação, você deverá criar apenas as interfaces solicitadas.
 
 #### **Jornada do usuário:**
 
-O usuário deverá ter acesso a uma tela de home com a listagem dos produtos comercializados pela empresa, os produtos devem ser agrupados por suas categorias, com possibilidade de filtrar os mesmos por sua categoria ou pesquisar por qualquer parte o nome do produto, ao clicar no card de um determinado produto, deverá ser exibido um modal contendo as informações sobre o mesmo com a possibilidade de alterar a quantidade e de adicionar a mesmo ao carrinho, não será necessário criar a interface do carrinho de compras, toda via, conforme protótipo,deverá ser exibido no rodapé da home acima do menu principal um totalizador do carrinho que precisar ser alterado a cada adição de um produto.
+O usuário deverá ter acesso a uma tela de home com a listagem dos produtos comercializados pela empresa, os produtos devem ser agrupados por suas categorias, com possibilidade de filtrar os mesmos por sua categoria ou pesquisar por qualquer parte o nome do produto, ao clicar no card de um determinado produto, deverá ser exibido um modal contendo as informações sobre o mesmo com a possibilidade de alterar a quantidade e de adicionar o mesmo ao carrinho, não será necessário criar a interface do carrinho de compras, toda via, conforme protótipo, deverá ser exibido no rodapé da home acima do menu principal um totalizador do carrinho que precisará ser atualizado a cada adição de um produto.
 
-#### **Link para o protótipo do interface do desafio:**
+#### **Link para o protótipo da interface do desafio:**
 
 https://www.figma.com/file/ebcFb6dxwj4JkN7vENzgeQ/Softcom-Desafio
 
