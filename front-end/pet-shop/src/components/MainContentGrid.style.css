@@ -1,0 +1,22 @@
+.description {
+  color: #3F3F3F;
+  font-size: 14px;
+}
+
+.card {
+  margin: 10px!important;
+  border-left: 1px solid rgba(0,0,0,.125)!important
+}
+
+.card button:hover {
+  background-color: #ff83de;
+}
+
+.cart-icon-purple {
+  height: 18px;
+}
+
+.card-footer-display {
+  display: flex;
+  justify-content: space-between;
+}

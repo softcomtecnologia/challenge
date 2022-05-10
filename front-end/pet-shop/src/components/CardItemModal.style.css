@@ -1,0 +1,26 @@
+.show {
+  display: flex;
+  align-items: center;
+}
+
+.fade {
+  display: flex;
+  align-items: center;
+}
+
+.modal {
+  display: flex!important;
+  align-items: center;
+}
+
+.free-shipping {
+  color: #1BBB16;
+}
+
+.thumbnail {
+  max-width: 50vw;
+}
+
+.modal-btn {
+  background-color: #B41C8B!important;
+}
