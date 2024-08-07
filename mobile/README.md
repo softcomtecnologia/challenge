@@ -19,7 +19,8 @@ A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contat
 - Linguagem de programação Kotlin ou Java;
 - Arquitetura Android MVVM;
 - Biblioteca AndroidX;
-- ORM ActiveAndroid;
+- Jetpack Compose
+- ORM Room ou/e ActiveAndroid;
 - Trabalhar com Cliente HTTP usando Retrofit;
 - Solid Principles;
 - Clean Code;
