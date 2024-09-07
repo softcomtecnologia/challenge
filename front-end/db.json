@@ -1,0 +1,226 @@
+{
+  "empresa": [
+    {
+      "id": 1,
+      "name": "Pet Friends Acessories",
+      "endereco": "Avenida Rio Grande do Sul, 1520, Estados | 58030-021 | João Pessoa - PB",
+      "delivery": "35m - 1h:40m",
+      "entrega": "À partir de R$ 3,00",
+      "status": "ABERTO AGORA"
+    }
+  ],
+  "carrinho": {
+    "quantidade": 5,
+    "valor": 350
+  },
+  "produtos": [
+    {
+    "id": 1,
+    "imageUrl": "/product1.png",
+    "titulo": "Shampoo Tradicional",
+    "valor": 69.90,
+    "categoria": "sugestao",
+    "descricao": "- Indicado para cães e gatos;                                                                     - Contém extrato de aloe e vera e silicone;                                                                                                       - Ph neutro;- Usoveterinário;- Produto de alta qualidade.- Disponível em embalagens de 500ml e 5 litros."
+    },
+    {
+      "id": 2,
+      "imageUrl": "/product2.png",
+      "titulo": "branco",
+      "valor": 295.50,
+      "categoria": "sugestao"
+    },
+    {
+       "id": 3,
+       "imageUrl": "/product1.png",
+       "titulo": "laranja",
+       "valor": 69.90,
+       "categoria": "sugestao"
+    },
+    {
+      "id": 4,
+      "imageUrl": "/product2.png",
+      "titulo": "preto",
+      "valor": 295.50,
+      "categoria": "sugestao"
+    },
+    {
+      "id": 5,
+      "imageUrl": "/product1.png",
+      "titulo": "Prduto 5",
+      "valor": 69.90,
+      "categoria": "sugestao"
+    },
+    {
+       "id": 6,
+       "imageUrl": "/product1.png",
+       "titulo": "arma",
+       "valor": 69.90,
+       "categoria": "brinquedos"
+    },
+    {
+       "id": 5,
+       "imageUrl": "/product1.png",
+       "titulo": "Prduto 5",
+       "valor": 69.90,
+       "categoria": "brinquedos"
+    },
+    {
+       "id": 1,
+       "imageUrl": "/product1.png",
+       "titulo": "arma",
+       "valor": 69.90,
+       "categoria": "camaecasa"
+    },
+    {
+       "id": 2,
+       "imageUrl": "/product2.png",
+       "titulo": "branco",
+       "valor": 295.50,
+       "categoria": "camaecasa"
+    },
+    {
+       "id": 3,
+       "imageUrl": "/product1.png",
+       "titulo": "laranja",
+       "valor": 69.90,
+       "categoria": "camaecasa"
+    },
+    {
+       "id": 4,
+       "imageUrl": "/product2.png",
+       "titulo": "preto",
+       "valor": 295.50,
+       "categoria": "camaecasa"
+    },
+    {
+        "id": 5,
+        "imageUrl": "/product1.png",
+        "titulo": "Prduto 5",
+        "valor": 69.90,
+        "categoria": "camaecasa"
+    },
+    {
+       "id": 4,
+       "imageUrl": "/product2.png",
+       "titulo": "preto",
+       "valor": 295.50,
+       "categoria": "camaecasa"
+    },
+    {
+       "id": 5,
+       "imageUrl": "/product1.png",
+       "titulo": "Prduto 5",
+       "valor": 69.90,
+       "categoria": "camaecasa"
+    },
+    {
+       "id": 1,
+       "imageUrl": "/product1.png",
+       "titulo": "arma",
+       "valor": 69.90,
+       "categoria": "coleiras"
+    },
+    {
+       "id": 2,
+       "imageUrl": "/product2.png",
+       "titulo": "branco",
+       "valor": 295.50,
+       "categoria": "coleiras"
+    },
+    {
+       "id": 3,
+       "imageUrl": "/product1.png",
+       "titulo": "laranja",
+       "valor": 69.90,
+       "categoria": "coleiras"
+    },
+    {
+       "id": 4,
+       "imageUrl": "/product2.png",
+       "titulo": "preto",
+       "valor": 295.50,
+       "categoria": "coleiras"
+    },
+    {
+       "id": 5,
+       "imageUrl": "/product1.png",
+       "titulo": "Prduto 5",
+       "valor": 69.90,
+       "categoria": "coleiras"
+    }
+    ,
+    {
+       "id": 1,
+       "imageUrl": "/product1.png",
+       "titulo": "arma",
+       "valor": 69.90,
+       "categoria": "ossosepetiscos"
+    },
+    {
+       "id": 2,
+       "imageUrl": "/product2.png",
+       "titulo": "branco",
+       "valor": 295.50,
+       "categoria": "ossosepetiscos"
+    },
+    {
+       "id": 3,
+       "imageUrl": "/product1.png",
+       "titulo": "laranja",
+       "valor": 69.90,
+       "categoria": "ossosepetiscos"
+    },
+    {
+       "id": 4,
+       "imageUrl": "/product2.png",
+       "titulo": "preto",
+       "valor": 295.50,
+       "categoria": "ossosepetiscos"
+    },
+    {
+       "id": 5,
+       "imageUrl": "/product1.png",
+       "titulo": "Prduto 5",
+       "valor": 69.90,
+       "categoria": "ossosepetiscos"
+    }
+    ,
+    {
+       "id": 1,
+       "imageUrl": "/product1.png",
+       "titulo": "arma",
+       "valor": 69.90,
+       "categoria": "saude"
+    },
+    {
+       "id": 2,
+       "imageUrl": "/product2.png",
+       "titulo": "branco",
+       "valor": 295.50,
+       "categoria": "saude"
+    },
+    {
+       "id": 3,
+       "imageUrl": "/product1.png",
+       "titulo": "laranja",
+       "valor": 69.90,
+       "categoria": "saude"
+    },
+    {
+       "id": 4,
+       "imageUrl": "/product2.png",
+       "titulo": "preto",
+       "valor": 295.50,
+       "categoria": "saude"
+    },
+    {
+       "id": 5,
+       "imageUrl": "/product1.png",
+       "titulo": "Prduto 5",
+       "valor": 69.90,
+       "categoria": "saude"
+    }
+  ]
+
+  
+}
