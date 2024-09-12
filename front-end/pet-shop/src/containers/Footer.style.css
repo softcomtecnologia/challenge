@@ -1,0 +1,22 @@
+.web-footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 5px solid #B41C8B;
+}
+
+.external {
+  color: #B41C8B!important;
+  margin: 0 30px 0 30px;
+}
+
+@media (max-width: 768px) {
+  .web-footer {
+    display: none; 
+  }
+}
+
+@media (min-width: 768px) {
+  .web-footer {
+    display: block; 
+  }
+}

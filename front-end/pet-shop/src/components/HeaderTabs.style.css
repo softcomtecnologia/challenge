@@ -1,0 +1,25 @@
+.nav {
+  flex-wrap: unset!important;
+}
+.nav-tabs {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+}
+.nav-tabs>li {
+  float: none;
+}
+
+.nav-tabs .nav-link.active {
+  color: #B41C8B!important;
+}
+
+.nav-link {
+  color: #3F3F3F!important;
+}
+
+.section-links {
+  color: inherit;
+  text-decoration: none;
+}

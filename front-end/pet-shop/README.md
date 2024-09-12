@@ -5,10 +5,6 @@ O desafio consiste em construir uma interface para a loja e integra-la a API.
 Como não foi fornecido uma API para o desfio e eu não quis fazer mockado com JSON, pois usei mocks para testes, então resolvi usar a API do [Mercado Lire](https://developers.mercadolivre.com.br/pt_br/api-docs-pt-br).
 Tentei ser o mais fiel possível ao [Protótipo](https://www.figma.com/file/ebcFb6dxwj4JkN7vENzgeQ/Desafio-UX?node-id=3585%3A0). E aos requisitos do projeto. Focando no produto e nas soluções. E não somente em skills e ferramentas. E também tentando me desapegar ao máximo das minhas ideias. Respeitando o que o cliente pediu.
 
-[Pet Friends Acessories - Live - AWS](https://main.dtxwvs3wwbvit.amplifyapp.com/)
-
-<a href="https://main.dtxwvs3wwbvit.amplifyapp.com/" target="_blank"><img src='verify-amazon.png' alt='verify'></a>
-
 Este aplicativo foi criado com `npx create-react-app`. Mais detalhes na documentação do [create-react-app](https://create-react-app.dev/).
 Os detalhes do desenvolimento, tomada de decições, ferramentas e considerações vem a seguir.
 
@@ -36,10 +32,13 @@ Para obter a cobertura de testes `npm run test-coverage`.
 
 5) Card com Modal para informações do produto e adição ao carrinho.
 
-6) Responsive web design com interface para dispositivos web e mobile.
+**BONUS**
 
-8) Footer versão web e Footer versão mobile
+`Existem mais dipositivos mobile do que pessoas no mundo.`
 
+Com base nessa afirmação:
+
+6) Responsive web design com interface para dispositivos web e mobile
 ### Por que React?
 
 É um dos framworks mais modernos do mundo. Principalmente para `Single Page Aplications`. Possui inúmeras vantagens. Que vão desde a quantidade de processamento até a experiencia do usuário final. Por ser desenvolvido e mantido por uma das maiores empresas de tecnologia do mundo, está em constante atualização e manutenção. É muito popular. Está entre os mais usados no mundo todo. Tem uma comunidade bastante ativa. Não é dificil encontrar artigos, textos, vídeos, aulas, etc. A documentção também é muito clara e objetiva. E está em várias línguas. Inclusive português. Possui diversos recursos avançados para otizmiação como o Lazy Load, exemplo. Tudo isso sem contar todo o ecossistema de bibliotecas oficias e de terceiros. `Jest`, `Redux` e `Testing Library` incluidos. Também é um framework para aplicações mobile. Com praticamente a mesma API para web.
@@ -118,14 +117,15 @@ Então quando estamos falando de testes, estamos falando diretamente de dinheiro
 
 Sou desenvolvedor de software de Belo Horizonte, MG. Antes da pandemia eu estava estudando Engenharia Metalúrgica. Na Universidade Federal de Ouro Preto. Logo no início, quando pararam as aulas, fiquei pensando em um jeito de não parar de estudar e estar caminahdo para um progresso pessoal. Olhei a minha volta e vi que tudo que eu tinha era um computador velho, acesso a internet e vontade de aprender.
 Sempre gostei de tecnologia. Porém, quando era adolescente, acabei criando um medo de tecnologia. Principalmente, por causa do meu pai. Que é outro doido com tecnologia. Mas ele não sabia passar as coisas para mim. Ele me deixava mais com medo do que com curiosidade e vontade de aprender. Mesmo assim, ainda passei em 3 universidades federais. E fui estudar Engenharia. Foi quando tiver um contato mais de perto com programação. Nas difciplinas obrigatórias. Alí deu pra sentir que não era tão difícil assim. Mas como já estava do meio pra frente no curso, não abandonei. Só que a pandemia mudou todo este contexto. Não só o contexto como as fobias também.
-Já trabalhei como motorista de taxi, recepcionista de hotel noturno, atendente de telemarkeing, professor de ingles na rede estadual, garçom, entrevistador remoto e até de Uber. Também fui monitar nas diciplinas de introdução a ciência dos materias e quimica. Na Universidade Federal da Paraíba. Morei em João Pessoa por quase 2 anos. E se precisar me mudar, eu mudo de novo! Já vi que meu futuro não é na engenharia. Só se for engenharia de software. Me vejo fazendo isso bem velhinho. Já sei o que vou fazer antes de morrer. Um commit.
+Já trabalhei como motorista de taxi, recepcionista de hotel noturno, atendente de telemarkeing, professor de ingles na rede estadual, garçom, entrevistador remoto e até de Uber. Também fui monitar nas diciplinas de introdução a ciência dos materias e quimica. Na Universidade Federal da Paraíba. Morei em João Pessoa por quase 2 anos. E se precisar me mudar, eu mudo de novo! Já vi que meu futuro não é na engenharia. Só se for engenharia de software. Me vejo fazendo isso bem velhinho. Já sei o que vou fazer antes de morrer.
+Um commit.
 
 ### Considerações finais
 
 Agradeço desde já a oportunidade para mostrar minhas skills. Me identifico muito com a filosofia da empresa. Gotei muito do tratamento e da atenção desde o início. Estou familiarizado com `Metodologias ágeis` e boas práticas como `pair-programming`. Faço parte de um bootcamp onde tenho oportunidade de aprender e ensinar com meus colégas. Com projetos e simulação de ambiente de empresa. Aprendi muita coisa em pouco tempo porque tive oportunidade de trabalhar e conviver (mesmo que vitualmente) com pessoas desenvolvedoras. O olhar de fora sempre enxerga coisas que não estamos vendo.
 Tenho interesse em fazer o projeto de back-end também. Minha meta é ser full-stack. Mas como comecei no front-end, então estou aproveitando ao máximo. E já estudei `banco de dados` MySQL e MongoDB. Além de `Node`, arquitetura REST, entre outros assuntos.
 
-[Deploy Amazon](https://main.dtxwvs3wwbvit.amplifyapp.com/)
+[Deploy Amazon](https://main.d1w0urkkuf4jt2.amplifyapp.com/)
 
 ### Contatos
 
@@ -137,69 +137,3 @@ Tenho interesse em fazer o projeto de back-end também. Minha meta é ser full-s
 [GitHub](https://github.com/hugoleonardodev)
 
 [CodeSandBox](https://codesandbox.io/u/hugoleonardo.dev)
-
------------------------------------------------------------------------------
-
-# Softcom Challenge - Front-end com React
-
-Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a vários níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo _README_ na raiz do projeto falando sobre o desenvolvimento do desafio.
-
-Focamos aqui em design de código e design patterns em _TypeScript_ exercendo da sua criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
-
-A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contato e vamos enviar um retorno do teste enviado. Faremos questão de falar seus pontos fortes e os pontos a melhorar. Então, aproveite essa oportunidade. =]
-
-## 🚀Principais responsabilidades que buscamos
-
-- Colaborar com ideias que possam melhorar nossos sistemas e a vida dos nossos usuários;
-- Estar disposto a aprender e a ensinar;
-- Cuidar dos nossos sistemas como se fossem seus filhos;
-- Estar sempre atento a oportunidades para melhorar o código e nossos processos.
-
-## 🎓 Requisitos
-
-- Experiência com TypeScript;
-- SSR ou SSG com Next.js
-- HTML5 e CSS3;
-- React Hooks;
-- Context API;
-- Styled Components e/ou Sass;
-- Clean Code;
-- Conhecer o básico de versionamento com Git;
-- Experiência com criação de interfaces responsivas;
-- Experiência em consumir API Rest;
-
-## 🎓 Skills como diferenciais
-
-- Experiência com Redux;
-- Experiência em construir formulários com Formik + Yup;
-- Experiência em autenticação JWT Token;
-- Experiência com Testes unitários com Jest;
-- Experiência com Continuous integration/continuous delivery;
-- Experiência com metodologia ágil;
-- Conhecimento em inglês para escrita de comentários, revisão de PRs e leitura;
-
-## 🎯 Problema a ser resolvido
-
-### **Lojinha Virtual**
-
-O nosso cliente necessita de uma lojinha virtual para vender os seus itens, o mesmo já possui uma interface onde ele pode cadastrar os seus produtos, atribuir promoções e sinalizar os mesmos como sugestão de venda, o que você precisa desenvolver para o mesmo é uma interface para consumidores que irá disponibilizar a listagem desses itens já cadastrados e os recursos necessários que o mesmo adicione esses itens em uma sacola de compras, essa tela é para aprovação, você deverá criar apenas as interfaces solicitadas:
-
-#### **Jornada do usuário:**
-
-O usuário deverá ter acesso a uma tela de home com a listagem dos produtos comercializados pela empresa, os produtos devem ser agrupados por sua categoria, com possibilidade de filtrar os mesmos por sua categoria ou pesquisar por qualquer parte o nome do produto, ao clicar no card de um determinado produto, deverá ser exibido um modal contendo as informações sobre o mesmo com a possibilidade de alterar a quantidade e de adicionar a mesmo ao carrinho, não será necessário criar a interface do carrinho de compras, toda via, conforme protótipo, exibe no header da home um totalizador do carrinho que precisar ser alterado a cada adição de um produto.
-
-#### **Link para o protótipo do interface do desafio:**
-
-https://www.figma.com/file/ebcFb6dxwj4JkN7vENzgeQ/Desafio-UX?node-id=3585%3A0
-
-## 🚀 Plus
-
-- Como não disponibilizamos uma API para consumo nesse desafio, os dados devem ser simulados com um objeto JSON fixo ou outra maneira que você achar interessante para simular um consumo de um JSON, toda via, consideramos um diferencial simular a API REST através da instalação da dependência do JSON-Server.
-- Da mesma maneira não estamos cobrando testes. Mas caso queira ganhar pontos extras, testes unitários cairiam bem na entrega.
-
-## 📆 Avaliação
-
-Para nos enviar seu código, você pode:
-
-- Fazer um fork desse repositório, e nos mandar uma pull-request.
-- Nos enviar o link do repositório por e-mail: lab@softcomtecnologia.com.br.
