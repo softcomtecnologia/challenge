@@ -1,0 +1,239 @@
+{
+  "profile-info": [
+    {
+      "id": 1,
+      "name": "Pet Friends Acessories",
+      "rua": "Avenida Rio Grande do Sul, 1520",
+      "bairro": "Estados",
+      "cep": "58030-021",
+      "cidade": "João Pessoa",
+      "estado": "PB",
+      "delivery": "35m - 1h:40m",
+      "entrega": "À partir de R$ 3,00",
+      "status": "ABERTO AGORA"
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "imageUrl": "/prod01.svg",
+      "nome": "Shampoo Tradicional",
+      "valor": 6.44,
+      "oferta": 0,
+      "categoria": "Sugestão do vendedor",
+      "sectionQuery": "sugestao"
+    },
+    {
+      "id": 3,
+      "imageUrl": "/prod01.svg",
+      "nome": "Shampoo Pet Society Pelos Claros",
+      "valor": 9.57,
+      "oferta": 10,
+      "categoria": "Sugestão do vendedor",
+      "sectionQuery": "sugestao"
+    },
+    {
+      "id": 4,
+      "imageUrl": "/prod02.svg",
+      "nome": "Snacks Pets du Monde Cannix Bifinhos",
+      "valor": 24.7,
+      "oferta": 0,
+      "categoria": "Sugestão do vendedor",
+      "sectionQuery": "sugestao"
+    },
+    {
+      "id": 5,
+      "imageUrl": "/prod01.svg",
+      "nome": "Shampoo Pet Society Pelos Escuros",
+      "valor": 6.59,
+      "oferta": 25,
+      "categoria": "Sugestão do vendedor",
+      "sectionQuery": "sugestao"
+    },
+    {
+      "id": 6,
+      "imageUrl": "/prod02.svg",
+      "nome": "Comedouro The Pets Brasil",
+      "valor": 41.9,
+      "oferta": 0,
+      "categoria": "Sugestão do vendedor",
+      "sectionQuery": "sugestao"
+    },
+    {
+      "id": 7,
+      "imageUrl": "/prod02.svg",
+      "nome": "Comedouro The Pets Brasil Inox",
+      "valor": 38.9,
+      "oferta": 0,
+      "categoria": "Brinquedos",
+      "sectionQuery": "brinquedos"
+    },
+    {
+      "id": 8,
+      "imageUrl": "/prod02.svg",
+      "nome": "Biscoito Orgânico All Love Aveia",
+      "valor": 45.9,
+      "oferta": 10,
+      "categoria": "Brinquedos",
+      "sectionQuery": "brinquedos"
+    },
+    {
+      "id": 9,
+      "imageUrl": "/prod02.svg",
+      "nome": "Ração Úmida Pedigree Lata Patê",
+      "valor": 134.9,
+      "oferta": 5,
+      "categoria": "Camas e Casinhas",
+      "sectionQuery": "cama-casinhas"
+    },
+    {
+      "id": 10,
+      "imageUrl": "/prod01.svg",
+      "nome": "Shampoo Ativo Collie Antipulgas",
+      "valor": 5.59,
+      "oferta": 25,
+      "categoria": "Camas e Casinhas",
+      "sectionQuery": "cama-casinhas"
+    },
+    {
+      "id": 11,
+      "imageUrl": "/prod03.svg",
+      "nome": "Ração Úmida Pedigree Lata Carne",
+      "valor": 120.9,
+      "oferta": 0,
+      "categoria": "Camas e Casinhas",
+      "sectionQuery": "cama-casinhas"
+    },
+    {
+      "id": 12,
+      "imageUrl": "/prod01.svg",
+      "nome": "Casinha Ecológica Recriar Pet Natural",
+      "valor": 155.5,
+      "oferta": 10,
+      "categoria": "Camas e Casinhas",
+      "sectionQuery": "cama-casinhas"
+    },
+    {
+      "id": 13,
+      "imageUrl": "/prod03.svg",
+      "nome": "Biscoito Pedigree Marrobone",
+      "valor": 13.9,
+      "oferta": 15,
+      "categoria": "Camas e Casinhas",
+      "sectionQuery": "cama-casinhas"
+    },
+    {
+      "id": 14,
+      "imageUrl": "/prod01.svg",
+      "nome": "Shampoo e Condicionador Collie Amazon",
+      "valor": 12.5,
+      "oferta": 5,
+      "categoria": "Camas e Casinhas",
+      "sectionQuery": "cama-casinhas"
+    },
+    {
+      "id": 15,
+      "imageUrl": "/prod03.svg",
+      "nome": "Comedouro NF Pet Pesado em Alumínio",
+      "valor": 18.9,
+      "oferta": 10,
+      "categoria": "Camas e Casinhas",
+      "sectionQuery": "cama-casinhas"
+    },
+    {
+      "id": 16,
+      "imageUrl": "/prod03.svg",
+      "nome": "Coleira Future Pet Ângulos",
+      "valor": 24.9,
+      "oferta": 0,
+      "categoria": "Coleiras",
+      "sectionQuery": "coleiras"
+    },
+    {
+      "id": 17,
+      "imageUrl": "/prod01.svg",
+      "nome": "Bandana Monicão Rosa",
+      "valor": 3.5,
+      "oferta": 10,
+      "categoria": "Coleiras",
+      "sectionQuery": "coleiras"
+    },
+    {
+      "id": 18,
+      "imageUrl": "/prod03.svg",
+      "nome": "Cama Canadá Vinho",
+      "valor": 45.9,
+      "oferta": 5,
+      "categoria": "Coleiras",
+      "sectionQuery": "coleiras"
+    },
+    {
+      "id": 19,
+      "imageUrl": "/prod01.svg",
+      "nome": "Meia Home Pet",
+      "valor": 2.5,
+      "oferta": 5,
+      "categoria": "Coleiras",
+      "sectionQuery": "coleiras"
+    },
+    {
+      "id": 20,
+      "imageUrl": "/prod03.svg",
+      "nome": "Bandana Pickorruchos",
+      "valor": 9.99,
+      "oferta": 0,
+      "categoria": "Coleiras",
+      "sectionQuery": "coleiras"
+    },
+    {
+      "id": 21,
+      "imageUrl": "/prod03.svg",
+      "nome": "Casa Pet Injet Plástica - Azul",
+      "valor": 288.9,
+      "oferta": 0,
+      "categoria": "Ossos e Petiscos",
+      "sectionQuery": "ossos-petiscos"
+    },
+    {
+      "id": 22,
+      "imageUrl": "/prod01.svg",
+      "nome": "Osso Snack Show Suíno Defumado",
+      "valor": 5.50,
+      "oferta": 15,
+      "categoria": "Ossos e Petiscos",
+      "sectionQuery": "ossos-petiscos"
+    },
+    {
+      "id": 23,
+      "imageUrl": "/prod03.svg",
+      "nome": "Petisco Pets du Monde Orelha Suína",
+      "valor": 19.21,
+      "oferta": 25,
+      "categoria": "Ossos e Petiscos",
+      "sectionQuery": "ossos-petiscos"
+    },
+    {
+      "id": 24,
+      "imageUrl": "/prod01.svg",
+      "nome": "Bifinho Snack Show Tira Carne",
+      "valor": 20.5,
+      "oferta": 10,
+      "categoria": "Ossos e Petiscos",
+      "sectionQuery": "ossos-petiscos"
+    },
+    {
+      "id": 25,
+      "imageUrl": "/prod03.svg",
+      "nome": "Bifinho Petiscão Fino Sabor Carne",
+      "valor": 16.29,
+      "oferta": 10,
+      "categoria": "Ossos e Petiscos",
+      "sectionQuery": "ossos-petiscos"
+    }
+  ],
+  "carrinho": {
+    "quantidade": 0,
+    "valor": 0,
+    "produtos": []
+  }
+}
