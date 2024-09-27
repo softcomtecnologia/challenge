@@ -1,0 +1,30 @@
+.input-search {
+  border: 1px solid var(--color-border);
+  padding: 15px 40px 15px 20px ;
+  width: 660px;
+  margin-bottom: 30px;
+}
+
+.input-search::-webkit-search-cancel-button {
+  position: relative;
+  background: red;
+}
+
+.search-btn {
+  color: var(--color-gray);
+  position: absolute;
+  margin: 12px 0 0 -30px;
+  background: none;
+  border: none;
+}
+
+.search-btn:hover {
+  color: var(--color-black);
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 840px) {
+  .input-search{
+    width: 90%;
+  }
+}
