@@ -1,88 +1,99 @@
-# Back-end Challenge - Softcom
+# Challenge Backend
 
-Esse é um teste de nivelamento. Queremos deixar claro que não é esperado que todos consigam realizá-lo por completo, já que é destinado a varios níveis de experiência. Esperamos que todas as pessoas que queiram trabalhar conosco tentem realizá-lo e submetam mesmo não tendo concluído todo o desafio. Esperamos que você crie um arquivo *README* na raiz do projeto falando sobre o desenvolvimento do desafio.
+API REST desenvolvida em **Node.js** com **Express** e **Sequelize** 
 
-Focamos aqui em design de código e design patterns em *JavaScript* e principalmente criatividade em resolução de problemas. O objetivo é avaliar sua experiência em escrever código de fácil manutenção, baixo acoplamento e alta coesão.
+---
 
-A Softcom trabalha com feedbacks construtivos, e, portando, entraremos em contato e vamos enviar um retorno do teste enviado. Faremos questão de falar seus pontos fortes e os pontos a melhorar. Então, aproveite essa oportunidade. =]
+## 🚀 Tecnologias Utilizadas
 
-## Principais responsabilidades que buscamos
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [Sequelize](https://sequelize.org/)
+- [MySQL](https://www.mysql.com/)
+- [JWT (JSON Web Token)](https://jwt.io/)
+- [BcryptJS](https://www.npmjs.com/package/bcryptjs)
+- [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-express)
 
-- Colaborar com idéias que possam melhorar nossos sistemas e a vida dos nossos usuários;
-- Estar disposto a aprender e a ensinar;
-- Cuidar dos nossos sistemas como se fossem seus filhos;
-- Estar sempre atento a oportunidades para melhorar o código e nossos processos.
+---
 
-## Requisitos e Skills
+## ⚙️ Pré-requisitos
 
-- Base em programação orientada a objetos;
-- Graduado/Cursando Ciência da Computação ou áreas relacionadas ou experiência profissional equivalente;
-- Experiência com JavaScript e/ou outra linguagem de programação.
-- Conhecer o básico de versionamento com Git;
-- Saber como funciona o protocolo HTTP.
-- Experiência com banco de dados Relacional, como SQL Server ou MySQL, por exemplo
+- [Node.js 18+](https://nodejs.org/)
+- [MySQL 8+](https://dev.mysql.com/downloads/)
 
-## Diferenciais
+---
 
-- Experiência em programação assíncrona ou relacionada arquitetura orientada a eventos;
-- Experiência em Linguagens Funcionais;
-- Experiência com metodologia ágil;
-- Experiência com banco de dados NoSQL, como Mongo por exemplo;
-- Experiência com testes de unidade;
-- Escrita de código usando ECMAScript 6;
+## 🛠 Configuração
 
-## Problema
+1. **Banco de Dados MySQL**  
+   Crie um banco de dados chamado `challenge_backend` no MySQL:
 
-Precisamos criar uma loja virtual para nossos pequenos empreendedores. Nessa lojinha teremos apenas cadastro do empreendedor e os itens que ele deseja vender. Lembrando que o item deve ter pelo menos um preço para venda e caso o pagamento seja em dinheiro, o sistema pode conceder um desconto de até 5% do preço do item.
-Toda a separação entre classes, interfaces e atributos é por sua conta. Como dito acima, estaremos de olho em todo o código.
-Abaixo retorno os exemplos das rotas que minimamente sejam disponibilizadas.
+```sql
+CREATE DATABASE challenge_backend;
+```
 
-### Rotas
+2. **Configuração de Conexão**  
+   No arquivo `src/config/db.config.js`, ajuste conforme seu ambiente:
 
-**POST /api/v1/user - Cadastro de usuário**
-Cadastra um novo usuário
+```javascript
+export default {
+    HOST: "localhost",
+    USER: "root",
+    PASSWORD: "",
+    DB: "challenge_backend",
+    PORT: 3306,
+    dialect: "mysql",
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    },
+};
+```
 
-**GET /api/v1/user/:id - Busca de usuário**
-Recupera um usuário pelo ID
+---
 
-**POST /api/v1/auth/sign_in - Autenticação**
-Autentica um usuário na aplicação
+## ▶️ Executando a Aplicação
 
-**POST /api/v1/user/:id/item - Cadastro de item**
-Cadastra um novo item
+Para instalar dependências:
 
-**GET /api/v1/user/:id/item/:itemId - Busca um item**
-Recupera um item do usuário
+```bash
+npm install
+```
 
-**UPDATE /api/v1/user/:id/item/:itemId - Atualiza um item**
-Atualiza um item do usuário
+Para rodar em modo desenvolvimento:
 
-**DELETE /api/v1/user/:id/item/:itemId - Remove um item**
-Remove um item do usuário
+```bash
+npm start
+```
 
-## Requisitos não funcionais
+Isso irá:
 
-- Utilize banco de dados relacional 
+- Iniciar o servidor (`server.js`) na porta configurada (padrão: **8080**)
 
-## Requisitos funcionais
+---
 
-- O usuário deve poder criar uma conta com nome, e-mail, cnpj e senha;
-- O usuário deve poder se autenticar na aplicação com e-mail ou cnpj e senha;
-- O usuário deve poder cadastrar um item com nome, descrição, preço;
-- O usuário não pode criar uma conta caso o e-mail/cnpj já exista no sistema;
-- O usuário deve poder excluir um item pelo id;
-- O usuário deve poder atualizar um item pelo id;
-- O usuário deve poder exibir um item pelo id;
-- O usuário deve poder listar os itens por usuário.
+## 📄 Documentação da API
 
-## Plus
+Você pode importar o arquivo Json (`postman\Backend-Softcom-Challenge.postman_collection.json`) diretamente no Postman para visualizar todas as rotas, parâmetros e exemplos de requisições mapeadas.
 
-- Não cobramos nada na parte de segurança, mas implementar estratégia JWT e retornar o token do usuário na autenticação e solicitar a cada requisição do sistema, conta como extra.
-- Da mesma maneira não estamos cobrando testes. Mas caso queira ganhar pontos extras, testes unitários cairiam bem na entrega.
+---
 
-## Avaliação
 
-Para nos enviar seu código, você pode:
+## 📌 Funcionalidades
 
-- Fazer um fork desse repositório, e nos mandar uma pull-request.
-- Nos enviar o link do repositório por e-mail: lab@softcomtecnologia.com.br.
+- **Criar usuário**: Cadastro com senha criptografada.
+- **Autenticação/login**: retorna informações do usuário e token JWT.
+- **Criar item**: adiciona um item ao banco do usuário.
+- **Listar itens**: retorna os itens do usuário.
+- **Criar venda**: calcula o valor total com base no preço e quantidade dos itens; aplica desconto de 5% se o pagamento for em dinheiro.
+- **Listar vendas**: retorna todas as vendas do usuário.
+
+---
+
+## 📌 Observações
+
+- Senhas são criptografadas com **bcrypt**.
+- Autenticação baseada em **JWT** com expiração de 30 minutos.
+- Roles suportadas: `user`, `admin`, `moderator`.
